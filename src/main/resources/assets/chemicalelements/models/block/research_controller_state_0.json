@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/research_controller",
+  "textures": {
+    "front": "chemicalelements:block/research_controller_state_0"
+  }
+}

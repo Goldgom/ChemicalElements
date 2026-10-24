@@ -1,0 +1,19 @@
+{
+  "files": [
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/core/VanillaCraftingAdmission.java",
+      "sha256": "0e7a65ac2b0ed7ed4455889e32fc2ea9b38772a5114120e89a236a128f293d56"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/gametest/core/VanillaCraftingAdmissionGameTests.java",
+      "sha256": "b09e5c7603b48d6ec24085ece5980409d1492765f4ed86dc3f49298307b854cc"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/gametest/core/LargeInventoryLifecycleGameTests.java",
+      "sha256": "989d47b4922a34eb52430f1a9ffb4a7d1e13a9401c71cd98ce7759210e8d45ff"
+    }
+  ],
+  "indexSha256": "82db786aa6a4f64d0b38f02be6e7eaf7a1d35e9e905e7efe0c29713593cf1b69",
+  "validation": "source only, no compile/GameTest",
+  "change": "Codec-detached mutable components; rejection has no input snapshot; dynamic book remainder and duplicate/hot input tests"
+}

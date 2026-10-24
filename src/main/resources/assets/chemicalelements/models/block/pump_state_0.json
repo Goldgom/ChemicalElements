@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/pump",
+  "textures": {
+    "front": "chemicalelements:block/pump_state_0"
+  }
+}

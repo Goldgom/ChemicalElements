@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "atoms": {
+    "chemicalelements:carbon": 6,
+    "chemicalelements:hydrogen": 10,
+    "chemicalelements:oxygen": 5
+  },
+  "charge": 0,
+  "phase": "solid",
+  "molar_mass_g_mol": "162.141",
+  "basis": "approximation",
+  "source": "Stoichiometric formula and sum of bundled abridged atomic weights; ion electron mass neglected"
+}

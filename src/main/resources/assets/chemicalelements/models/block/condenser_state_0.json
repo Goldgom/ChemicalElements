@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/condenser",
+  "textures": {
+    "front": "chemicalelements:block/condenser_state_0"
+  }
+}

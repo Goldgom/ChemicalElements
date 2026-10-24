@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/gas_collector",
+  "textures": {
+    "front": "chemicalelements:block/gas_collector_state_3"
+  }
+}

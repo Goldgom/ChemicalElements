@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:deepslate_iron_ore"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:iron": "1.000000000000000000",
+    "chemicalelements:silica": "3.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Ore grade gameplay calibration: one mol target element plus three mol silicate gangue. No claim of universal real ore grade.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<component name="ProjectRunConfigurationManager">
+  <configuration name="Client - Latest Sources + Curios Jade JEI" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+    <module name="ChemicalElements.main" />
+    <option name="PROGRAM_PARAMETERS" value="@E:\\Projects\\ChemicalElements\\build\\moddev\\clientRunProgramArgs.txt" />
+    <option name="VM_PARAMETERS" value="@E:\\Projects\\ChemicalElements\\build\\moddev\\clientRunVmArgs.txt -Dfml.modFolders=chemicalelements%%E:\\Projects\\ChemicalElements\\build\\classes\\java\\main;chemicalelements%%E:\\Projects\\ChemicalElements\\build\\resources\\main" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run/compat-r17" />
+    <method v="2">
+      <option name="Gradle.BeforeRunTask" enabled="true" tasks="prepareIdeaClient" externalProjectPath="$PROJECT_DIR$" vmOptions="" scriptParameters="--max-workers=2 --no-parallel" executionName="Prepare current sources and resources" />
+    </method>
+  </configuration>
+</component>

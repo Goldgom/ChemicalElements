@@ -1,0 +1,15 @@
+* text=auto eol=lf
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+*.jar binary
+*.png binary
+*.nbt binary
+
+# Historical patches and verbatim source excerpts retain their original spacing.
+docs/**/*.patch -whitespace
+docs/idea-debug-r22-implementation/moddev-generation-evidence.txt -whitespace
+docs/world-material-boundary-r24/supplemental-paths.txt -whitespace
+docs/world-material-boundary-r24/vanilla-paths.txt -whitespace

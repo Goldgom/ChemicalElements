@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/shielded_reactor",
+  "textures": {
+    "front": "chemicalelements:block/shielded_reactor_state_3"
+  }
+}

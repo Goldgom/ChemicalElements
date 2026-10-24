@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "atoms": {
+    "chemicalelements:neptunium": 1
+  },
+  "charge": 0,
+  "phase": "solid",
+  "molar_mass_g_mol": "237",
+  "basis": "game_convention",
+  "source": "ChemicalElements atomic-component bookkeeping v1",
+  "notes": "One mol of atoms in an elemental sample; actual molecular/allotropic phase requires a separate species."
+}

@@ -1,0 +1,9 @@
+{
+ "schema_version": 1,
+ "model": "ideal_concentration_product",
+ "solid": "chemicalelements:silver_chloride",
+ "ions": {"chemicalelements:silver_ion": 1, "chemicalelements:chloride_ion": 1},
+ "temperature_table": [{"kelvin": "298.15", "ksp": "0.00000000018"}],
+ "basis": "empirical_approximation",
+ "source": "AgCl Ksp approximately 1.8e-10 at 25 C, standard solubility-product table; OpenStax Chemistry 2e Appendix J Solubility Products. Concentrations in mol/L approximate activities only in dilute solutions. Single-temperature table deliberately disallows extrapolation; chloride complexation and high ionic strength not modeled."
+}

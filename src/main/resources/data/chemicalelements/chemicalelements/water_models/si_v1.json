@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "model": "chemicalelements:si_water_body_v1",
+  "basis": "game_convention",
+  "source": "User specification 2026-10-24 07:24/07:33 EDT: one bucket and one cubic block are 1 m3; not empirical hydraulic/material measurements.",
+  "volume_format": "si-m3-scale18-residual1000-v1",
+  "bucket_m3": "1",
+  "block_m3": "1",
+  "litres_per_m3": "1000",
+  "legacy_litre_quantum_m3": "0.000000000000000000001",
+  "exposed_vanilla_water_fraction": "fluid_amount/8",
+  "waterlogged_policy": "unmodeled_until_explicit_geometry_and_pore_admission",
+  "collision_domain": "full_cube_or_empty; partial_shapes_pause",
+  "material_source": "existing chemicalelements/sorption schema1; pore_litres and litres_per_tick are explicit gameplay calibrations, converted exactly without relabeling",
+  "initial_contact": "deduplicate_solid_owner_then_saturate_atomically_from_known_water",
+  "insufficient_initial_water": "reject_without_side_effects_pending_policy_decision",
+  "new_contact": "progressive_existing_sorption_rate_times_wettability",
+  "nonvolatile_evaporation": "retain_solutes_in_liquid_or_explicit_dry_residue",
+  "activation": "descriptor_only_not_registered_with_atomic_reload; production_stays_disabled"
+}

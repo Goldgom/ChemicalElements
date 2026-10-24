@@ -1,0 +1,30 @@
+{
+    "schema_version":  1,
+    "type":  "gas_generation",
+    "reactants":  {
+                      "chemicalelements:carbonate_ion":  1,
+                      "chemicalelements:hydrogen_ion":  2
+                  },
+    "products":  {
+                     "chemicalelements:carbon_dioxide":  1,
+                     "chemicalelements:water":  1
+                 },
+    "conditions":  {
+                       "min_k":  "293.15",
+                       "max_k":  "303.15",
+                       "max_pa":  "103000",
+                       "min_pa":  "100000",
+                       "catalysts":  [
+
+                                     ],
+                       "capabilities":  [
+                                            "aqueous_contact",
+                                            "gas_capture"
+                                        ]
+                   },
+    "duration_ticks":  100,
+    "energy_j_per_mol":  "0",
+    "game_priority":  0,
+    "basis":  "approximation_and_game_convention",
+    "source":  "Carbonate acid net ionic gas evolution; OpenStax Chemistry 2e 4.2 Classifying Chemical Reactions. Requires gas capture; ideal dilute model. Duration 100 ticks and energy budget are game calibration, not experimental kinetics/enthalpy. No Gibbs value claimed."
+}

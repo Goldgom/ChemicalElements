@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:totem_of_undying"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:gold": "4.000000000000000000",
+    "chemicalelements:beryllium": "0.100000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Named fictional gold/emerald carrier; resurrection not modeled as chemical reaction.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

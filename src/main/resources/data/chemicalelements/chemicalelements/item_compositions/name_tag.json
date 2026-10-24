@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:name_tag"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:cellulose": "0.250000000000000000",
+    "chemicalelements:iron": "0.010000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Paper label with metal attachment.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

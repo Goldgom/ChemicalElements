@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<component name="ProjectRunConfigurationManager">
+  <configuration name="Client - Latest Sources Bare (no optional mods)" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+    <module name="ChemicalElements.main" />
+    <option name="PROGRAM_PARAMETERS" value="@&quot;$PROJECT_DIR$/build/moddev/clientRunProgramArgs.txt&quot;" />
+    <option name="VM_PARAMETERS" value="@&quot;$PROJECT_DIR$/build/moddev/clientRunVmArgs.txt&quot; -XX:ActiveProcessorCount=2 -Xmx2G &quot;-Dfml.modFolders=chemicalelements%%$PROJECT_DIR$/build/classes/java/main;chemicalelements%%$PROJECT_DIR$/build/resources/main&quot;" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/run/idea-debug-bare-r22" />
+    <method v="2">
+      <option name="Gradle.BeforeRunTask" enabled="true" tasks="prepareIdeaClient" externalProjectPath="$PROJECT_DIR$" vmOptions="" scriptParameters="--max-workers=2 --no-parallel -PideaWithoutOptionalMods=true" executionName="Prepare current sources and resources" />
+    </method>
+  </configuration>
+</component>

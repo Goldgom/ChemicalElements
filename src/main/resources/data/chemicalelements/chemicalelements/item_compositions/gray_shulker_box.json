@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:gray_shulker_box"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:cellulose": "8.000000000000000000",
+    "chemicalelements:carbon": "2.000000000000000000",
+    "chemicalelements:hydrogen": "4.000000000000000000",
+    "chemicalelements:nitrogen": "0.666666666666666666",
+    "chemicalelements:oxygen": "0.666666666666666666",
+    "chemicalelements:sulfur": "0.040000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Chest plus two protein-shell carriers; contents are independent inventories, not folded into casing template. Quantized downward at 10^-18 mol; all actual recipe transactions must carry deterministic residuals, not regenerate this template.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

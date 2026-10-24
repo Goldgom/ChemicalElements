@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/grinder",
+  "textures": {
+    "front": "chemicalelements:block/grinder_state_2"
+  }
+}

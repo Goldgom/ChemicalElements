@@ -1,0 +1,39 @@
+﻿{
+    "version":  "material-owner-key-r24-v1",
+    "taskId":  "chem-material-owner-key-r24",
+    "files":  [
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/api/tx/OwnerKey.java",
+                      "sha256":  "7978EEDE55F94815FB83D9F9CCB92514D6BF35A9D1972FAD7BD9125A1E29FA28",
+                      "bytes":  2457
+                  },
+                  {
+                      "path":  "src/test/java/org/goldgom/chemicalelements/api/tx/MaterialOwnerKeyTest.java",
+                      "sha256":  "9CDC83C965270988A42BBFAEF2919C67458F9F84D41008C93B8F4C14D9DAFDBD",
+                      "bytes":  5120
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/gametest/core/MaterialOwnerKeyGameTests.java",
+                      "sha256":  "D2F9F10797A6F9A867B59EBF9D3643B1CDC65E2C8069C99240FBCE581DE61075",
+                      "bytes":  4665
+                  },
+                  {
+                      "path":  "docs/material-owner-key-r24/static-check.ps1",
+                      "sha256":  "1B326DCDE18695EDD35884AA0873734AC8C53F85EB304E60EA7A2E2962AD834D",
+                      "bytes":  4883
+                  },
+                  {
+                      "path":  "docs/material-owner-key-r24/static-evidence.json",
+                      "sha256":  "86F75342548DAE66AE271F873C3315C3A7AD77737D5EE519280AFEB9AD36FAA0",
+                      "bytes":  2263
+                  },
+                  {
+                      "path":  "docs/material-owner-key-r24/report.md",
+                      "sha256":  "CE3640F6F2470909F70D837D0099E7D801A4A36DDE3A1210AFFDF16712B96255",
+                      "bytes":  3524
+                  }
+              ],
+    "validation":  "Static checks only; Java compilation and all runtime checks NOT RUN",
+    "integration":  "Next explicitly versioned integration input, not fixed 2693; main MaterialOwnerKeyTest and two MaterialOwnerKeyGameTests methods",
+    "safety":  "Value identities are not real Owner/CAS, placement/phase or water/production readiness; gates remain closed"
+}

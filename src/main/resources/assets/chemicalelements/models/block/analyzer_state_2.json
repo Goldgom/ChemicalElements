@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/analyzer",
+  "textures": {
+    "front": "chemicalelements:block/analyzer_state_2"
+  }
+}

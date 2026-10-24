@@ -1,0 +1,86 @@
+{
+  "version": "world-material-boundary-r24-preparation-v2",
+  "status": "PREPARATION_ONLY_NOT_COMPILED_NOT_RUN",
+  "artifacts": [
+    {
+      "path": "docs/world-material-boundary-r24/ADDENDUM-v2.md",
+      "sha256": "e18037e83ddd584eb1cf310bd3034fbbec89195c7cb3fe4edccdd4753e171444"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/candidate.patch",
+      "sha256": "4b6b995260400c940ab21a1deee6a5f4dbca88edb8544284e791800833e2fe8b"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/descriptors.json",
+      "sha256": "f6ca2f8f7c21a5a1cc891685af937e1d9abe4dd936d9d0645181aa7055a82f88"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/descriptors.py",
+      "sha256": "5c45f1a1a887501c17d1f94eb5bf2ca5ec99e1ba31d0c247b95b545d7948bf68"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/handoff_v2.py",
+      "sha256": "167e660451ce3095d1416f68e94a6bb080c257ab8ac83f729da6725824ee8494"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/inspect_sources.py",
+      "sha256": "d44a02ce8de3dda19f8f007e2b67d4bf824ec76f422e48f7e012e3cea0e08dc7"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/manifest.json",
+      "sha256": "9e44636af8c4f57e5841c6bc2df4dd651c6435b1bae6ba7ceac6d28d6ae6711a"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/MIXIN-HANDOFF-v2.md",
+      "sha256": "f5cbed4948ede4b75b07128d554366aed6e165f679a0ed804ef356f9d508bf33"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/mixins-additions-v2.json",
+      "sha256": "537ee419bd358f962c5e2b44dd34fda59091650466b196529232cbf5fc0bfc8d"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/prepare_patch.py",
+      "sha256": "bba605a79422d4bac4e898b56310c26a7860a8ebd61ed69519e27d4da04ef104"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/REPORT.md",
+      "sha256": "9214497741ccfd7342a9127f7ef63f811ebc87cd315cf9ae6dfe0501bf2ac253"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/source-entries.json",
+      "sha256": "b6f43fae954c04881ef0c756619ebe98871744e2305dc4d03a4c9fccc1353e78"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/supplemental-paths.txt",
+      "sha256": "b3919b7bf61586fe4cce8e42719a84523ba72f7e90c5dbc49b8f30956061c9c1"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/vanilla-paths.txt",
+      "sha256": "c9b13dcf5b7df5c448a00f8059d2539611e10d2ecbbaba47ccdae6f67065cccf"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/candidate/src/main/java/org/goldgom/chemicalelements/world/material/ChunkWriteFence.java",
+      "sha256": "116309058762ccc184b82345a8902200e29d8a6b24a5998ec2bdaf36b7c7eeba"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/candidate/src/main/java/org/goldgom/chemicalelements/world/material/WorldPrimitivePermit.java",
+      "sha256": "29ffc4481c4430bce197794fa3f5b247c52f7e315a98e1640084a61e1d318277"
+    }
+  ],
+  "contentV2Inputs": [
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/content/material/MaterialProjection.java",
+      "sha256": "e8d0aa44521583057e2d66fe23b00900b59a5e7735811dfaab58b80791dddd10"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/content/material/MaterialBlockEntity.java",
+      "sha256": "f7dcdf0d356020142ca34ff76061405647b0e364a78ad68f957578688c41ef8d"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/content/material/tx/MaterialRootState.java",
+      "sha256": "7324cdf0b0b21c746a5ae6e2964b02f3f8afdf199dd977b9c2a107e0cb87d5b8"
+    }
+  ],
+  "indexSha256": "82db786aa6a4f64d0b38f02be6e7eaf7a1d35e9e905e7efe0c29713593cf1b69",
+  "indexUnchanged": true
+}

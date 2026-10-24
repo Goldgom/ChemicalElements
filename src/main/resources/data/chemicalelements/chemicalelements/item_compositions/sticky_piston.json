@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:sticky_piston"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:carbon": "1.000000000000000000",
+    "chemicalelements:hydrogen": "2.000000000000000000",
+    "chemicalelements:nitrogen": "0.100000000000000000",
+    "chemicalelements:oxygen": "1.000000000000000000",
+    "chemicalelements:water": "1.000000000000000000",
+    "chemicalelements:cellulose": "3.000000000000000000",
+    "chemicalelements:silica": "4.000000000000000000",
+    "chemicalelements:iron": "1.000000000000000000",
+    "chemicalelements:copper": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Derived composite inventory from explicit ingredient items of minecraft:sticky_piston; not a proof of reaction feasibility.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

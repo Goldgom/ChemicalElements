@@ -1,0 +1,51 @@
+﻿{
+    "indexSha256":  "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69",
+    "staticDiffCheck":  "passed",
+    "baselineManifestSha256":  "ACF4708836CAB99FFB142470CA7D3980BC961A2AD6177F4091026BB5655708E1",
+    "task":  "chem-content-recovery-evidence-r24",
+    "stagedPathCount":  13,
+    "files":  [
+                  {
+                      "sha256":  "D80C8A9CDA0E2FCB2C70F91DCECAC87BC1076626D5C85ADD26BC142D9CD550D9",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/content/material/MaterialBlockEntity.java"
+                  },
+                  {
+                      "sha256":  "787C4733C8A4942EA8AC78E511DFA0CD113AEBA567DE6E8A780B0B27EE7B273E",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/content/material/tx/MaterialRootState.java"
+                  },
+                  {
+                      "sha256":  "C270D1DCE98F8F9FC4794CB7C3DB0255289D556F02BC1D31D484C05DC0913503",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/gametest/material/MaterialRootGameTests.java"
+                  },
+                  {
+                      "sha256":  "64346FBA67725BC35C7D2A6CC29640D1C342F0247A46BBB3C0D29610C9E87660",
+                      "path":  "src/test/java/org/goldgom/chemicalelements/content/material/MaterialCancellationRecoveryTest.java"
+                  },
+                  {
+                      "sha256":  "EF520F22EFA3C4C598048504F815447D82ABDEB684ABB6180BFF19DB06501B48",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialRecoveryEvidence.java"
+                  },
+                  {
+                      "sha256":  "905D59320FE8D67D84B63A3D436BAE536EE93FAF1CA589D8995C83E6C5BF1FF4",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialCommitCoordinator.java"
+                  },
+                  {
+                      "sha256":  "472322D34D42B0F6E504510BF386E207F701BAC52689A0FDD091485D3FCB3EE5",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialRecoveryBatch.java"
+                  },
+                  {
+                      "sha256":  "A9BE02482F14E4007DB531E0FC5E59CAD5B0B9B30DFF029C754A82E0ED68523D",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialObservationBarrier.java"
+                  },
+                  {
+                      "sha256":  "C6F1CE0694841679F0AC2098DB058A039751BA9A97BCB86303D21DAB654CE177",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialJournal.java"
+                  },
+                  {
+                      "sha256":  "A364DFA550F417D81BFBBD0C243D3ED9757FDA3BE0D11D1C17458534CB01C6CE",
+                      "path":  "docs/material-owner-r24/cancel-recovery/STATUS-v1.md"
+                  }
+              ],
+    "status":  "source-only; not compiled or run",
+    "version":  1
+}

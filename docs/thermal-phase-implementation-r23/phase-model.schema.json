@@ -1,0 +1,285 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PhaseLibrary v1 structure; Java semantic validation additionally mandatory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "subject",
+    "allotrope",
+    "reason",
+    "schema_version",
+    "kind",
+    "domain",
+    "sources",
+    "energy_reference",
+    "low_species",
+    "high_species",
+    "legacy_operation",
+    "transition_k",
+    "cp_low_j_mol_k",
+    "cp_high_j_mol_k",
+    "latent_j_mol"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "subject": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "allotrope": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4096
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "kind": {
+      "enum": [
+        "UNKNOWN",
+        "UNMODELED",
+        "LEGACY_WATER_LATENT",
+        "CONSTANT_CP_TWO_PHASE"
+      ]
+    },
+    "domain": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "min_k",
+            "max_k",
+            "min_pa",
+            "max_pa",
+            "ensemble"
+          ],
+          "properties": {
+            "min_k": {
+              "type": "string",
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+              "maxLength": 80
+            },
+            "max_k": {
+              "type": "string",
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+              "maxLength": 80
+            },
+            "min_pa": {
+              "type": "string",
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+              "maxLength": 80
+            },
+            "max_pa": {
+              "type": "string",
+              "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+              "maxLength": 80
+            },
+            "ensemble": {
+              "const": "ISOBARIC_APPROXIMATION"
+            }
+          }
+        }
+      ]
+    },
+    "sources": {
+      "type": "array",
+      "maxItems": 256,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "uri",
+          "citation",
+          "locator",
+          "accessed",
+          "basis",
+          "method",
+          "pressure_evidence",
+          "uncertainty",
+          "license_status",
+          "units",
+          "limitations"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "uri": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "citation": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "accessed": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "basis": {
+            "enum": [
+              "MEASURED",
+              "EVALUATED",
+              "PREDICTED",
+              "GAME_CONVENTION",
+              "UNVERIFIED"
+            ]
+          },
+          "method": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "pressure_evidence": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "uncertainty": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          },
+          "license_status": {
+            "enum": [
+              "CLEARED",
+              "NOT_CLEARED",
+              "UNKNOWN",
+              "EXISTING_CODE_ONLY"
+            ]
+          },
+          "units": {
+            "const": "K;Pa;J/mol;J/mol/K"
+          },
+          "limitations": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 4096
+          }
+        }
+      }
+    },
+    "energy_reference": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        }
+      ]
+    },
+    "low_species": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        }
+      ]
+    },
+    "high_species": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        }
+      ]
+    },
+    "legacy_operation": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4096
+        }
+      ]
+    },
+    "transition_k": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+          "maxLength": 80
+        }
+      ]
+    },
+    "cp_low_j_mol_k": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+          "maxLength": 80
+        }
+      ]
+    },
+    "cp_high_j_mol_k": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+          "maxLength": 80
+        }
+      ]
+    },
+    "latent_j_mol": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string",
+          "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$",
+          "maxLength": 80
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,103 @@
+﻿{
+    "files":  [
+                  {
+                      "sha256":  "BBE3703F93EFAC58F3FB6C495FEEB9B72650F92CD9FD64DBEF9B8FB73576B555",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialCommitCoordinator.java"
+                  },
+                  {
+                      "sha256":  "20E71178E363C0111D271A02E3F785E55670399DED0E331E7793FC00BE5815F6",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialHeatValidation.java"
+                  },
+                  {
+                      "sha256":  "532D29FB9D266356B1FABCB59D156C3E027CDB2296674915A1FA583E985AE060",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialIsolationGameTests.java"
+                  },
+                  {
+                      "sha256":  "C6F1CE0694841679F0AC2098DB058A039751BA9A97BCB86303D21DAB654CE177",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialJournal.java"
+                  },
+                  {
+                      "sha256":  "2FB9C63D25BAD24425BEAC10B9A4CE65663977CEDDB78F25FC5D9522D6A66A2A",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialObservationBarrier.java"
+                  },
+                  {
+                      "sha256":  "B6CC468CF687F45E0EC9F15DDFC02129B4F6B5497DDA0BD10951EA27BA7F4AE0",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialOwnerAccess.java"
+                  },
+                  {
+                      "sha256":  "176EB28C950D69B7140C6D644AE6FB8DE79643A2A1AB4238680356C3CFE03568",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialOwnerSnapshot.java"
+                  },
+                  {
+                      "sha256":  "E00127D6FA76B234CCB4B3224852012E00E5EE116AC4EADC35F05A2F9697E9A1",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialPendingMarker.java"
+                  },
+                  {
+                      "sha256":  "0B9A6F733C9DEDC2CDC4E12522736F8C2C592D5E57125139EDC4DEFD97E76CA1",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialPickupPreparation.java"
+                  },
+                  {
+                      "sha256":  "0A40FEF7506ECAAC827060288AC27AD65541B1ED118649D29630CE15439499FE",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialPlacementPreparation.java"
+                  },
+                  {
+                      "sha256":  "39039226BAFEB859BD84A5EE3DF3FF530D422F2E2736F40A28C8530118CC19A6",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialPlayerPlanGameTests.java"
+                  },
+                  {
+                      "sha256":  "84E3979F2283473A2BE1BCE878F81095922BD385849B0EFD19E6501A73836C29",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialPlayerSlotPlan.java"
+                  },
+                  {
+                      "sha256":  "59993516F30320FF08899EBF9E69870C002DCFABA5AFB9EA86B00D2D79D501B6",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialPlayerSnapshot.java"
+                  },
+                  {
+                      "sha256":  "41BE72B0FA5ADA13E7ACB102AB0B33F78A01EB0710655CDC06A487F32480CDC3",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialRecoveryBatch.java"
+                  },
+                  {
+                      "sha256":  "87F744367045017BC9D77B26ED286ADFC9EF350C8EC3209FD284A63026F45A05",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialTransaction.java"
+                  },
+                  {
+                      "sha256":  "7BC3FCE491FF912E9BCE496F42BEE4158C57E896F77B81AE948A98DBD9119160",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\MaterialTransferValidation.java"
+                  },
+                  {
+                      "sha256":  "5AA7614EB98ECABEDC7A41E0571857E6DF25061A41CC6A390B99EED4434DE34D",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\ReservedListAccess.java"
+                  },
+                  {
+                      "sha256":  "00371BEC4E8739EDEF94774A37B24A736E24E52EDF93314841062990E37153D6",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\materialtx\\ReservedPlayerPublication.java"
+                  },
+                  {
+                      "sha256":  "334677F0652DE86E65853D2CA5BC2C51EFA41FB572DAA3EF3B4DBDC28BBE2085",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\MultiOwnerRequest.java"
+                  },
+                  {
+                      "sha256":  "EA327CAFE482D486C232E17828258B43796B52825A4E9013D7A9BB6D8CA40D8F",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\instance\\PlayerProjectionState.java"
+                  },
+                  {
+                      "sha256":  "D5199FB6DCD18BB67A72C79B66307C2265F63FA502EE33D1B9EC37F876130E4D",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\persistence\\SinkLedger.java"
+                  },
+                  {
+                      "sha256":  "F8BF2051F2ED3AA4A94DC9D967E3ED20D1241D52210C02053A1182BDB311A9D8",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\mixin\\NonNullListMutationMixin.java"
+                  },
+                  {
+                      "sha256":  "51BABA2640797EAA4DBB6DD4A1E4737EBC2AABEA29D747E96B63E2284B2D8D28",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\mixin\\ItemStackMixin.java"
+                  },
+                  {
+                      "sha256":  "DB7727F2D64528F4443DE112FF72282BBA7D8A9B365477CCCD05DB2E0644FFF4",
+                      "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\mixin\\ComponentMapMutationMixin.java"
+                  }
+              ],
+    "evidence":  "source/static only; not compiled or executed",
+    "version":  "material-r24-checkpoint4",
+    "indexSha256":  "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69"
+}

@@ -1,0 +1,34 @@
+﻿[
+    {
+        "path":  "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-diagnosis\\build.gradle.candidate.patch",
+        "sha256":  "ECD3F444F8176A974796B2D77F6F63D1C5575115BFC84614B9BBE2328ED1BA02"
+    },
+    {
+        "path":  "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-diagnosis\\Client_Latest.run.xml.candidate.txt",
+        "sha256":  "AF78BDD32C5EFDB8350F9BCE0DADE02C8318EFA69CDBAAC7FF383CF8682AFB99"
+    },
+    {
+        "path":  "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-diagnosis\\evidence-files.json",
+        "sha256":  "7D5D621061F7BF1439397088500BCA774EC8A0319D1F6A5024E1DCDEEC432A96"
+    },
+    {
+        "path":  "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-diagnosis\\historical-load-excerpt.txt",
+        "sha256":  "F14C98B6C49F8B94B19527D7457F960CF3C9B04E22C8DFD2BE481EBFA68200F0"
+    },
+    {
+        "path":  "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-diagnosis\\idea-runmanager-excerpt.xml.txt",
+        "sha256":  "FE3520D9D86C7B2D2A7F78564B153AF0AA3BCE882BC57C7D328A07BD90F16AFB"
+    },
+    {
+        "path":  "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-diagnosis\\prepare-candidates.py",
+        "sha256":  "34196B3265579C6CFED98BB65E2012638A6EC1B572D8432B9CC048473FC29515"
+    },
+    {
+        "path":  "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-diagnosis\\REPORT.md",
+        "sha256":  "ADC2D5A39D7E996DF2F1C26D8074C9F2725A206528031EC090C1137E52A5F388"
+    },
+    {
+        "path":  "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-diagnosis\\run-layout.json",
+        "sha256":  "318792D7403008571F18238BB584E2727B16236470CBC43FEA3CF9634D9993A9"
+    }
+]

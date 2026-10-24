@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:mud_brick_stairs"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:silica": "1.500000000000000000",
+    "chemicalelements:cellulose": "0.150000000000000000",
+    "chemicalelements:water": "0.300000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Derived composite inventory from explicit ingredient items of minecraft:mud_brick_stairs; not a proof of reaction feasibility.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

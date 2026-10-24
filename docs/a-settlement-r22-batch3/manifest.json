@@ -1,0 +1,19 @@
+{
+  "files": [
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/core/VanillaCraftingAdmission.java",
+      "sha256": "a75fbdbcd077fa29a331ff0b662a41d09827111c479a3e7ca7c7f97a71025db7"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/gametest/core/VanillaCraftingAdmissionGameTests.java",
+      "sha256": "4f17de73ae1495ea8e81478c5d96a1ae1f9bb3bd849a85f8488f2ad893ed53f6"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/gametest/core/LargeInventoryLifecycleGameTests.java",
+      "sha256": "989d47b4922a34eb52430f1a9ffb4a7d1e13a9401c71cd98ce7759210e8d45ff"
+    }
+  ],
+  "indexSha256": "82db786aa6a4f64d0b38f02be6e7eaf7a1d35e9e905e7efe0c29713593cf1b69",
+  "validation": "source only; no compile or GameTest",
+  "change": "unchangedReturns binds exact FIFO source record by remainder slot; changed containers not bound; hard rejection revalidation cannot promote"
+}

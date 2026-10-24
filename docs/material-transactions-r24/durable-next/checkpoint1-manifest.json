@@ -1,0 +1,39 @@
+﻿{
+    "task":  "chem-b-material-durable-next-r24",
+    "level":  "source-static-only",
+    "files":  [
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialLocationGuard.java",
+                      "sha256":  "34E00DF0E5E8A0E113629B0524F5714F51F900B9071985AEE13F3144BA990E94"
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialCommitCoordinator.java",
+                      "sha256":  "905D59320FE8D67D84B63A3D436BAE536EE93FAF1CA589D8995C83E6C5BF1FF4"
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialRecoveryBatch.java",
+                      "sha256":  "472322D34D42B0F6E504510BF386E207F701BAC52689A0FDD091485D3FCB3EE5"
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialPlayerFilePublication.java",
+                      "sha256":  "6777C4D5DEBA275FF5B177111B7D05C459F6F3174027CD13BDFB6D8444EE064F"
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialPlayerFileGameTests.java",
+                      "sha256":  "29AD58D55915AFFE6C9F52E53FD7A5993646D53491FA524342F895DA71B8664B"
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialObservationBarrier.java",
+                      "sha256":  "110AD726949EF4EC5C18495C4892A4758AC30E7B7D4046CC8E3B4BBCED2A86D7"
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/materialtx/ReservedPlayerPublication.java",
+                      "sha256":  "4A85DF73FBCF665835794AD2C54B43E10806F7CA6D09CF7FDDE3C27C8713747A"
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialIsolationGameTests.java",
+                      "sha256":  "F000612D61059A074E7DA7B5888CD0A823F0A89A823E51BAEEB57D6224BD258C"
+                  }
+              ],
+    "indexSha256":  "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69"
+}

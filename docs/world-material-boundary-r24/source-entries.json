@@ -1,0 +1,46 @@
+[
+  {
+    "entry": "net/minecraft/world/level/Level.java",
+    "sha256": "7f5e1a7a08b97eccf025c4e09e4f4d4a80d2278b1f0a65a6edcbb35fc551eda7"
+  },
+  {
+    "entry": "net/minecraft/world/level/chunk/LevelChunk.java",
+    "sha256": "c014a13e2ef391901113b080362ad6db4bdd4a65c7ad47b8c6aecd8bd89b6223"
+  },
+  {
+    "entry": "net/minecraft/world/level/chunk/ChunkAccess.java",
+    "sha256": "f29217541a45b5df25b13a32a8ef96031c34cb9832ac4d9ec2f3d031fba1f8f2"
+  },
+  {
+    "entry": "net/minecraft/world/level/chunk/LevelChunkSection.java",
+    "sha256": "ab1151ec2982ae006605e7eec9b2328056e8d462fc30b3cdcf7edc1766c178dc"
+  },
+  {
+    "entry": "net/minecraft/world/level/chunk/storage/ChunkStorage.java",
+    "sha256": "c1445891fe243ecaf1e0e41fc9f0205e64d16c021fe89340f3e60420f4e2bead"
+  },
+  {
+    "entry": "net/minecraft/world/level/chunk/storage/IOWorker.java",
+    "sha256": "a72ead740db0ccc239a4de8e3ef96ff4c3a4aae3bd3c7ab18aaf7b00938248fc"
+  },
+  {
+    "entry": "net/minecraft/world/level/chunk/storage/RegionFileStorage.java",
+    "sha256": "fffaacb6b5ceaf95344608e7d79c55faab516794c7668ccef1645fc19fd4763a"
+  },
+  {
+    "entry": "net/minecraft/world/level/chunk/storage/RegionFile.java",
+    "sha256": "8a1af126966c80d6270bcc74dc229bd6083f68d513d67c883ba639208f5c7024"
+  },
+  {
+    "entry": "net/minecraft/world/level/chunk/storage/ChunkSerializer.java",
+    "sha256": "9c8e13e48fa82ce2d8112df0149d5365eef3a66ea7f694eff72a029e04afb395"
+  },
+  {
+    "entry": "net/minecraft/server/level/ChunkMap.java",
+    "sha256": "8051062b0f0b25b1f64704371b0d0fb0e9bfc06dd289eae297163bee5164d648"
+  },
+  {
+    "entry": "net/minecraft/world/level/Explosion.java",
+    "sha256": "c0a5ca9a60ecedab11b73ed3a087e00066f5f5d42b73982937d18591e7742af7"
+  }
+]

@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "controller": "chemicalelements:reactor",
+  "parts": [
+    {
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "block": "chemicalelements:reactor"
+    },
+    {
+      "offset": [
+        2,
+        0,
+        1
+      ],
+      "block": "chemicalelements:part_assembly",
+      "facing": "north"
+    },
+    {
+      "offset": [
+        -3,
+        0,
+        1
+      ],
+      "block": "chemicalelements:part_core",
+      "facing": "north"
+    },
+    {
+      "offset": [
+        -1,
+        0,
+        4
+      ],
+      "block": "chemicalelements:part_column_short",
+      "facing": "north"
+    },
+    {
+      "offset": [
+        1,
+        0,
+        0
+      ],
+      "block": "chemicalelements:part_port",
+      "facing": "north"
+    }
+  ],
+  "ports": [
+    {
+      "offset": [
+        1,
+        0,
+        0
+      ],
+      "role": "material"
+    }
+  ],
+  "unloaded": "pause",
+  "visual_assembly": {
+    "style": "industrial chemistry r16",
+    "bays": [
+      {
+        "kind": "assembly",
+        "origin": [
+          2,
+          0,
+          1
+        ],
+        "size": [
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "kind": "core",
+        "origin": [
+          -3,
+          0,
+          1
+        ],
+        "size": [
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "kind": "column_short",
+        "origin": [
+          -1,
+          0,
+          4
+        ],
+        "size": [
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "kind": "port",
+        "origin": [
+          1,
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  }
+}

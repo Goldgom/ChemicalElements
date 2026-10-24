@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:carrot_on_a_stick"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:cellulose": "0.750000000000000000",
+    "chemicalelements:carbon": "8.000000000000000000",
+    "chemicalelements:hydrogen": "16.000000000000000000",
+    "chemicalelements:nitrogen": "0.666666666666666666",
+    "chemicalelements:oxygen": "6.666666666666666666",
+    "chemicalelements:sulfur": "0.040000000000000000",
+    "chemicalelements:water": "0.500000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Derived composite inventory from explicit ingredient items of minecraft:carrot_on_a_stick; not a proof of reaction feasibility. Quantized downward at 10^-18 mol; all actual recipe transactions must carry deterministic residuals, not regenerate this template.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

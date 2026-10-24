@@ -1,0 +1,687 @@
+[
+    {
+        "path":  "docs/thermal-phase-implementation-r23/create_resources.py",
+        "sha256":  "3d8baadd0fd2fe42b9684d536f736238aae3c964341696fcd8d3b21ea7252621",
+        "bytes":  2452
+    },
+    {
+        "path":  "docs/thermal-phase-implementation-r23/phase-model.schema.json",
+        "sha256":  "b2b793583f963dc064c120e6c1dd88bf91ba7e00144b6c1df8db67d21338c7e6",
+        "bytes":  6322
+    },
+    {
+        "path":  "docs/thermal-phase-implementation-r23/REPORT.md",
+        "sha256":  "4ebdf2f942bc8bdb55347eea42209aa6e051dec4e21dc6591efe3d62e0148e53",
+        "bytes":  8496
+    },
+    {
+        "path":  "docs/thermal-phase-implementation-r23/static-results.json",
+        "sha256":  "86a8b064b7954c6ff9f85ea3f6605bba386dd27fde79314cb767253302cbed00",
+        "bytes":  496
+    },
+    {
+        "path":  "docs/thermal-phase-implementation-r23/verify_static.py",
+        "sha256":  "65ca599b834c180463a93dcce556dc60479bdc3bef072100d02035632eb7c3d6",
+        "bytes":  4568
+    },
+    {
+        "path":  "src/main/java/org/goldgom/chemicalelements/thermal/DiluteWaterPhase.java",
+        "sha256":  "cd085e8b8f405595d03afeafb2d41aa8a1bc35d4ebc20cfdecfe51d3c4813ba3",
+        "bytes":  4598
+    },
+    {
+        "path":  "src/main/java/org/goldgom/chemicalelements/thermal/EnthalpyPlanner.java",
+        "sha256":  "8c087e8e95b10cccaa3213b6b25b4cddc73729b7ace874ffb5f20801e9b1c4c1",
+        "bytes":  10307
+    },
+    {
+        "path":  "src/main/java/org/goldgom/chemicalelements/thermal/InstanceHeatExchange.java",
+        "sha256":  "7471f40390e6480427ff32b79ca766c7940754f282a42e4d5cb4853421c898f5",
+        "bytes":  2317
+    },
+    {
+        "path":  "src/main/java/org/goldgom/chemicalelements/thermal/PhaseLibrary.java",
+        "sha256":  "0fbefb03cfdcb0f1009a8d87b16063e7ea2797380a793265ca7b572956e25068",
+        "bytes":  9649
+    },
+    {
+        "path":  "src/main/java/org/goldgom/chemicalelements/thermal/PhaseModel.java",
+        "sha256":  "ffa009084c3b329425d5d182f5c9fca338fbe349e269c084a0501e14b054348a",
+        "bytes":  2134
+    },
+    {
+        "path":  "src/main/java/org/goldgom/chemicalelements/thermal/PhaseProcess.java",
+        "sha256":  "365d590d5475b994398051eaf5363f3592ab3267818065c701905051eb068df4",
+        "bytes":  3029
+    },
+    {
+        "path":  "src/main/java/org/goldgom/chemicalelements/thermal/ThermalExchange.java",
+        "sha256":  "65627109d2fadb9f7bdeb3f660416c367d7d040d297b68232660d7a3fff0fd85",
+        "bytes":  1877
+    },
+    {
+        "path":  "src/main/java/org/goldgom/chemicalelements/thermal/ThermalPhaseGameTests.java",
+        "sha256":  "b5515d1db2fb6773fe1023b1b4f72e37ec6d7f42c3edae791cc9da06c91bd9c6",
+        "bytes":  9315
+    },
+    {
+        "path":  "src/main/java/org/goldgom/chemicalelements/thermal/WaterPhaseModels.java",
+        "sha256":  "26ca73026da1fa80ce386e0778816a368751694f70aa0dbf53d113a15badc5e3",
+        "bytes":  2082
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/actinium_unknown.json",
+        "sha256":  "1a9d0ef5a861bacc2cab5aa76a2708b41459524b53cef9388369699e2299f23c",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/aluminium_unknown.json",
+        "sha256":  "5f35e5b4f017e40d39bb9e8c4a8632253e239cddde5e0d58191c4c8c308345bc",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/americium_unknown.json",
+        "sha256":  "3cc7a0923aa9c1a76c27cfc1fc8ae80df96f5f5d7adc22ba7f026e0824256477",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/antimony_unknown.json",
+        "sha256":  "2cca5ea4a5a70bd4f494730a709503cfeb8325ffa61b81eeb468ab9a4acdbd6c",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/argon_unknown.json",
+        "sha256":  "fc4720634fca369ee02fb3d3eebeb704d30a0251a0bf4ae0fae3053c7b8027af",
+        "bytes":  573
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/arsenic_unknown.json",
+        "sha256":  "98e2f1550a86045137b21213a540964c42472e79803f0c3c6f72ee0a53424f0b",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/astatine_unknown.json",
+        "sha256":  "6cda1a0c25a07c777a8bf25749920eb033cd50aec680673035f5b04235b14956",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/barium_unknown.json",
+        "sha256":  "d28b94873148cd78e2c47765fb8429826fe63eaefdfc5531d8b9d964988a5ba8",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/berkelium_unknown.json",
+        "sha256":  "bcd729f67d67988e6dae0fee0078af239ad481a201857749e86525d3576b15d4",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/beryllium_unknown.json",
+        "sha256":  "ea1378e04ef0e85d7664a7cac0318d9368059503a38430bfdd0adac93aa2a889",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/bismuth_unknown.json",
+        "sha256":  "4455e5cb95c0003645927dac80eb7cc659ec6d7387dcf946acdd63eec734b695",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/bohrium_unknown.json",
+        "sha256":  "a1ffcbf1fdd3dd46cffc1919f153dad9b02345d3ba46c46d4d9d388dc4e26b9e",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/boron_unknown.json",
+        "sha256":  "31bad402474a353b4ad73ecf2b9b734854aab90c9afa7f4cd89e88f00408bfc6",
+        "bytes":  573
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/bromine_unknown.json",
+        "sha256":  "4839b92d4f709df9d053f1bafc654d94d2864ffa7e608374617901ed397d5a9b",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/cadmium_unknown.json",
+        "sha256":  "2680757acabdc2bfa722d391fbba921793f05ca9f32f274d44b5296b90f4f285",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/caesium_unknown.json",
+        "sha256":  "3c4f276d8edda160efc0d9687fb057ca2011f5c47ba23c76aa650c5514f8e4e4",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/calcium_unknown.json",
+        "sha256":  "1563faaff1285332035e112523171b057541640b3c8e6b52ba8a0591eb40dd82",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/californium_unknown.json",
+        "sha256":  "a89601e1c4469671220b1744eef11ca74a4ad8c337514fac1c8b5f8f258e5e1f",
+        "bytes":  585
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/carbon_unknown.json",
+        "sha256":  "ab18cbab3752e448581e3fda558c153bb8392d4e973c7d12b119f6f6ce1cc983",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/cerium_unknown.json",
+        "sha256":  "e95815f3b15d4d24997108e9581cf7a543c40c40f5ec7025df43334e05d95e1b",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/chlorine_unknown.json",
+        "sha256":  "c768c338c398871f98d3cd7ee009e72db1e1921bb70649f12dc95bfa29f198af",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/chromium_unknown.json",
+        "sha256":  "f4e14bbb7241f67b7ba5121d906ecd498abf6d5e54d1b53a73a4811743299bb3",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/cobalt_unknown.json",
+        "sha256":  "83c00b2fcb8b4336b30a5df6563958a4dba5a6717a64099962dd29bc74179275",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/copernicium_unknown.json",
+        "sha256":  "d21277cc95cc65f6a3823b0f0a988814e1042791333225e94ce6de5f73388367",
+        "bytes":  585
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/copper_unknown.json",
+        "sha256":  "dc8b4acf949288c265363d349f95fa2b08ef8451e0656285186947024437e8d4",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/curium_unknown.json",
+        "sha256":  "4cffc8fc674f29f15dc235fe21b6b320ca33970fa1e69a11525ab7a58ee3802f",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/darmstadtium_unknown.json",
+        "sha256":  "a6b936531cb38c66285566e9ebf5a492c2148b694c0e7d8e10f37bb0a45bce4d",
+        "bytes":  587
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/dubnium_unknown.json",
+        "sha256":  "a2b2605bf17baf15b8bbf80dfd32f74a0321b02aa0e94328711fc9c98575c967",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/dysprosium_unknown.json",
+        "sha256":  "c1ead2f94ba9b5c1accf3ab842b607016e45bcb3e7964b10a46d244324ba7f12",
+        "bytes":  583
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/einsteinium_unknown.json",
+        "sha256":  "f385f002f0878635e035e1c58fae50e8198fd38878ed80d8a0d33a1877a765e1",
+        "bytes":  585
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/erbium_unknown.json",
+        "sha256":  "e9cbbe817b8b122762b35d346afdb18f4891ad14f733d6eca877bd264e884c0b",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/europium_unknown.json",
+        "sha256":  "a4dae8f39799a4d3ffb325199392315dc45c2d2238ee17a1f9e439fd6a3bbc8f",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/fermium_unknown.json",
+        "sha256":  "c62b7577c95bed795e436ab3b9069b383ef61b8d6fd0b74d3023871bb8262adb",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/flerovium_unknown.json",
+        "sha256":  "f97c132bd76013cce92ae1d62a58023cb5cf4fa1e5eae5ea6acbf5cc20cb6ba7",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/fluorine_unknown.json",
+        "sha256":  "eaebcfd0f13db7ab666475ed434b278c4c370f6800a2ea5cc199dcc5d05b0447",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/francium_unknown.json",
+        "sha256":  "d123778aaa4cd58107c16c993db886310488802b4e97af218d721b71a8378e54",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/gadolinium_unknown.json",
+        "sha256":  "dfdc2704aff0d2cee4ead2da86f4172e30bb9a17c3bd8e0a7411c878c171d5d8",
+        "bytes":  583
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/gallium_unknown.json",
+        "sha256":  "69c5d487cd32a9c22bb0d04b47434237e9ef8cce61153bdf1d92bfa7c86c3501",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/germanium_unknown.json",
+        "sha256":  "9932f51249a62267bce5eb0b49f8597da512df8fc85b23e8acf3ab50ec669538",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/gold_unknown.json",
+        "sha256":  "f36ca5120c30566437f0370a1061951f64cee4c9904b8f4c40601c72243c36c4",
+        "bytes":  571
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/hafnium_unknown.json",
+        "sha256":  "933dae9fc33797ae479c78e4cb240b87df38eb0e606f501e0a1ccb41269886ef",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/hassium_unknown.json",
+        "sha256":  "36cc63cfdcc220c57575acbd6139a667c25c9b1171a39e00f0a2bb15cc6c1756",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/helium_unknown.json",
+        "sha256":  "1f9baa0f10d395398a8c76e20ffb6559b7a21e3a73bacc793c4db9334b98b8cf",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/holmium_unknown.json",
+        "sha256":  "6e8ce30b616ee5ce52740b6ad7624128880b998ddcbf4061b5ded79a728e0601",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/hydrogen_unknown.json",
+        "sha256":  "e8729f246344a5c26e4851cdff140ce9e086a75f62015b7714c95b4801d23ff8",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/indium_unknown.json",
+        "sha256":  "3ce9d50ccf41deda7c7324e837a0648bfbbace2b3ecb22be9bcead98b68ba8e4",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/iodine_unknown.json",
+        "sha256":  "1ce4d15b0d08c84957cc2caea9c6ab8e71837135cbafb72eea3a9d38fd2a1935",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/iridium_unknown.json",
+        "sha256":  "9c96f5d868eb3f82f1d472177825feb38b4219ec4702c16678ba02a3420a16b5",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/iron_unknown.json",
+        "sha256":  "9ae78db2413f97a9c95a48aa58f703552b54b1e5a4daf4ab4422289e6d3822d3",
+        "bytes":  571
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/krypton_unknown.json",
+        "sha256":  "a0f431e21b69c70d3a52e84fa096a93ccb4c30d744bd53d8280babd06825e931",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/lanthanum_unknown.json",
+        "sha256":  "b3e16457e289f1307b52bed471eb211d1710afbdda3904b36f8a8f0f30caf821",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/lawrencium_unknown.json",
+        "sha256":  "74b69a44427645290491c2299710eb5f854eea8b7d9b54a05cfb13585255f9c6",
+        "bytes":  583
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/lead_unknown.json",
+        "sha256":  "67a5ca1ab35f8fcb478dcb8257d7c8b0ef181e3672c8bcb80c06bfdb79927d3b",
+        "bytes":  571
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/lithium_unknown.json",
+        "sha256":  "fe2945d74a177581c470de58014fadfbdf25a219ba5fe4a2fa0c59b8dd7b9e69",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/livermorium_unknown.json",
+        "sha256":  "357ddeec624bf8d390c8036f37650b77c19aff88af2039edbf88ffde4e202daf",
+        "bytes":  585
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/lutetium_unknown.json",
+        "sha256":  "d4d96e4ff1f8e76e78e5e5b86c9184384b960b3a6c1afdbaed4a90349b34868c",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/magnesium_unknown.json",
+        "sha256":  "8aefc49c26eeb6fba1f5cf6535225a5538add23c3c90106f2ca2c9070645de0e",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/manganese_unknown.json",
+        "sha256":  "c22f657ca0a54390255781ccd5c77dc53d7ea8ae7ab859d262e3bd7180d1fc97",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/meitnerium_unknown.json",
+        "sha256":  "2b4981cc90b41a7f274fc83f6a16373f4a9b9cc190ab02861c4b71bb542c4378",
+        "bytes":  583
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/mendelevium_unknown.json",
+        "sha256":  "390cdd1fac5e1dbd4db9c738b7cb72b412e5d28cc98e58e2b432f0ddb9a39afe",
+        "bytes":  585
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/mercury_unknown.json",
+        "sha256":  "8ca57f315da9b3121e592e3088d88cbe6a148940f6af890668a839f9afd4abfc",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/molybdenum_unknown.json",
+        "sha256":  "26630aed12bc728d3861e0a11cbaf661256c5b47faa7cd42f335d893ec34b7f4",
+        "bytes":  583
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/moscovium_unknown.json",
+        "sha256":  "717828bd20ec9c99be6c25eafcad3727b7ecd6970027ecbb882d59ff47244631",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/neodymium_unknown.json",
+        "sha256":  "ae086ae307914d9c8464200b9c2d22e379cef180256d5292c81201fb266e9db2",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/neon_unknown.json",
+        "sha256":  "43be91f2a4c9d952f7ef0d7c660d6e9be00dad1cc9696648c44a2ae244e5deba",
+        "bytes":  571
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/neptunium_unknown.json",
+        "sha256":  "6c0abb6911bbfc3ca6806db32228661c32c65dd0491bd4ad2d777a319ed1420b",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/nickel_unknown.json",
+        "sha256":  "d08553f67ae316e632e04d1536aa964dc31b34ecd54c66eea58861b266428691",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/nihonium_unknown.json",
+        "sha256":  "7790148fe64806e5fbc26231763a5c66e2c9148f9ec1b29eb011de5852b02de4",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/niobium_unknown.json",
+        "sha256":  "72280a131e688565d8cbab498e826b93db47b0526507789852329c0ee899ce43",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/nitrogen_unknown.json",
+        "sha256":  "cb6c8d2d7dbf8e4f153b394a411c36e40b09cceaefab174fbe11d859d1a0a457",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/nobelium_unknown.json",
+        "sha256":  "d8ff7a608b313114fd6bb06ebfe1e31275e900b7bbdefd5d5695b30aa6dc584d",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/oganesson_unknown.json",
+        "sha256":  "15da07e8e0341dcbcc0c0f2104030a952dd07dd391ae9a8167def5ae6c7e7015",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/osmium_unknown.json",
+        "sha256":  "6be3733eb2bc91c90e9c77f08d4636810308d52631c08d9b3f843a674d81cffa",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/oxygen_unknown.json",
+        "sha256":  "986c0af87427b8b1f0e12038ef84a29c941249e8c85d4bd0ca6f5bc91729195b",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/palladium_unknown.json",
+        "sha256":  "74eff6a6449ad3172b8a818f769dbdd7c25b3be02f3a7eb2f4cf9a34cb93a524",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/phosphorus_unknown.json",
+        "sha256":  "1e9f0628f8f768ea04c22c1e3cac737462e6c21cbacbe6aeb03d47fa45598601",
+        "bytes":  583
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/platinum_unknown.json",
+        "sha256":  "6f87585a23ae73a4a95292b1639eaacd01d0cbf0bde93ed182d096c7297034cf",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/plutonium_unknown.json",
+        "sha256":  "09eab80812669fd0ba4fce7d93f97bff7cccb5487c82df4d93443f8b14ec453f",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/polonium_unknown.json",
+        "sha256":  "9cd5cf3f691a4a864a03c1b44bf5314ac9638a831e89e60b16a4e0055592fad6",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/potassium_unknown.json",
+        "sha256":  "1154f005a58a0c1acfcb9836fa867f9351bdd3715571f52315163c61399930c7",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/praseodymium_unknown.json",
+        "sha256":  "2f792899a4699703402dbe91450d32f300a5ba7d50e9621a5daab9a2ffdd6100",
+        "bytes":  587
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/promethium_unknown.json",
+        "sha256":  "8a3843c6442ad53e8d8ab4e6e44c7639cd05cdec0cd3335f2d5e45c6823a5d69",
+        "bytes":  583
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/protactinium_unknown.json",
+        "sha256":  "450de8645215fa4a29d249a21eea1acfb621a8b0ddb00e6b04902f535f0c1170",
+        "bytes":  587
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/radium_unknown.json",
+        "sha256":  "ad1b80ec311574f1658862b54c2f5e7e44b2ab71d45a1984c8f99fb90eae9dbd",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/radon_unknown.json",
+        "sha256":  "00fefd5af3845f9b52cfaa514768811238a4c809b97ac579840fd0fb3889bde7",
+        "bytes":  573
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/rhenium_unknown.json",
+        "sha256":  "ce12b7acf4ef08497c940bda3b3cd1abf807d9401d7956f4c759808cc445c1e1",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/rhodium_unknown.json",
+        "sha256":  "8bfa9bd185c7c9665341ed2caaf47899cafb1acfec99dc2dc05f70d772326f27",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/roentgenium_unknown.json",
+        "sha256":  "828fd2200186901b5cff9b5d8a71f9bea98912b7bc33c0cab15bb9a0dd92be7c",
+        "bytes":  585
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/rubidium_unknown.json",
+        "sha256":  "9f9dcfdd14c3e3ffdb49c4c31ae4cec51866a8d700b0fd94c6b2524025641e86",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/ruthenium_unknown.json",
+        "sha256":  "c1a3f20ca38bad8fe6c45baf33482c8c040d2cd9951b92524ac6aff8b61fad72",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/rutherfordium_unknown.json",
+        "sha256":  "96ddd74c34d33cfa1b483b3ba20444cfe54a7595c5c4d9c575b96648961820c9",
+        "bytes":  589
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/samarium_unknown.json",
+        "sha256":  "483d56d5b63de2c99b79fa552cfb0e9e45aa0574d874cb0b398c5c30fe312160",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/scandium_unknown.json",
+        "sha256":  "bb6fe772aefcfec72ec9f0321faa4b7557be61b1e78bcca21eca6a33cc58492f",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/seaborgium_unknown.json",
+        "sha256":  "89fa3288a2b0c2dd3ddbe53552ed399fc14cf8ce4d4c65198142f2699bc29f6c",
+        "bytes":  583
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/selenium_unknown.json",
+        "sha256":  "041ff7e9e64fd07af34de191e4ebab25e7b76a6b610d1d080172729f8f26a7a6",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/silicon_unknown.json",
+        "sha256":  "f8c38f5d94a202facce3c3486ce83ee7f6de46e36c5ca64b714115f75f1c7664",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/silver_unknown.json",
+        "sha256":  "2d9de621de527449052e9f88b73173fd8e6b6b03c16bd71ce5429c5e873739e7",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/sodium_unknown.json",
+        "sha256":  "64fae5275c01c83f0d67f43f15912132713126f35a08585749b0c4eb5a3817a6",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/strontium_unknown.json",
+        "sha256":  "ee5e68b20bef6b08a01a6502182076b624c5c303c520d34a50d8a457b4b18899",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/sulfur_unknown.json",
+        "sha256":  "544e05342a29e68cf93ed4bacedbd793d96deb8f073fa67216d2f2fe6b05086e",
+        "bytes":  575
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/tantalum_unknown.json",
+        "sha256":  "0c7ef05baa289e50175e471d9442dff5132c0408e9f1e833d40b2a584bbf5907",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/technetium_unknown.json",
+        "sha256":  "3418c35ca4568efc55a3db7285933e7fde81a048504c28640da28aa8b97af3a9",
+        "bytes":  583
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/tellurium_unknown.json",
+        "sha256":  "cd1092849bb77866ed09268432c5cad40e29f5a1f4712b6e265f1584452f838d",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/tennessine_unknown.json",
+        "sha256":  "7a9de71ab2eca2e56df8c4c486f9438bfa174aad6004d6db44ba84b43164b39e",
+        "bytes":  583
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/terbium_unknown.json",
+        "sha256":  "461c1072f90b01bb63feeeacd5645552577193ee05e1ed55338032d51128afb1",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/thallium_unknown.json",
+        "sha256":  "c07cd7d1908e3a8614c8997f3cd855a81032119b25bb64ec507977c25d1cfcf5",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/thorium_unknown.json",
+        "sha256":  "ec357939c0ee5bf7875f09fa787ff7d02d47fec198236154eb0b3f6e0a6c3de6",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/thulium_unknown.json",
+        "sha256":  "e6149c60984f8593a457222c04f32aa8693fa198015ced432699cba02cd2d513",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/tin_unknown.json",
+        "sha256":  "6e4c09ee98c778dd23ff04392a7770af95bd87566402bbb0cafbe5532d86b5e5",
+        "bytes":  569
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/titanium_unknown.json",
+        "sha256":  "0b68acbf06987c8869046c17189eb982e48411508b51866699a866cb0851541d",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/tungsten_unknown.json",
+        "sha256":  "862276ddd66ded6a5376e26f9a26d246cb53e05c79f864c73728cb190c410174",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/uranium_unknown.json",
+        "sha256":  "e9df266e839805808afca27d4be312b3182979ed628dd280e4c641ed4500b6b2",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/vanadium_unknown.json",
+        "sha256":  "ada1e825ca306c13d798831414424765198269521eb35f0e60eaf178f57187c4",
+        "bytes":  579
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/water_condense_legacy.json",
+        "sha256":  "659ceef99cf221ce214d41793d7a6f89e0cbbc46d28530f0932d906a990a091a",
+        "bytes":  1374
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/water_freeze_legacy.json",
+        "sha256":  "1dde5b0d2d799138861f6e9969c8d71f7f2a2447caefe5f3c748e1105d2344c8",
+        "bytes":  1362
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/water_melt_legacy.json",
+        "sha256":  "05883924ec23e4291697a9841285e01fba2f4127aa8a5c7a49c047f213bb739b",
+        "bytes":  1354
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/water_vaporize_legacy.json",
+        "sha256":  "0c5030c64ced4a8f0bb8ac0174ff8166314b9c5ffb7777a835ab7b4eec9f1574",
+        "bytes":  1368
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/xenon_unknown.json",
+        "sha256":  "51d778e64d08660a7894121eeacbfbe74daf9a08040537fbbe20c2aa721ad21a",
+        "bytes":  573
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/ytterbium_unknown.json",
+        "sha256":  "f502ad3152eb5a2fedf34c22aa4222f92443461e8554268918e00ff8ab443ec9",
+        "bytes":  581
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/yttrium_unknown.json",
+        "sha256":  "a100486ff9b746c2af2127da175857908d91b1169470cf4ca659f85dc8980797",
+        "bytes":  577
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/zinc_unknown.json",
+        "sha256":  "8cca0b0bbe0d826632612a0393f5d9b600235498c4797a2c493ecda69b1fc543",
+        "bytes":  571
+    },
+    {
+        "path":  "src/main/resources/data/chemicalelements/chemicalelements/phase_models/zirconium_unknown.json",
+        "sha256":  "2b35e65d702825c90b0b8cfffab86566acaba39c82e405640aaead6e81e090dd",
+        "bytes":  581
+    },
+    {
+        "path":  "src/test/java/org/goldgom/chemicalelements/thermal/PhaseLibraryTest.java",
+        "sha256":  "708067ca1276869f3b7eeba76cfa86a22114f1d19c600f569aaacc9a7c27d309",
+        "bytes":  2034
+    }
+]

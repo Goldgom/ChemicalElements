@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "chemicalelements:elemental_neodymium"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:neodymium": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Existing atomic bookkeeping species: 1 species-mol x 1 = 1 atom-mol per item. Explicit game calibration, not 1 m3 of dense pure element, measured density, actual physical phase, stability or allotrope. Geometric block volume does not set matter quantity. No thermal properties or placement/pickup permission supplied.",
+  "source": "ChemicalElements elemental-block calibration r23: 1 atom-mol/item; existing species and element-item calibration retained."
+}

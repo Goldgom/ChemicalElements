@@ -1,0 +1,18 @@
+﻿{
+    "files":  [
+                  {
+                      "sha256":  "2614CC9894968AF60D37C08541FB2E4720D9B1CF0D2EBAFEDCC56169788EC59B",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/MachineJournal.java"
+                  },
+                  {
+                      "sha256":  "36FDEB1300F02354A746B61C498308DF5A86C53CCFC9E7C0360C6ACA2F06529F",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/MachineJournalGameTests.java"
+                  },
+                  {
+                      "sha256":  "0A1422D3460929A83F0486FAC7B1BC94FDF88181D434EF10A7414FF49C62C00D",
+                      "path":  "docs/b-journal-permit-r23-batch4/REPORT.md"
+                  }
+              ],
+    "baseline":  "b-batch3 + machine-batch4",
+    "verification":  "source-only; diff-check exit0; not compiled/run"
+}

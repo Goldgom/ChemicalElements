@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:chain"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:iron": "1.222222222222222222"
+  },
+  "basis": "game_convention",
+  "notes": "Derived composite inventory from explicit ingredient items of minecraft:chain; not a proof of reaction feasibility. Quantized downward at 10^-18 mol; all actual recipe transactions must carry deterministic residuals, not regenerate this template.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

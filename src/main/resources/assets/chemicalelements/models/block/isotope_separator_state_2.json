@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/isotope_separator",
+  "textures": {
+    "front": "chemicalelements:block/isotope_separator_state_2"
+  }
+}

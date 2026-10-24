@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/storage_tank",
+  "textures": {
+    "front": "chemicalelements:block/storage_tank_state_2"
+  }
+}

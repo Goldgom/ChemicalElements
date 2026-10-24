@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:air"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {},
+  "basis": "game_convention",
+  "notes": "Air item has no material; atmospheric gas is separate finite inventory.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

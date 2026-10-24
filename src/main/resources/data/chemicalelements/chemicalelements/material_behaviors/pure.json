@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "id": "chemicalelements:pure",
+  "composition_kind": "PURE",
+  "all_species": [],
+  "tags": [
+    "chemicalelements:material/pure"
+  ],
+  "phase_model": null,
+  "basis": "GAME_CONVENTION",
+  "source": "Original material classification contract r23; no thermodynamic numbers",
+  "limitations": "Classification only. Authoritative Composition, temperature, pressure, finite inventory and transaction checks remain with the server Owner. No phase prediction or production permission."
+}

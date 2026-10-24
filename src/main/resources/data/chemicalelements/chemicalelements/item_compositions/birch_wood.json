@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:birch_wood"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:cellulose": "4.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Lignocellulosic material approximated as cellulose repeat units; fungal Nether wood uses explicit gameplay analogue; per-item volume calibration.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

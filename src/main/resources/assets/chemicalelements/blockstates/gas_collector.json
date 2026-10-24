@@ -1,0 +1,84 @@
+{
+  "variants": {
+    "facing=north,visual=0": {
+      "model": "chemicalelements:block/gas_collector_state_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,visual=0": {
+      "model": "chemicalelements:block/gas_collector_state_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,visual=0": {
+      "model": "chemicalelements:block/gas_collector_state_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,visual=0": {
+      "model": "chemicalelements:block/gas_collector_state_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,visual=1": {
+      "model": "chemicalelements:block/gas_collector_state_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,visual=1": {
+      "model": "chemicalelements:block/gas_collector_state_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,visual=1": {
+      "model": "chemicalelements:block/gas_collector_state_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,visual=1": {
+      "model": "chemicalelements:block/gas_collector_state_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,visual=2": {
+      "model": "chemicalelements:block/gas_collector_state_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,visual=2": {
+      "model": "chemicalelements:block/gas_collector_state_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,visual=2": {
+      "model": "chemicalelements:block/gas_collector_state_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,visual=2": {
+      "model": "chemicalelements:block/gas_collector_state_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "facing=north,visual=3": {
+      "model": "chemicalelements:block/gas_collector_state_3",
+      "y": 0,
+      "uvlock": true
+    },
+    "facing=east,visual=3": {
+      "model": "chemicalelements:block/gas_collector_state_3",
+      "y": 90,
+      "uvlock": true
+    },
+    "facing=south,visual=3": {
+      "model": "chemicalelements:block/gas_collector_state_3",
+      "y": 180,
+      "uvlock": true
+    },
+    "facing=west,visual=3": {
+      "model": "chemicalelements:block/gas_collector_state_3",
+      "y": 270,
+      "uvlock": true
+    }
+  }
+}

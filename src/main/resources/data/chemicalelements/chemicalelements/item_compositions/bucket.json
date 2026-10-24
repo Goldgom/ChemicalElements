@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:bucket"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:iron": "3.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Explicit iron container plus finite contents calibration; returned container participates in same transaction.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

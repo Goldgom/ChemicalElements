@@ -1,0 +1,863 @@
+
+FILE net/minecraft/world/level/Level.java
+211:     public boolean setBlock(BlockPos p_46601_, BlockState p_46602_, int p_46603_) {
+212:         return this.setBlock(p_46601_, p_46602_, p_46603_, 512);
+213:     }
+216:     public boolean setBlock(BlockPos p_46605_, BlockState p_46606_, int p_46607_, int p_46608_) {
+217:         if (this.isOutsideBuildHeight(p_46605_)) {
+218:             return false;
+219:         } else if (!this.isClientSide && this.isDebug()) {
+220:             return false;
+221:         } else {
+222:             LevelChunk levelchunk = this.getChunkAt(p_46605_);
+223:             Block block = p_46606_.getBlock();
+224: 
+225:             p_46605_ = p_46605_.immutable(); // Forge - prevent mutable BlockPos leaks
+226:             net.neoforged.neoforge.common.util.BlockSnapshot blockSnapshot = null;
+227:             if (this.captureBlockSnapshots && !this.isClientSide) {
+228:                  blockSnapshot = net.neoforged.neoforge.common.util.BlockSnapshot.create(this.dimension, this, p_46605_, p_46607_);
+229:                  this.capturedBlockSnapshots.add(blockSnapshot);
+230:             }
+231: 
+232:             BlockState old = getBlockState(p_46605_);
+233:             int oldLight = old.getLightEmission(this, p_46605_);
+234:             int oldOpacity = old.getLightBlock(this, p_46605_);
+235: 
+236:             BlockState blockstate = levelchunk.setBlockState(p_46605_, p_46606_, (p_46607_ & 64) != 0);
+237:             if (blockstate == null) {
+238:                 if (blockSnapshot != null) this.capturedBlockSnapshots.remove(blockSnapshot);
+239:                 return false;
+240:             } else {
+241:                 BlockState blockstate1 = this.getBlockState(p_46605_);
+242: 
+243:                 if (blockSnapshot == null) { // Don't notify clients or update physics while capturing blockstates
+244:                     this.markAndNotifyBlock(p_46605_, levelchunk, blockstate, p_46606_, p_46607_, p_46608_);
+245:                 }
+246: 
+247:                 return true;
+248:             }
+249:         }
+250:     }
+378:     public BlockState getBlockState(BlockPos p_46732_) {
+379:         if (this.isOutsideBuildHeight(p_46732_)) {
+380:             return Blocks.VOID_AIR.defaultBlockState();
+381:         } else {
+382:             LevelChunk levelchunk = this.getChunk(SectionPos.blockToSectionCoord(p_46732_.getX()), SectionPos.blockToSectionCoord(p_46732_.getZ()));
+383:             return levelchunk.getBlockState(p_46732_);
+384:         }
+385:     }
+771:     public BlockEntity getBlockEntity(BlockPos p_46716_) {
+772:         if (this.isOutsideBuildHeight(p_46716_)) {
+773:             return null;
+774:         } else {
+775:             return !this.isClientSide && Thread.currentThread() != this.thread
+776:                 ? null
+777:                 : this.getChunkAt(p_46716_).getBlockEntity(p_46716_, LevelChunk.EntityCreationType.IMMEDIATE);
+778:         }
+779:     }
+788:     public void removeBlockEntity(BlockPos p_46748_) {
+789:         if (!this.isOutsideBuildHeight(p_46748_)) {
+790:             this.getChunkAt(p_46748_).removeBlockEntity(p_46748_);
+791:         }
+792:         this.updateNeighbourForOutputSignal(p_46748_, getBlockState(p_46748_).getBlock()); //Notify neighbors of changes
+793:     }
+
+FILE net/minecraft/world/level/chunk/LevelChunk.java
+239:     public BlockState setBlockState(BlockPos p_62865_, BlockState p_62866_, boolean p_62867_) {
+240:         int i = p_62865_.getY();
+241:         LevelChunkSection levelchunksection = this.getSection(this.getSectionIndex(i));
+242:         boolean flag = levelchunksection.hasOnlyAir();
+243:         if (flag && p_62866_.isAir()) {
+244:             return null;
+245:         } else {
+246:             int j = p_62865_.getX() & 15;
+247:             int k = i & 15;
+248:             int l = p_62865_.getZ() & 15;
+249:             BlockState blockstate = levelchunksection.setBlockState(j, k, l, p_62866_);
+250:             if (blockstate == p_62866_) {
+251:                 return null;
+252:             } else {
+253:                 Block block = p_62866_.getBlock();
+254:                 this.heightmaps.get(Heightmap.Types.MOTION_BLOCKING).update(j, i, l, p_62866_);
+255:                 this.heightmaps.get(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES).update(j, i, l, p_62866_);
+256:                 this.heightmaps.get(Heightmap.Types.OCEAN_FLOOR).update(j, i, l, p_62866_);
+257:                 this.heightmaps.get(Heightmap.Types.WORLD_SURFACE).update(j, i, l, p_62866_);
+258:                 boolean flag1 = levelchunksection.hasOnlyAir();
+259:                 if (flag != flag1) {
+260:                     this.level.getChunkSource().getLightEngine().updateSectionStatus(p_62865_, flag1);
+261:                 }
+262: 
+263:                 if (LightEngine.hasDifferentLightProperties(this, p_62865_, blockstate, p_62866_)) {
+264:                     ProfilerFiller profilerfiller = this.level.getProfiler();
+265:                     profilerfiller.push("updateSkyLightSources");
+266:                     this.skyLightSources.update(this, j, i, l);
+267:                     profilerfiller.popPush("queueCheckLight");
+268:                     this.level.getChunkSource().getLightEngine().checkBlock(p_62865_);
+269:                     profilerfiller.pop();
+270:                 }
+271: 
+272:                 boolean flag2 = blockstate.hasBlockEntity();
+273:                 if (!this.level.isClientSide) {
+274:                     blockstate.onRemove(this.level, p_62865_, p_62866_, p_62867_);
+275:                 } else if (!blockstate.is(block) && flag2) {
+276:                     this.removeBlockEntity(p_62865_);
+277:                 }
+278: 
+279:                 if (!levelchunksection.getBlockState(j, k, l).is(block)) {
+280:                     return null;
+281:                 } else {
+282:                     if (!this.level.isClientSide && !this.level.captureBlockSnapshots) {
+283:                         p_62866_.onPlace(this.level, p_62865_, blockstate, p_62867_);
+284:                     }
+285: 
+286:                     if (p_62866_.hasBlockEntity()) {
+287:                         BlockEntity blockentity = this.getBlockEntity(p_62865_, LevelChunk.EntityCreationType.CHECK);
+288:                         if (blockentity != null && !blockentity.isValidBlockState(p_62866_)) {
+289:                             this.removeBlockEntity(p_62865_);
+290:                             blockentity = null;
+291:                         }
+292: 
+293:                         if (blockentity == null) {
+294:                             blockentity = ((EntityBlock)block).newBlockEntity(p_62865_, p_62866_);
+295:                             if (blockentity != null) {
+296:                                 this.addAndRegisterBlockEntity(blockentity);
+297:                             }
+298:                         } else {
+299:                             blockentity.setBlockState(p_62866_);
+300:                             this.updateBlockEntityTicker(blockentity);
+301:                         }
+302:                     }
+303: 
+304:                     this.unsaved = true;
+305:                     return blockstate;
+306:                 }
+307:             }
+308:         }
+309:     }
+324:     public BlockEntity getBlockEntity(BlockPos p_62912_) {
+325:         return this.getBlockEntity(p_62912_, LevelChunk.EntityCreationType.CHECK);
+326:     }
+329:     public BlockEntity getBlockEntity(BlockPos p_62868_, LevelChunk.EntityCreationType p_62869_) {
+330:         BlockEntity blockentity = this.blockEntities.get(p_62868_);
+331:         if (blockentity != null && blockentity.isRemoved()) {
+332:             blockEntities.remove(p_62868_);
+333:             blockentity = null;
+334:         }
+335:         if (blockentity == null) {
+336:             CompoundTag compoundtag = this.pendingBlockEntities.remove(p_62868_);
+337:             if (compoundtag != null) {
+338:                 BlockEntity blockentity1 = this.promotePendingBlockEntity(p_62868_, compoundtag);
+339:                 if (blockentity1 != null) {
+340:                     return blockentity1;
+341:                 }
+342:             }
+343:         }
+344: 
+345:         if (blockentity == null) {
+346:             if (p_62869_ == LevelChunk.EntityCreationType.IMMEDIATE) {
+347:                 blockentity = this.createBlockEntity(p_62868_);
+348:                 if (blockentity != null) {
+349:                     this.addAndRegisterBlockEntity(blockentity);
+350:                 }
+351:             }
+352:         }
+353: 
+354:         return blockentity;
+355:     }
+384:     public void setBlockEntity(BlockEntity p_156374_) {
+385:         BlockPos blockpos = p_156374_.getBlockPos();
+386:         BlockState blockstate = this.getBlockState(blockpos);
+387:         if (!blockstate.hasBlockEntity()) {
+388:             LOGGER.warn("Trying to set block entity {} at position {}, but state {} does not allow it", p_156374_, blockpos, blockstate);
+389:         } else {
+390:             BlockState blockstate1 = p_156374_.getBlockState();
+391:             if (blockstate != blockstate1) {
+392:                 if (!p_156374_.getType().isValid(blockstate)) {
+393:                     LOGGER.warn("Trying to set block entity {} at position {}, but state {} does not allow it", p_156374_, blockpos, blockstate);
+394:                     return;
+395:                 }
+396: 
+397:                 if (blockstate.getBlock() != blockstate1.getBlock()) {
+398:                     LOGGER.warn("Block state mismatch on block entity {} in position {}, {} != {}, updating", p_156374_, blockpos, blockstate, blockstate1);
+399:                 }
+400: 
+401:                 p_156374_.setBlockState(blockstate);
+402:             }
+403: 
+404:             p_156374_.setLevel(this.level);
+405:             p_156374_.clearRemoved();
+406:             BlockEntity blockentity = this.blockEntities.put(blockpos.immutable(), p_156374_);
+407:             if (blockentity != null && blockentity != p_156374_) {
+408:                 blockentity.setRemoved();
+409:                 auxLightManager.removeLightAt(blockpos);
+410:             }
+411:         }
+412:     }
+416:     public CompoundTag getBlockEntityNbtForSaving(BlockPos p_62932_, HolderLookup.Provider p_323699_) {
+417:         BlockEntity blockentity = this.getBlockEntity(p_62932_);
+418:         if (blockentity != null && !blockentity.isRemoved()) {
+419:             try {
+420:             CompoundTag compoundtag1 = blockentity.saveWithFullMetadata(this.level.registryAccess());
+421:             compoundtag1.putBoolean("keepPacked", false);
+422:             return compoundtag1;
+423:             } catch (Exception e) {
+424:                 LOGGER.error("A BlockEntity type {} has thrown an exception trying to write state. It will not persist, Report this to the mod author", blockentity.getClass().getName(), e);
+425:                 return null;
+426:             }
+427:         } else {
+428:             CompoundTag compoundtag = this.pendingBlockEntities.get(p_62932_);
+429:             if (compoundtag != null) {
+430:                 compoundtag = compoundtag.copy();
+431:                 compoundtag.putBoolean("keepPacked", true);
+432:             }
+433: 
+434:             return compoundtag;
+435:         }
+436:     }
+439:     public void removeBlockEntity(BlockPos p_62919_) {
+440:         if (this.isInLevel()) {
+441:             BlockEntity blockentity = this.blockEntities.remove(p_62919_);
+442:             if (blockentity != null) {
+443:                 if (this.level instanceof ServerLevel serverlevel) {
+444:                     this.removeGameEventListener(blockentity, serverlevel);
+445:                 }
+446: 
+447:                 blockentity.setRemoved();
+448:                 auxLightManager.removeLightAt(p_62919_);
+449:             }
+450:         }
+451: 
+452:         this.removeBlockEntityTicker(p_62919_);
+453:     }
+528:     public Map<BlockPos, BlockEntity> getBlockEntities() {
+529:         return this.blockEntities;
+530:     }
+616:     public void clearAllBlockEntities() {
+617:         this.blockEntities.values().forEach(BlockEntity::onChunkUnloaded);
+618:         this.blockEntities.values().forEach(BlockEntity::setRemoved);
+619:         this.blockEntities.clear();
+620:         this.tickersInLevel.values().forEach(p_187966_ -> p_187966_.rebind(NULL_TICKER));
+621:         this.tickersInLevel.clear();
+622:     }
+
+FILE net/minecraft/world/level/chunk/ChunkAccess.java
+160:     public LevelChunkSection[] getSections() {
+161:         return this.sections;
+162:     }
+164:     public LevelChunkSection getSection(int p_187657_) {
+165:         return this.getSections()[p_187657_];
+166:     }
+
+FILE net/minecraft/world/level/chunk/LevelChunkSection.java
+38:     public BlockState getBlockState(int p_62983_, int p_62984_, int p_62985_) {
+39:         return this.states.get(p_62983_, p_62984_, p_62985_);
+40:     }
+54:     public BlockState setBlockState(int p_62987_, int p_62988_, int p_62989_, BlockState p_62990_) {
+55:         return this.setBlockState(p_62987_, p_62988_, p_62989_, p_62990_, true);
+56:     }
+58:     public BlockState setBlockState(int p_62992_, int p_62993_, int p_62994_, BlockState p_62995_, boolean p_62996_) {
+59:         BlockState blockstate;
+60:         if (p_62996_) {
+61:             blockstate = this.states.getAndSet(p_62992_, p_62993_, p_62994_, p_62995_);
+62:         } else {
+63:             blockstate = this.states.getAndSetUnchecked(p_62992_, p_62993_, p_62994_, p_62995_);
+64:         }
+65: 
+66:         FluidState fluidstate = blockstate.getFluidState();
+67:         FluidState fluidstate1 = p_62995_.getFluidState();
+68:         if (!blockstate.isEmpty()) { // Neo: Fix MC-232360 for modded blocks (Makes modded isAir blocks not be replaced with Blocks.AIR in all-air chunk sections)
+69:             this.nonEmptyBlockCount--;
+70:             if (blockstate.isRandomlyTicking()) {
+71:                 this.tickingBlockCount--;
+72:             }
+73:         }
+74: 
+75:         if (!fluidstate.isEmpty()) {
+76:             this.tickingFluidCount--;
+77:         }
+78: 
+79:         if (!p_62995_.isEmpty()) { // Neo: Fix MC-232360 for modded blocks (Makes modded isAir blocks not be replaced with Blocks.AIR in all-air chunk sections)
+80:             this.nonEmptyBlockCount++;
+81:             if (p_62995_.isRandomlyTicking()) {
+82:                 this.tickingBlockCount++;
+83:             }
+84:         }
+85: 
+86:         if (!fluidstate1.isEmpty()) {
+87:             this.tickingFluidCount++;
+88:         }
+89: 
+90:         return blockstate;
+91:     }
+140:     public PalettedContainer<BlockState> getStates() {
+141:         return this.states;
+142:     }
+
+FILE net/minecraft/world/level/chunk/storage/ChunkStorage.java
+109:     public CompletableFuture<Void> write(ChunkPos p_63503_, CompoundTag p_63504_) {
+110:         this.handleLegacyStructureIndex(p_63503_);
+111:         return this.worker.store(p_63503_, p_63504_);
+112:     }
+120:     public void flushWorker() {
+121:         this.worker.synchronize(true).join();
+122:     }
+
+FILE net/minecraft/world/level/chunk/storage/IOWorker.java
+129:     public CompletableFuture<Void> store(ChunkPos p_63539_, @Nullable CompoundTag p_63540_) {
+130:         return this.<CompletableFuture<Void>>submitTask(() -> {
+131:             IOWorker.PendingStore ioworker$pendingstore = this.pendingWrites.computeIfAbsent(p_63539_, p_223488_ -> new IOWorker.PendingStore(p_63540_));
+132:             ioworker$pendingstore.data = p_63540_;
+133:             return Either.left(ioworker$pendingstore.result);
+134:         }).thenCompose(Function.identity());
+135:     }
+154:     public CompletableFuture<Void> synchronize(boolean p_182499_) {
+155:         CompletableFuture<Void> completablefuture = this.<CompletableFuture<Void>>submitTask(
+156:                 () -> Either.left(
+157:                         CompletableFuture.allOf(this.pendingWrites.values().stream().map(p_223475_ -> p_223475_.result).toArray(CompletableFuture[]::new))
+158:                     )
+159:             )
+160:             .thenCompose(Function.identity());
+161:         return p_182499_ ? completablefuture.thenCompose(p_182494_ -> this.submitTask(() -> {
+162:                 try {
+163:                     this.storage.flush();
+164:                     return Either.left(null);
+165:                 } catch (Exception exception) {
+166:                     LOGGER.warn("Failed to synchronize chunks", (Throwable)exception);
+167:                     return Either.right(exception);
+168:                 }
+169:             })) : completablefuture.thenCompose(p_223477_ -> this.submitTask(() -> Either.left(null)));
+170:     }
+203:     private void storePendingChunk() {
+204:         if (!this.pendingWrites.isEmpty()) {
+205:             Iterator<Entry<ChunkPos, IOWorker.PendingStore>> iterator = this.pendingWrites.entrySet().iterator();
+206:             Entry<ChunkPos, IOWorker.PendingStore> entry = iterator.next();
+207:             iterator.remove();
+208:             this.runStore(entry.getKey(), entry.getValue());
+209:             this.tellStorePending();
+210:         }
+211:     }
+217:     private void runStore(ChunkPos p_63536_, IOWorker.PendingStore p_63537_) {
+218:         try {
+219:             this.storage.write(p_63536_, p_63537_.data);
+220:             p_63537_.result.complete(null);
+221:         } catch (Exception exception) {
+222:             LOGGER.error("Failed to store chunk {}", p_63536_, exception);
+223:             p_63537_.result.completeExceptionally(exception);
+224:         }
+225:     }
+
+FILE net/minecraft/world/level/chunk/storage/RegionFileStorage.java
+75:     protected void write(ChunkPos p_63709_, @Nullable CompoundTag p_63710_) throws IOException {
+76:         RegionFile regionfile = this.getRegionFile(p_63709_);
+77:         if (p_63710_ == null) {
+78:             regionfile.clear(p_63709_);
+79:         } else {
+80:             try (DataOutputStream dataoutputstream = regionfile.getChunkDataOutputStream(p_63709_)) {
+81:                 NbtIo.write(p_63710_, dataoutputstream);
+82:             }
+83:         }
+84:     }
+101:     public void flush() throws IOException {
+102:         for (RegionFile regionfile : this.regionCache.values()) {
+103:             regionfile.flush();
+104:         }
+105:     }
+
+FILE net/minecraft/world/level/chunk/storage/RegionFile.java
+272:     public void flush() throws IOException {
+273:         this.file.force(true);
+274:     }
+288:     protected synchronized void write(ChunkPos p_63655_, ByteBuffer p_63656_) throws IOException {
+289:         int i = getOffsetIndex(p_63655_);
+290:         int j = this.offsets.get(i);
+291:         int k = getSectorNumber(j);
+292:         int l = getNumSectors(j);
+293:         int i1 = p_63656_.remaining();
+294:         int j1 = sizeToSectors(i1);
+295:         int k1;
+296:         RegionFile.CommitOp regionfile$commitop;
+297:         if (j1 >= 256) {
+298:             Path path = this.getExternalChunkPath(p_63655_);
+299:             LOGGER.warn("Saving oversized chunk {} ({} bytes} to external file {}", p_63655_, i1, path);
+300:             j1 = 1;
+301:             k1 = this.usedSectors.allocate(j1);
+302:             regionfile$commitop = this.writeToExternalFile(path, p_63656_);
+303:             ByteBuffer bytebuffer = this.createExternalStub();
+304:             this.file.write(bytebuffer, (long)(k1 * 4096));
+305:         } else {
+306:             k1 = this.usedSectors.allocate(j1);
+307:             regionfile$commitop = () -> Files.deleteIfExists(this.getExternalChunkPath(p_63655_));
+308:             this.file.write(p_63656_, (long)(k1 * 4096));
+309:         }
+
+FILE net/minecraft/world/level/chunk/storage/ChunkSerializer.java
+85:     public static ProtoChunk read(ServerLevel p_188231_, PoiManager p_188232_, RegionStorageInfo p_352213_, ChunkPos p_188233_, CompoundTag p_188234_) {
+86:         ChunkPos chunkpos = new ChunkPos(p_188234_.getInt("xPos"), p_188234_.getInt("zPos"));
+87:         if (!Objects.equals(p_188233_, chunkpos)) {
+88:             LOGGER.error("Chunk file at {} is in the wrong location; relocating. (Expected {}, got {})", p_188233_, p_188233_, chunkpos);
+89:             p_188231_.getServer().reportMisplacedChunk(chunkpos, p_188233_, p_352213_);
+90:         }
+91: 
+92:         UpgradeData upgradedata = p_188234_.contains("UpgradeData", 10) ? new UpgradeData(p_188234_.getCompound("UpgradeData"), p_188231_) : UpgradeData.EMPTY;
+93:         boolean flag = p_188234_.getBoolean("isLightOn");
+94:         ListTag listtag = p_188234_.getList("sections", 10);
+95:         int i = p_188231_.getSectionsCount();
+96:         LevelChunkSection[] alevelchunksection = new LevelChunkSection[i];
+97:         boolean flag1 = p_188231_.dimensionType().hasSkyLight();
+98:         ChunkSource chunksource = p_188231_.getChunkSource();
+99:         LevelLightEngine levellightengine = chunksource.getLightEngine();
+100:         Registry<Biome> registry = p_188231_.registryAccess().registryOrThrow(Registries.BIOME);
+101:         Codec<PalettedContainerRO<Holder<Biome>>> codec = makeBiomeCodec(registry);
+102:         boolean flag2 = false;
+103: 
+104:         for (int j = 0; j < listtag.size(); j++) {
+105:             CompoundTag compoundtag = listtag.getCompound(j);
+106:             int k = compoundtag.getByte("Y");
+107:             int l = p_188231_.getSectionIndexFromSectionY(k);
+108:             if (l >= 0 && l < alevelchunksection.length) {
+109:                 PalettedContainer<BlockState> palettedcontainer;
+110:                 if (compoundtag.contains("block_states", 10)) {
+111:                     palettedcontainer = BLOCK_STATE_CODEC.parse(NbtOps.INSTANCE, compoundtag.getCompound("block_states"))
+112:                         .promotePartial(p_188283_ -> logErrors(p_188233_, k, p_188283_))
+113:                         .getOrThrow(ChunkSerializer.ChunkReadException::new);
+114:                 } else {
+115:                     palettedcontainer = new PalettedContainer<>(
+116:                         Block.BLOCK_STATE_REGISTRY, Blocks.AIR.defaultBlockState(), PalettedContainer.Strategy.SECTION_STATES
+117:                     );
+118:                 }
+119: 
+120:                 PalettedContainerRO<Holder<Biome>> palettedcontainerro;
+121:                 if (compoundtag.contains("biomes", 10)) {
+122:                     palettedcontainerro = codec.parse(NbtOps.INSTANCE, compoundtag.getCompound("biomes"))
+123:                         .promotePartial(p_188274_ -> logErrors(p_188233_, k, p_188274_))
+124:                         .getOrThrow(ChunkSerializer.ChunkReadException::new);
+125:                 } else {
+126:                     palettedcontainerro = new PalettedContainer<>(
+127:                         registry.asHolderIdMap(), registry.getHolderOrThrow(Biomes.PLAINS), PalettedContainer.Strategy.SECTION_BIOMES
+128:                     );
+129:                 }
+130: 
+131:                 LevelChunkSection levelchunksection = new LevelChunkSection(palettedcontainer, palettedcontainerro);
+132:                 alevelchunksection[l] = levelchunksection;
+133:                 SectionPos sectionpos = SectionPos.of(p_188233_, k);
+134:                 p_188232_.checkConsistencyWithBlocks(sectionpos, levelchunksection);
+135:             }
+136: 
+137:             boolean flag3 = compoundtag.contains("BlockLight", 7);
+138:             boolean flag4 = flag1 && compoundtag.contains("SkyLight", 7);
+139:             if (flag3 || flag4) {
+140:                 if (!flag2) {
+141:                     levellightengine.retainData(p_188233_, true);
+142:                     flag2 = true;
+143:                 }
+144: 
+145:                 if (flag3) {
+146:                     levellightengine.queueSectionData(LightLayer.BLOCK, SectionPos.of(p_188233_, k), new DataLayer(compoundtag.getByteArray("BlockLight")));
+147:                 }
+148: 
+149:                 if (flag4) {
+150:                     levellightengine.queueSectionData(LightLayer.SKY, SectionPos.of(p_188233_, k), new DataLayer(compoundtag.getByteArray("SkyLight")));
+151:                 }
+152:             }
+153:         }
+154: 
+155:         long k1 = p_188234_.getLong("InhabitedTime");
+156:         ChunkType chunktype = getChunkTypeFromTag(p_188234_);
+157:         BlendingData blendingdata;
+158:         if (p_188234_.contains("blending_data", 10)) {
+159:             blendingdata = BlendingData.CODEC
+160:                 .parse(new Dynamic<>(NbtOps.INSTANCE, p_188234_.getCompound("blending_data")))
+161:                 .resultOrPartial(LOGGER::error)
+162:                 .orElse(null);
+163:         } else {
+164:             blendingdata = null;
+165:         }
+166: 
+167:         ChunkAccess chunkaccess;
+168:         if (chunktype == ChunkType.LEVELCHUNK) {
+169:             LevelChunkTicks<Block> levelchunkticks = LevelChunkTicks.load(
+170:                 p_188234_.getList("block_ticks", 10), p_258988_ -> BuiltInRegistries.BLOCK.getOptional(ResourceLocation.tryParse(p_258988_)), p_188233_
+171:             );
+172:             LevelChunkTicks<Fluid> levelchunkticks1 = LevelChunkTicks.load(
+173:                 p_188234_.getList("fluid_ticks", 10), p_258990_ -> BuiltInRegistries.FLUID.getOptional(ResourceLocation.tryParse(p_258990_)), p_188233_
+174:             );
+175:             chunkaccess = new LevelChunk(
+176:                 p_188231_.getLevel(),
+177:                 p_188233_,
+178:                 upgradedata,
+179:                 levelchunkticks,
+180:                 levelchunkticks1,
+181:                 k1,
+182:                 alevelchunksection,
+183:                 postLoadChunk(p_188231_, p_188234_),
+184:                 blendingdata
+185:             );
+186:             if (p_188234_.contains(net.neoforged.neoforge.common.world.LevelChunkAuxiliaryLightManager.LIGHT_NBT_KEY, net.minecraft.nbt.Tag.TAG_LIST))
+187:                 Objects.requireNonNull(((LevelChunk)chunkaccess).getAuxLightManager(p_188233_)).deserializeNBT(p_188231_.registryAccess(), p_188234_.getList(net.neoforged.neoforge.common.world.LevelChunkAuxiliaryLightManager.LIGHT_NBT_KEY, net.minecraft.nbt.Tag.TAG_COMPOUND));
+188:         } else {
+189:             ProtoChunkTicks<Block> protochunkticks = ProtoChunkTicks.load(
+190:                 p_188234_.getList("block_ticks", 10), p_258992_ -> BuiltInRegistries.BLOCK.getOptional(ResourceLocation.tryParse(p_258992_)), p_188233_
+191:             );
+192:             ProtoChunkTicks<Fluid> protochunkticks1 = ProtoChunkTicks.load(
+193:                 p_188234_.getList("fluid_ticks", 10), p_258991_ -> BuiltInRegistries.FLUID.getOptional(ResourceLocation.tryParse(p_258991_)), p_188233_
+194:             );
+195:             ProtoChunk protochunk = new ProtoChunk(
+196:                 p_188233_, upgradedata, alevelchunksection, protochunkticks, protochunkticks1, p_188231_, registry, blendingdata
+197:             );
+198:             chunkaccess = protochunk;
+199:             protochunk.setInhabitedTime(k1);
+200:             if (p_188234_.contains("below_zero_retrogen", 10)) {
+201:                 BelowZeroRetrogen.CODEC
+202:                     .parse(new Dynamic<>(NbtOps.INSTANCE, p_188234_.getCompound("below_zero_retrogen")))
+203:                     .resultOrPartial(LOGGER::error)
+204:                     .ifPresent(protochunk::setBelowZeroRetrogen);
+205:             }
+206: 
+207:             ChunkStatus chunkstatus = ChunkStatus.byName(p_188234_.getString("Status"));
+208:             protochunk.setPersistedStatus(chunkstatus);
+209:             if (chunkstatus.isOrAfter(ChunkStatus.INITIALIZE_LIGHT)) {
+210:                 protochunk.setLightEngine(levellightengine);
+211:             }
+212:         }
+213: 
+214:         if (p_188234_.contains(net.neoforged.neoforge.attachment.AttachmentHolder.ATTACHMENTS_NBT_KEY, net.minecraft.nbt.Tag.TAG_COMPOUND))
+215:             chunkaccess.readAttachmentsFromNBT(p_188231_.registryAccess(), p_188234_.getCompound(net.neoforged.neoforge.attachment.AttachmentHolder.ATTACHMENTS_NBT_KEY));
+216:         chunkaccess.setLightCorrect(flag);
+217:         CompoundTag compoundtag2 = p_188234_.getCompound("Heightmaps");
+218:         EnumSet<Heightmap.Types> enumset = EnumSet.noneOf(Heightmap.Types.class);
+219: 
+220:         for (Heightmap.Types heightmap$types : chunkaccess.getPersistedStatus().getChunkSaveHeightmaps()) {
+221:             String s = heightmap$types.getSerializationKey();
+222:             if (compoundtag2.contains(s, 12)) {
+223:                 chunkaccess.setHeightmap(heightmap$types, compoundtag2.getLongArray(s));
+224:             } else {
+225:                 enumset.add(heightmap$types);
+226:             }
+227:         }
+228: 
+229:         Heightmap.primeHeightmaps(chunkaccess, enumset);
+230:         CompoundTag compoundtag3 = p_188234_.getCompound("structures");
+231:         chunkaccess.setAllStarts(unpackStructureStart(StructurePieceSerializationContext.fromLevel(p_188231_), compoundtag3, p_188231_.getSeed()));
+232:         chunkaccess.setAllReferences(unpackStructureReferences(p_188231_.registryAccess(), p_188233_, compoundtag3));
+233:         if (p_188234_.getBoolean("shouldSave")) {
+234:             chunkaccess.setUnsaved(true);
+235:         }
+236: 
+237:         ListTag listtag2 = p_188234_.getList("PostProcessing", 9);
+238: 
+239:         for (int l1 = 0; l1 < listtag2.size(); l1++) {
+240:             ListTag listtag1 = listtag2.getList(l1);
+241: 
+242:             for (int i1 = 0; i1 < listtag1.size(); i1++) {
+243:                 chunkaccess.addPackedPostProcess(listtag1.getShort(i1), l1);
+244:             }
+245:         }
+246: 
+247:         if (chunktype == ChunkType.LEVELCHUNK) {
+248:             net.neoforged.neoforge.common.NeoForge.EVENT_BUS.post(new net.neoforged.neoforge.event.level.ChunkDataEvent.Load(chunkaccess, p_188234_, chunktype));
+249:             return new ImposterProtoChunk((LevelChunk)chunkaccess, false);
+250:         } else {
+251:             ProtoChunk protochunk1 = (ProtoChunk)chunkaccess;
+252:             ListTag listtag3 = p_188234_.getList("entities", 10);
+253: 
+254:             for (int i2 = 0; i2 < listtag3.size(); i2++) {
+255:                 protochunk1.addEntity(listtag3.getCompound(i2));
+256:             }
+257: 
+258:             ListTag listtag4 = p_188234_.getList("block_entities", 10);
+259: 
+260:             for (int j1 = 0; j1 < listtag4.size(); j1++) {
+261:                 CompoundTag compoundtag1 = listtag4.getCompound(j1);
+262:                 chunkaccess.setBlockEntityNbt(compoundtag1);
+263:             }
+264: 
+265:             CompoundTag compoundtag4 = p_188234_.getCompound("CarvingMasks");
+266: 
+267:             for (String s1 : compoundtag4.getAllKeys()) {
+268:                 GenerationStep.Carving generationstep$carving = GenerationStep.Carving.valueOf(s1);
+269:                 protochunk1.setCarvingMask(generationstep$carving, new CarvingMask(compoundtag4.getLongArray(s1), chunkaccess.getMinBuildHeight()));
+270:             }
+271: 
+272:             net.neoforged.neoforge.common.NeoForge.EVENT_BUS.post(new net.neoforged.neoforge.event.level.ChunkDataEvent.Load(chunkaccess, p_188234_, chunktype));
+273:             return protochunk1;
+274:         }
+275:     }
+287:     public static CompoundTag write(ServerLevel p_63455_, ChunkAccess p_63456_) {
+288:         ChunkPos chunkpos = p_63456_.getPos();
+289:         CompoundTag compoundtag = NbtUtils.addCurrentDataVersion(new CompoundTag());
+290:         compoundtag.putInt("xPos", chunkpos.x);
+291:         compoundtag.putInt("yPos", p_63456_.getMinSection());
+292:         compoundtag.putInt("zPos", chunkpos.z);
+293:         compoundtag.putLong("LastUpdate", p_63455_.getGameTime());
+294:         compoundtag.putLong("InhabitedTime", p_63456_.getInhabitedTime());
+295:         compoundtag.putString("Status", BuiltInRegistries.CHUNK_STATUS.getKey(p_63456_.getPersistedStatus()).toString());
+296:         BlendingData blendingdata = p_63456_.getBlendingData();
+297:         if (blendingdata != null) {
+298:             BlendingData.CODEC
+299:                 .encodeStart(NbtOps.INSTANCE, blendingdata)
+300:                 .resultOrPartial(LOGGER::error)
+301:                 .ifPresent(p_196909_ -> compoundtag.put("blending_data", p_196909_));
+302:         }
+303: 
+304:         BelowZeroRetrogen belowzeroretrogen = p_63456_.getBelowZeroRetrogen();
+305:         if (belowzeroretrogen != null) {
+306:             BelowZeroRetrogen.CODEC
+307:                 .encodeStart(NbtOps.INSTANCE, belowzeroretrogen)
+308:                 .resultOrPartial(LOGGER::error)
+309:                 .ifPresent(p_188279_ -> compoundtag.put("below_zero_retrogen", p_188279_));
+310:         }
+311: 
+312:         UpgradeData upgradedata = p_63456_.getUpgradeData();
+313:         if (!upgradedata.isEmpty()) {
+314:             compoundtag.put("UpgradeData", upgradedata.write());
+315:         }
+316: 
+317:         LevelChunkSection[] alevelchunksection = p_63456_.getSections();
+318:         ListTag listtag = new ListTag();
+319:         LevelLightEngine levellightengine = p_63455_.getChunkSource().getLightEngine();
+320:         Registry<Biome> registry = p_63455_.registryAccess().registryOrThrow(Registries.BIOME);
+321:         Codec<PalettedContainerRO<Holder<Biome>>> codec = makeBiomeCodec(registry);
+322:         boolean flag = p_63456_.isLightCorrect();
+323: 
+324:         for (int i = levellightengine.getMinLightSection(); i < levellightengine.getMaxLightSection(); i++) {
+325:             int j = p_63456_.getSectionIndexFromSectionY(i);
+326:             boolean flag1 = j >= 0 && j < alevelchunksection.length;
+327:             DataLayer datalayer = levellightengine.getLayerListener(LightLayer.BLOCK).getDataLayerData(SectionPos.of(chunkpos, i));
+328:             DataLayer datalayer1 = levellightengine.getLayerListener(LightLayer.SKY).getDataLayerData(SectionPos.of(chunkpos, i));
+329:             if (flag1 || datalayer != null || datalayer1 != null) {
+330:                 CompoundTag compoundtag1 = new CompoundTag();
+331:                 if (flag1) {
+332:                     LevelChunkSection levelchunksection = alevelchunksection[j];
+333:                     compoundtag1.put("block_states", BLOCK_STATE_CODEC.encodeStart(NbtOps.INSTANCE, levelchunksection.getStates()).getOrThrow());
+334:                     compoundtag1.put("biomes", codec.encodeStart(NbtOps.INSTANCE, levelchunksection.getBiomes()).getOrThrow());
+335:                 }
+336: 
+337:                 if (datalayer != null && !datalayer.isEmpty()) {
+338:                     compoundtag1.putByteArray("BlockLight", datalayer.getData());
+339:                 }
+340: 
+341:                 if (datalayer1 != null && !datalayer1.isEmpty()) {
+342:                     compoundtag1.putByteArray("SkyLight", datalayer1.getData());
+343:                 }
+344: 
+345:                 if (!compoundtag1.isEmpty()) {
+346:                     compoundtag1.putByte("Y", (byte)i);
+347:                     listtag.add(compoundtag1);
+348:                 }
+349:             }
+350:         }
+351: 
+352:         compoundtag.put("sections", listtag);
+353:         if (flag) {
+354:             compoundtag.putBoolean("isLightOn", true);
+355:         }
+356: 
+357:         ListTag listtag1 = new ListTag();
+358: 
+359:         for (BlockPos blockpos : p_63456_.getBlockEntitiesPos()) {
+360:             CompoundTag compoundtag3 = p_63456_.getBlockEntityNbtForSaving(blockpos, p_63455_.registryAccess());
+361:             if (compoundtag3 != null) {
+362:                 listtag1.add(compoundtag3);
+363:             }
+364:         }
+365: 
+366:         compoundtag.put("block_entities", listtag1);
+367:         if (p_63456_.getPersistedStatus().getChunkType() == ChunkType.PROTOCHUNK) {
+368:             ProtoChunk protochunk = (ProtoChunk)p_63456_;
+369:             ListTag listtag2 = new ListTag();
+370:             listtag2.addAll(protochunk.getEntities());
+371:             compoundtag.put("entities", listtag2);
+372:             CompoundTag compoundtag4 = new CompoundTag();
+373: 
+374:             for (GenerationStep.Carving generationstep$carving : GenerationStep.Carving.values()) {
+375:                 CarvingMask carvingmask = protochunk.getCarvingMask(generationstep$carving);
+376:                 if (carvingmask != null) {
+377:                     compoundtag4.putLongArray(generationstep$carving.toString(), carvingmask.toArray());
+378:                 }
+379:             }
+380: 
+381:             compoundtag.put("CarvingMasks", compoundtag4);
+382:         }
+383:         else if (p_63456_ instanceof LevelChunk levelChunk){
+384: 
+385:              Tag lightTag = levelChunk.getAuxLightManager(chunkpos).serializeNBT(p_63455_.registryAccess());
+386:              if (lightTag != null) compoundtag.put(net.neoforged.neoforge.common.world.LevelChunkAuxiliaryLightManager.LIGHT_NBT_KEY, lightTag);
+387:         }
+388: 
+389:         saveTicks(p_63455_, compoundtag, p_63456_.getTicksForSerialization());
+390:         compoundtag.put("PostProcessing", packOffsets(p_63456_.getPostProcessing()));
+391:         CompoundTag compoundtag2 = new CompoundTag();
+392: 
+393:         for (Entry<Heightmap.Types, Heightmap> entry : p_63456_.getHeightmaps()) {
+394:             if (p_63456_.getPersistedStatus().getChunkSaveHeightmaps().contains(entry.getKey())) {
+395:                 compoundtag2.put(entry.getKey().getSerializationKey(), new LongArrayTag(entry.getValue().getRawData()));
+396:             }
+397:         }
+398: 
+399:         try {
+400:             final CompoundTag capTag = p_63456_.writeAttachmentsToNBT(p_63455_.registryAccess());
+401:             if (capTag != null) compoundtag.put(net.neoforged.neoforge.attachment.AttachmentHolder.ATTACHMENTS_NBT_KEY, capTag);
+402:         } catch (Exception exception) {
+403:             LOGGER.error("Failed to write chunk attachments. An attachment has likely thrown an exception trying to write state. It will not persist. Report this to the mod author", exception);
+404:         }
+405:         compoundtag.put("Heightmaps", compoundtag2);
+406:         compoundtag.put(
+407:             "structures",
+408:             packStructureData(StructurePieceSerializationContext.fromLevel(p_63455_), chunkpos, p_63456_.getAllStarts(), p_63456_.getAllReferences())
+409:         );
+410:         return compoundtag;
+411:     }
+
+FILE net/minecraft/server/level/ChunkMap.java
+413:     protected void saveAllChunks(boolean p_140319_) {
+414:         if (p_140319_) {
+415:             List<ChunkHolder> list = this.visibleChunkMap
+416:                 .values()
+417:                 .stream()
+418:                 .filter(ChunkHolder::wasAccessibleSinceLastSave)
+419:                 .peek(ChunkHolder::refreshAccessibility)
+420:                 .toList();
+421:             MutableBoolean mutableboolean = new MutableBoolean();
+422: 
+423:             do {
+424:                 mutableboolean.setFalse();
+425:                 list.stream()
+426:                     .map(p_347059_ -> {
+427:                         this.mainThreadExecutor.managedBlock(p_347059_::isReadyForSaving);
+428:                         return p_347059_.getLatestChunk();
+429:                     })
+430:                     .filter(p_203088_ -> p_203088_ instanceof ImposterProtoChunk || p_203088_ instanceof LevelChunk)
+431:                     .filter(this::save)
+432:                     .forEach(p_203051_ -> mutableboolean.setTrue());
+433:             } while (mutableboolean.isTrue());
+434: 
+435:             this.processUnloads(() -> true);
+436:             this.flushWorker();
+437:         } else {
+438:             this.visibleChunkMap.values().forEach(this::saveChunkIfNeeded);
+439:         }
+440:     }
+505:     private void scheduleUnload(long p_140182_, ChunkHolder p_140183_) {
+506:         p_140183_.getSaveSyncFuture().thenRunAsync(() -> {
+507:             if (!p_140183_.isReadyForSaving()) {
+508:                 this.scheduleUnload(p_140182_, p_140183_);
+509:             } else {
+510:                 ChunkAccess chunkaccess = p_140183_.getLatestChunk();
+511:                 if (this.pendingUnloads.remove(p_140182_, p_140183_) && chunkaccess != null) {
+512:                     if (chunkaccess instanceof LevelChunk levelchunk) {
+513:                         levelchunk.setLoaded(false);
+514:                         net.neoforged.neoforge.common.NeoForge.EVENT_BUS.post(new net.neoforged.neoforge.event.level.ChunkEvent.Unload(chunkaccess));
+515:                     }
+516: 
+517:                     this.save(chunkaccess);
+518:                     if (chunkaccess instanceof LevelChunk levelchunk1) {
+519:                         this.level.unload(levelchunk1);
+520:                     }
+521: 
+522:                     net.neoforged.neoforge.common.CommonHooks.onChunkUnload(this.poiManager, chunkaccess); // Neo: Must be called for all chunk unloading. Not just LevelChunks.
+523:                     this.chunkTypeCache.remove(chunkaccess.getPos().toLong()); // Neo: Prevent chunk type cache from permanently retaining data for unloaded chunks
+524: 
+525:                     this.lightEngine.updateChunkStatus(chunkaccess.getPos());
+526:                     this.lightEngine.tryScheduleUpdate();
+527:                     this.progressListener.onStatusChange(chunkaccess.getPos(), null);
+528:                     this.chunkSaveCooldowns.remove(chunkaccess.getPos().toLong());
+529:                 }
+530:             }
+531:         }, this.unloadQueue::add).whenComplete((p_347052_, p_347053_) -> {
+532:             if (p_347053_ != null) {
+533:                 LOGGER.error("Failed to save chunk {}", p_140183_.getPos(), p_347053_);
+534:             }
+535:         });
+536:     }
+742:     private boolean save(ChunkAccess p_140259_) {
+743:         this.poiManager.flush(p_140259_.getPos());
+744:         if (!p_140259_.isUnsaved()) {
+745:             return false;
+746:         } else {
+747:             p_140259_.setUnsaved(false);
+748:             ChunkPos chunkpos = p_140259_.getPos();
+749: 
+750:             try {
+751:                 ChunkStatus chunkstatus = p_140259_.getPersistedStatus();
+752:                 if (chunkstatus.getChunkType() != ChunkType.LEVELCHUNK) {
+753:                     if (this.isExistingChunkFull(chunkpos)) {
+754:                         return false;
+755:                     }
+756: 
+757:                     if (chunkstatus == ChunkStatus.EMPTY && p_140259_.getAllStarts().values().stream().noneMatch(StructureStart::isValid)) {
+758:                         return false;
+759:                     }
+760:                 }
+761: 
+762:                 this.level.getProfiler().incrementCounter("chunkSave");
+763:                 CompoundTag compoundtag = ChunkSerializer.write(this.level, p_140259_);
+764:                 net.neoforged.neoforge.common.NeoForge.EVENT_BUS.post(new net.neoforged.neoforge.event.level.ChunkDataEvent.Save(p_140259_, p_140259_.getLevel() != null ? p_140259_.getLevel() : this.level, compoundtag));
+765:                 this.write(chunkpos, compoundtag).exceptionally(p_351776_ -> {
+766:                     this.level.getServer().reportChunkSaveFailure(p_351776_, this.storageInfo(), chunkpos);
+767:                     return null;
+768:                 });
+769:                 this.markPosition(chunkpos, chunkstatus.getChunkType());
+770:                 return true;
+771:             } catch (Exception exception) {
+772:                 this.level.getServer().reportChunkSaveFailure(exception, this.storageInfo(), chunkpos);
+773:                 return false;
+774:             }
+775:         }
+776:     }
+
+FILE net/minecraft/world/level/Explosion.java
+319:     public void finalizeExplosion(boolean p_46076_) {
+320:         if (this.level.isClientSide) {
+321:             this.level
+322:                 .playLocalSound(
+323:                     this.x,
+324:                     this.y,
+325:                     this.z,
+326:                     this.explosionSound.value(),
+327:                     SoundSource.BLOCKS,
+328:                     4.0F,
+329:                     (1.0F + (this.level.random.nextFloat() - this.level.random.nextFloat()) * 0.2F) * 0.7F,
+330:                     false
+331:                 );
+332:         }
+333: 
+334:         boolean flag = this.interactsWithBlocks();
+335:         if (p_46076_) {
+336:             ParticleOptions particleoptions;
+337:             if (!(this.radius < 2.0F) && flag) {
+338:                 particleoptions = this.largeExplosionParticles;
+339:             } else {
+340:                 particleoptions = this.smallExplosionParticles;
+341:             }
+342: 
+343:             this.level.addParticle(particleoptions, this.x, this.y, this.z, 1.0, 0.0, 0.0);
+344:         }
+345: 
+346:         if (flag) {
+347:             this.level.getProfiler().push("explosion_blocks");
+348:             List<Pair<ItemStack, BlockPos>> list = new ArrayList<>();
+349:             Util.shuffle(this.toBlow, this.level.random);
+350: 
+351:             for (BlockPos blockpos : this.toBlow) {
+352:                 this.level
+353:                     .getBlockState(blockpos)
+354:                     .onExplosionHit(this.level, blockpos, this, (p_311741_, p_311742_) -> addOrAppendStack(list, p_311741_, p_311742_));
+355:             }
+356: 
+357:             for (Pair<ItemStack, BlockPos> pair : list) {
+358:                 Block.popResource(this.level, pair.getSecond(), pair.getFirst());
+359:             }
+360: 
+361:             this.level.getProfiler().pop();
+362:         }
+363: 
+364:         if (this.fire) {
+365:             for (BlockPos blockpos1 : this.toBlow) {
+366:                 if (this.random.nextInt(3) == 0
+367:                     && this.level.getBlockState(blockpos1).isAir()
+368:                     && this.level.getBlockState(blockpos1.below()).isSolidRender(this.level, blockpos1.below())) {
+369:                     this.level.setBlockAndUpdate(blockpos1, BaseFireBlock.getState(this.level, blockpos1));
+370:                 }
+371:             }
+372:         }
+373:     }

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "chemicalelements:element_radon"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:radon": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Uses existing atomic bookkeeping species: 1 species-mol x 1 = 1 atom-mol per item. Sample quantity is a game calibration, not measured item mass. Species phase does not establish current sample phase, stability, allotrope or transition behavior; no thermal properties are supplied.",
+  "source": "ChemicalElements element-item calibration r23: one atom-mol per item; existing bundled species stoichiometry retained."
+}

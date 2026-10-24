@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "chemicalelements:block/mixture_carrier_solid"
+    }
+  }
+}

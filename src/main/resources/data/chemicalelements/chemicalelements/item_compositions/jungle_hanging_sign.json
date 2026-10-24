@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:jungle_hanging_sign"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:cellulose": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Lignocellulosic material approximated as cellulose repeat units; fungal Nether wood uses explicit gameplay analogue; per-item volume calibration.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

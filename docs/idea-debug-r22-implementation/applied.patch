@@ -1,0 +1,62 @@
+--- a/build.gradle
++++ b/build.gradle
+@@ -39,13 +39,12 @@
+     runs {
+         client {
+             client()
+-            // Dedicated optional-mod test environment; never uses a player's normal saves/mods.
+-            if (providers.gradleProperty('compatR17').getOrElse('false').toBoolean()) {
+-                if (['withCurios', 'withJade', 'withJei'].any { providers.gradleProperty(it).getOrElse('false').toBoolean() }) {
+-                    throw new GradleException('compatR17 uses its own mods directory; do not combine runtimeOnly optional-mod flags')
+-                }
+-                gameDirectory = project.file('run/compat-r17')
++            // Directory mods are the single optional-mod source for the debug client.
++            if (['withCurios', 'withJade', 'withJei'].any { providers.gradleProperty(it).getOrElse('false').toBoolean() }) {
++                throw new GradleException('Debug client uses directory mods; remove withCurios/withJade/withJei runtimeOnly flags')
+             }
++            gameDirectory = project.file(providers.gradleProperty('ideaWithoutOptionalMods')
++                .getOrElse('false').toBoolean() ? 'run/idea-debug-bare-r22' : 'run/compat-r17')
+ 
+             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
+             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+@@ -53,6 +52,7 @@
+ 
+         server {
+             server()
++            gameDirectory = project.file('run/idea-server-r22')
+             programArgument '--nogui'
+             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+         }
+@@ -62,11 +62,13 @@
+         // The gametest system is also enabled by default for other run configs under the /test command.
+         gameTestServer {
+             type = "gameTestServer"
++            gameDirectory = project.file('run/idea-gametest-r22')
+             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+         }
+ 
+         data {
+             data()
++            gameDirectory = project.file('run/idea-data-r22')
+ 
+             // example of overriding the workingDirectory set in configureEach above, uncomment if you want to use it
+             // gameDirectory = project.file('run-data')
+@@ -191,6 +193,18 @@
+ // To avoid having to run "generateModMetadata" manually, make it run on every project reload
+ neoForge.ideSyncTask generateModMetadata
+ 
++// Explicit before-launch entry: no check/build/GameTest/jar prerequisite.
++def prepareIdeaClient = tasks.register('prepareIdeaClient') {
++    group = 'mod development'
++    description = 'Compile current sources/resources and prepare client launch files; no JAR or tests.'
++    dependsOn tasks.named('classes'), tasks.named('prepareClientRun')
++}
++// ModDev regenerates its Client configuration on IDEA sync. Keep its prerequisite too.
++// Do not attach this to prepareClientRun itself: that would create a dependency cycle.
++neoForge.runs.named('client') {
++    taskBefore prepareIdeaClient
++}
++
+ // Example configuration to allow publishing using the maven-publish plugin
+ publishing {
+     publications {

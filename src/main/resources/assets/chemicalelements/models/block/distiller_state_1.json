@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/distiller",
+  "textures": {
+    "front": "chemicalelements:block/distiller_state_1"
+  }
+}

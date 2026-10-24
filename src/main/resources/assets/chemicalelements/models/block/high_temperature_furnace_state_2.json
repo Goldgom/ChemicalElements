@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/high_temperature_furnace",
+  "textures": {
+    "front": "chemicalelements:block/high_temperature_furnace_state_2"
+  }
+}

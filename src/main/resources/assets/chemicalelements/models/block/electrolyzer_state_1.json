@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/electrolyzer",
+  "textures": {
+    "front": "chemicalelements:block/electrolyzer_state_1"
+  }
+}

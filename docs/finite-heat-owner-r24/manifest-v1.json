@@ -1,0 +1,49 @@
+{
+    "version":  "finite-heat-owner-r24-v1",
+    "files":  [
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/world/ThermalRuntime.java",
+                      "sha256":  "56897EE37E2986223905AEC09F1B3CC6B73483C733166F6AD9AD8309165F960F",
+                      "bytes":  1379
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/world/heat/FiniteHeatEvidence.java",
+                      "sha256":  "7E4032453FEBE805D3DEBC3319325985CC3CA20F047B58A69BC0589B932268F4",
+                      "bytes":  3877
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/world/heat/FiniteHeatValidator.java",
+                      "sha256":  "1F49A1F6A88C2D5617153353B533307D2897DB5B2CFDC62355D3B9D085B3490A",
+                      "bytes":  3999
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/world/heat/FiniteHeatBlockEntityRoot.java",
+                      "sha256":  "F37868D78BDFBCD059C9F02434CFD24B47E8D3C7E64AC2E0F179534425352A61",
+                      "bytes":  1353
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/world/heat/LoadedFiniteHeatResolver.java",
+                      "sha256":  "4DA903F4D7E45477ED22F85C8D7734A7624BAB22779182C52722A8DDFDA474F2",
+                      "bytes":  10441
+                  },
+                  {
+                      "path":  "src/test/java/org/goldgom/chemicalelements/world/heat/FiniteHeatEvidenceTest.java",
+                      "sha256":  "219677F6174CF2FA7BB71B7271054BAA84D42BDF4944AE72817279A2E3028681",
+                      "bytes":  2234
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/gametest/heat/FiniteHeatResolutionGameTests.java",
+                      "sha256":  "A8A1EF782655E0815BB1FB96E193E34AD2E3793983B76961843941F73387F5A1",
+                      "bytes":  2824
+                  },
+                  {
+                      "path":  "docs/finite-heat-owner-r24/implementation-v1.md",
+                      "sha256":  "243E0EBACD1AFF3230372C48CD3AD12AD729F637AC6D59706DC1A85ACC452934",
+                      "bytes":  5244
+                  }
+              ],
+    "testsRun":  false,
+    "productionReady":  false,
+    "compiled":  false,
+    "task":  "chem-finite-heat-owner-r24"
+}

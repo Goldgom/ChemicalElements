@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:debug_stick"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:silica": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Explicit game convention: technical/spawn token is a silica carrier; spawned entity matter requires a separate authorized creation ledger, not chemical synthesis.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

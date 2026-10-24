@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "chemicalelements:analyzer",
+    "chemicalelements:sampler",
+    "chemicalelements:grinder",
+    "chemicalelements:dissolver",
+    "chemicalelements:filter",
+    "chemicalelements:centrifuge",
+    "chemicalelements:evaporator",
+    "chemicalelements:crystallizer",
+    "chemicalelements:distiller",
+    "chemicalelements:reactor",
+    "chemicalelements:electrolyzer",
+    "chemicalelements:heat_exchanger",
+    "chemicalelements:condenser",
+    "chemicalelements:gas_collector",
+    "chemicalelements:storage_tank",
+    "chemicalelements:pump",
+    "chemicalelements:pipe",
+    "chemicalelements:dryer",
+    "chemicalelements:vacuum_chamber",
+    "chemicalelements:high_temperature_furnace",
+    "chemicalelements:fractionation_tower",
+    "chemicalelements:research_controller",
+    "chemicalelements:isotope_separator",
+    "chemicalelements:shielded_reactor",
+    "chemicalelements:ambient_workbench"
+  ]
+}

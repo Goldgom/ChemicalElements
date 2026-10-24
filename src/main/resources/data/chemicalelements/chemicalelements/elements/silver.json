@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "atomic_number": 47,
+  "symbol": "Ag",
+  "molar_mass_g_mol": "107.8682",
+  "basis": "empirical",
+  "source": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+  "notes": "Conventional abridged atomic weight; natural isotopic composition varies."
+}

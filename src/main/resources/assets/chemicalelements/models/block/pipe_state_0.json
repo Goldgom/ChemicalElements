@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/pipe",
+  "textures": {
+    "front": "chemicalelements:block/pipe_state_0"
+  }
+}

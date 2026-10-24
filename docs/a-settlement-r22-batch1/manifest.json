@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/core/VanillaCraftingAdmission.java",
+      "sha256": "aefa8798ea8d4b7f375d283f728d6b2599df57e122def55e9b252f47aa8b1e97"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/gametest/core/VanillaCraftingAdmissionGameTests.java",
+      "sha256": "45f4c23ea4c2b81d4b6dc6afe0673ffe94e4a7c9c8bd711367b999009fc4652f"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/gametest/core/LargeInventoryLifecycleGameTests.java",
+      "sha256": "989d47b4922a34eb52430f1a9ffb4a7d1e13a9401c71cd98ce7759210e8d45ff"
+    }
+  ],
+  "indexSha256": "82db786aa6a4f64d0b38f02be6e7eaf7a1d35e9e905e7efe0c29713593cf1b69",
+  "validation": "source-only; no compile or runtime",
+  "evidence": [
+    {
+      "path": "docs\\a-settlement-r22-batch1\\REPORT.md",
+      "sha256": "f4935e97b5d2285ade1a5ea7c26e9b101b4508d14c9583cbd54656765d117b88"
+    },
+    {
+      "path": "docs\\a-settlement-r22-batch1\\coverage.json",
+      "sha256": "075f866d9514a60627513aaf2cb98b9f3f7b995c145ea1b8d9bfaf577d9fb03b"
+    }
+  ]
+}

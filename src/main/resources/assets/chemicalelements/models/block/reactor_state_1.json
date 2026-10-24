@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/reactor",
+  "textures": {
+    "front": "chemicalelements:block/reactor_state_1"
+  }
+}

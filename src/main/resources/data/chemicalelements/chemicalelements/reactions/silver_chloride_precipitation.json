@@ -1,0 +1,28 @@
+{
+    "schema_version":  1,
+    "type":  "precipitation",
+    "reactants":  {
+                      "chemicalelements:silver_ion":  1,
+                      "chemicalelements:chloride_ion":  1
+                  },
+    "products":  {
+                     "chemicalelements:silver_chloride":  1
+                 },
+    "conditions":  {
+                       "min_k":  "293.15",
+                       "max_k":  "303.15",
+                       "max_pa":  "103000",
+                       "min_pa":  "100000",
+                       "catalysts":  [
+
+                                     ],
+                       "capabilities":  [
+                                            "supersaturated_agcl"
+                                        ]
+                   },
+    "duration_ticks":  100,
+    "energy_j_per_mol":  "0",
+    "game_priority":  0,
+    "basis":  "approximation_and_game_convention",
+    "source":  "Ag+ + Cl- -\u003e AgCl precipitation; OpenStax Chemistry 2e 15.1 Precipitation and Dissolution. Capability must come from measured ion product exceeding Ksp, not arbitrary machine flag. Duration 100 ticks and energy budget are game calibration, not experimental kinetics/enthalpy. No Gibbs value claimed."
+}

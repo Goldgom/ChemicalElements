@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Candidate PhaseModel v1 - NOT installed; semantic validation required",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "status", "subject", "pure_only", "basis", "sources", "domain", "transitions", "heat_capacity", "density", "energy_reference", "kinetics"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"$ref": "#/$defs/id"},
+    "status": {"enum": ["DRAFT", "MODELED", "UNKNOWN", "UNMODELED"]},
+    "subject": {"type": "object", "additionalProperties": false, "required": ["species", "allotrope"], "properties": {"species": {"$ref": "#/$defs/id"}, "allotrope": {"type": ["string", "null"]}}},
+    "pure_only": {"const": true},
+    "basis": {"enum": ["MEASURED", "EVALUATED", "PREDICTED", "GAME_CONVENTION", "UNKNOWN", "UNVERIFIED"]},
+    "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}},
+    "domain": {"anyOf": [{"type": "null"}, {"type": "object", "additionalProperties": false, "required": ["min_k", "max_k", "min_pa", "max_pa", "ensemble"], "properties": {"min_k": {"$ref": "#/$defs/decimal"}, "max_k": {"$ref": "#/$defs/decimal"}, "min_pa": {"$ref": "#/$defs/decimal"}, "max_pa": {"$ref": "#/$defs/decimal"}, "ensemble": {"const": "ISOBARIC_APPROXIMATION"}}}]},
+    "transitions": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["from", "to", "kind", "temperature_k", "pressure_pa", "latent_j_mol", "source_id"], "properties": {"from": {"$ref": "#/$defs/id"}, "to": {"$ref": "#/$defs/id"}, "kind": {"enum": ["FUSION", "VAPORIZATION", "SUBLIMATION", "SOLID_SOLID", "FREEZING", "CONDENSATION", "DEPOSITION"]}, "temperature_k": {"$ref": "#/$defs/decimal"}, "pressure_pa": {"$ref": "#/$defs/decimal"}, "latent_j_mol": {"$ref": "#/$defs/decimal"}, "source_id": {"type": "string", "minLength": 1}}}},
+    "heat_capacity": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["species", "min_k", "max_k", "cp_j_mol_k", "source_id"], "properties": {"species": {"$ref": "#/$defs/id"}, "min_k": {"$ref": "#/$defs/decimal"}, "max_k": {"$ref": "#/$defs/decimal"}, "cp_j_mol_k": {"$ref": "#/$defs/decimal"}, "source_id": {"type": "string"}}}},
+    "density": {"type": "array", "items": {"type": "object", "additionalProperties": false, "required": ["species", "min_k", "max_k", "min_pa", "max_pa", "kg_m3", "source_id"], "properties": {"species": {"$ref": "#/$defs/id"}, "min_k": {"$ref": "#/$defs/decimal"}, "max_k": {"$ref": "#/$defs/decimal"}, "min_pa": {"$ref": "#/$defs/decimal"}, "max_pa": {"$ref": "#/$defs/decimal"}, "kg_m3": {"$ref": "#/$defs/decimal"}, "source_id": {"type": "string"}}}},
+    "energy_reference": {"type": ["string", "null"]},
+    "kinetics": {"const": "EQUILIBRIUM_NO_SUPERCOOLING"}
+  },
+  "allOf": [{"if": {"properties": {"status": {"const": "MODELED"}}}, "then": {"properties": {"domain": {"type": "object"}, "sources": {"minItems": 1}, "transitions": {"minItems": 1}, "heat_capacity": {"minItems": 1}, "energy_reference": {"type": "string", "minLength": 1}, "basis": {"enum": ["MEASURED", "EVALUATED", "PREDICTED", "GAME_CONVENTION"]}}}}],
+  "$defs": {
+    "decimal": {"type": "string", "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$", "maxLength": 100},
+    "id": {"type": "string", "pattern": "^[a-z0-9_.-]+:[a-z0-9_./-]+$"},
+    "source": {"type": "object", "additionalProperties": false, "required": ["id", "url", "accessed", "citation", "method", "value_basis", "pressure_evidence", "license_status", "locator", "uncertainty"], "properties": {"id": {"type": "string", "minLength": 1}, "url": {"type": "string", "format": "uri"}, "accessed": {"type": "string", "format": "date"}, "citation": {"type": "string"}, "method": {"type": ["string", "null"]}, "value_basis": {"enum": ["MEASURED", "EVALUATED", "PREDICTED", "GAME_CONVENTION", "UNKNOWN", "UNVERIFIED"]}, "pressure_evidence": {"type": ["string", "null"]}, "license_status": {"enum": ["CLEARED", "NOT_CLEARED", "UNKNOWN"]}, "locator": {"type": "string"}, "uncertainty": {"type": ["string", "null"]}}}
+  }
+}

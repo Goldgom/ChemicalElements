@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/dissolver",
+  "textures": {
+    "front": "chemicalelements:block/dissolver_state_0"
+  }
+}

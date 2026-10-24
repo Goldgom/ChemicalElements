@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/heat_exchanger",
+  "textures": {
+    "front": "chemicalelements:block/heat_exchanger_state_0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "priority": 1,
+  "precision": 3,
+  "max_inventory_slot": 8,
+  "instances": false,
+  "liquid": false,
+  "gas": false,
+  "temperature": false,
+  "nuclides": false,
+  "elements": [
+    "chemicalelements:hydrogen",
+    "chemicalelements:carbon",
+    "chemicalelements:oxygen"
+  ]
+}

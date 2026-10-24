@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/evaporator",
+  "textures": {
+    "front": "chemicalelements:block/evaporator_state_3"
+  }
+}

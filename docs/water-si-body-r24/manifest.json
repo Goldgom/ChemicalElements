@@ -1,0 +1,87 @@
+﻿[
+    {
+        "path":  "docs\\water-si-body-r24\\actual-nbt-sample.json",
+        "sha256":  "BC4A678BE718FD7A7B03196DA76E5DB20459CCE7010A08C4DF8A5DB67CC8ABEF",
+        "bytes":  3036
+    },
+    {
+        "path":  "docs\\water-si-body-r24\\inspect_test_nbt.py",
+        "sha256":  "5C55DCCB46751C2D765972F84463F1071722A4E2DBF3C1A277CE87F8A28D63C8",
+        "bytes":  3363
+    },
+    {
+        "path":  "docs\\water-si-body-r24\\RESULT.md",
+        "sha256":  "7563053515AD3CB86A625A691A060DA88184884A72F4353A75D1FB907C0B6926",
+        "bytes":  9240
+    },
+    {
+        "path":  "docs\\water-si-body-r24\\verification.log",
+        "sha256":  "937FA20922680A488517971838D7B973553A5610FFB832ED9A5BC82BA664769B",
+        "bytes":  1264
+    },
+    {
+        "path":  "docs\\water-si-body-r24\\verify.ps1",
+        "sha256":  "CE004E9BF9A24AE8A0C3B0456E68D7F1904FD0CFFE0409C65030A42B5D9DAE02",
+        "bytes":  1967
+    },
+    {
+        "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\fluid\\waterbody\\ConnectedWaterBodies.java",
+        "sha256":  "09255ADB21429A1ADAE2C65B26D33BF0076FDF565AB70254D37944A2CF28760F",
+        "bytes":  2285
+    },
+    {
+        "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\fluid\\waterbody\\WaterBody.java",
+        "sha256":  "F84A21DA5072494F1CF6213F6D7F64956C88F5D6911445A7318CB69B77DC293E",
+        "bytes":  4256
+    },
+    {
+        "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\fluid\\waterbody\\WaterGeometry.java",
+        "sha256":  "F569E786E513DA8D00E28BF9D51AA9D796C84CC22324CC07433986B3A8FD838C",
+        "bytes":  5068
+    },
+    {
+        "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\fluid\\waterbody\\WaterVolume.java",
+        "sha256":  "1AB8CF52A2499C12585CAAC726BAD994DB331BBCD49982C464213A72BFE58589",
+        "bytes":  2289
+    },
+    {
+        "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\fluid\\waterbody\\WaterVolumeCodec.java",
+        "sha256":  "7D9A0CA128D7CAF701F525E6931B894EC7A05178AB0C8B842334B581F7875BAB",
+        "bytes":  2549
+    },
+    {
+        "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\fluid\\waterbody\\WaterWetting.java",
+        "sha256":  "713FC8652744C7B62B7834290B3C85300DE2A657E4F956A6F2D225F257318AE0",
+        "bytes":  3888
+    },
+    {
+        "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\gametest\\water\\WaterGeometryGameTests.java",
+        "sha256":  "B8AD206DC74860567809BE9AB9BFA05C9A44A1229CE5291E3799EDBCAEE2D22C",
+        "bytes":  4418
+    },
+    {
+        "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\world\\water\\LoadedWaterGeometry.java",
+        "sha256":  "3B5E5DBD55C34E80B5ABCB8D0C915A308DE052D957EBF37F9542449DAA8A6366",
+        "bytes":  4281
+    },
+    {
+        "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\world\\water\\LoadedWettingContacts.java",
+        "sha256":  "59842638B568578476D846BFC05C7F89C7E6748ABCF2B307294BF36B3BDA3820",
+        "bytes":  4221
+    },
+    {
+        "path":  "src\\main\\java\\org\\goldgom\\chemicalelements\\world\\water\\NaturalWaterAdmission.java",
+        "sha256":  "4C280F9A76166D91F45927714A62D6DA165682B08F1B3E0153B766C0188A853A",
+        "bytes":  3224
+    },
+    {
+        "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\water_models\\si_v1.json",
+        "sha256":  "6C94CDB09836A226D68353455132E576F524EEE549539EDFFE4D015F42367F89",
+        "bytes":  1228
+    },
+    {
+        "path":  "src\\test\\java\\org\\goldgom\\chemicalelements\\fluid\\waterbody\\WaterBodyModelTest.java",
+        "sha256":  "3656DA6CED274D97BD88BD6E77BBD11A0842BC28FBB87FFC24FAB29A9C2389FA",
+        "bytes":  7997
+    }
+]

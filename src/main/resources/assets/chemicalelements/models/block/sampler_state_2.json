@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/sampler",
+  "textures": {
+    "front": "chemicalelements:block/sampler_state_2"
+  }
+}

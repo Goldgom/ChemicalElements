@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "atomic_number": 35,
+  "symbol": "Br",
+  "molar_mass_g_mol": "79.904",
+  "basis": "empirical",
+  "source": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+  "notes": "Conventional abridged atomic weight; natural isotopic composition varies."
+}

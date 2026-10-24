@@ -1,0 +1,180 @@
+{
+  "version": "world-material-boundary-r24-preparation-v1",
+  "status": "NOT_IMPLEMENTED_NOT_COMPILED_NOT_RUN",
+  "readTimeSemantics": "hashes at manifest creation; content owner not frozen",
+  "inputs": [
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialCommitCoordinator.java",
+      "sha256": "bbe3703f93efac58f3fb6c495feeb9b72650f92cd9fd64dbef9b8fb73576b555"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialHeatValidation.java",
+      "sha256": "20e71178e363c0111d271a02e3f785e55670399ded0e331e7793fc00be5815f6"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialIsolationGameTests.java",
+      "sha256": "532d29fb9d266356b1fabcb59d156c3e027cdb2296674915a1fa583e985ae060"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialJournal.java",
+      "sha256": "c6f1ce0694841679f0ac2098db058a039751ba9a97bcb86303d21dab654ce177"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialObservationBarrier.java",
+      "sha256": "2fb9c63d25bad24425beac10b9a4ce65663977ceddb78f25fc5d9522d6a66a2a"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialOwnerAccess.java",
+      "sha256": "b6cc468cf687f45e0ec9f15ddfc02129b4f6b5497dda0bd10951ea27ba7f4ae0"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialOwnerSnapshot.java",
+      "sha256": "176eb28c950d69b7140c6d644ae6fb8de79643a2a1ab4238680356c3cfe03568"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialPendingMarker.java",
+      "sha256": "e00127d6fa76b234ccb4b3224852012e00e5ee116ac4eadc35f05a2f9697e9a1"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialPickupPreparation.java",
+      "sha256": "0b9a6f733c9dedc2cdc4e12522736f8c2c592d5e57125139edc4defd97e76ca1"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialPlacementPreparation.java",
+      "sha256": "0a40fef7506ecaac827060288ac27ad65541b1ed118649d29630ce15439499fe"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialPlayerPlanGameTests.java",
+      "sha256": "39039226bafeb859bd84a5ee3df3ff530d422f2e2736f40a28c8530118cc19a6"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialPlayerSlotPlan.java",
+      "sha256": "84e3979f2283473a2be1bce878f81095922bd385849b0efd19e6501a73836c29"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialPlayerSnapshot.java",
+      "sha256": "59993516f30320ff08899ebf9e69870c002dcfaba5afb9ea86b00d2d79d501b6"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialRecoveryBatch.java",
+      "sha256": "41be72b0fa5ada13e7acb102ab0b33f78a01eb0710655cdc06a487f32480cdc3"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialTransaction.java",
+      "sha256": "87f744367045017bc9d77b26ed286adfc9ef350c8ec3209fd284a63026f45a05"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/MaterialTransferValidation.java",
+      "sha256": "7bc3fce491ff912e9bce496f42bee4158c57e896f77b81ae948a98dbd9119160"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/ReservedListAccess.java",
+      "sha256": "5aa7614eb98ecabedc7a41e0571857e6df25061a41cc6a390b99eed4434de34d"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/instance/materialtx/ReservedPlayerPublication.java",
+      "sha256": "00371bec4e8739edef94774a37b24a736e24e52edf93314841062990e37153d6"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/content/material/MaterialAdmission.java",
+      "sha256": "44457f4faaf0d96215a47d3439999960d439aec0477a41b72555c4078301200b"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/content/material/MaterialBlock.java",
+      "sha256": "956f1ef620c9fda1e12a102b200ef8a40cfd97c978d50d35981d75289c11e21c"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/content/material/MaterialBlockEntity.java",
+      "sha256": "f7dcdf0d356020142ca34ff76061405647b0e364a78ad68f957578688c41ef8d"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/content/material/MaterialBlockItem.java",
+      "sha256": "4f1f448c1e48c24f62035a198ebd6c1989c35a62e41469f58b3ddbe3f2769dfa"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/content/material/MaterialProjection.java",
+      "sha256": "e8d0aa44521583057e2d66fe23b00900b59a5e7735811dfaab58b80791dddd10"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/content/material/tx/MaterialRootState.java",
+      "sha256": "7324cdf0b0b21c746a5ae6e2964b02f3f8afdf199dd977b9c2a107e0cb87d5b8"
+    },
+    {
+      "path": "src/main/resources/chemicalelements.mixins.json",
+      "sha256": "ea48fde69405da5ac98494f4fa4642211460d33a86ce7588f88363affc297f97"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/persistence/SinkLedger.java",
+      "sha256": "d5199fb6dcd18bb67a72c79b66307c2265f63fa502ee33d1b9ec37f876130e4d"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "docs/world-material-boundary-r24/candidate.patch",
+      "sha256": "4b6b995260400c940ab21a1deee6a5f4dbca88edb8544284e791800833e2fe8b"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/inspect_sources.py",
+      "sha256": "d44a02ce8de3dda19f8f007e2b67d4bf824ec76f422e48f7e012e3cea0e08dc7"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/prepare_patch.py",
+      "sha256": "bba605a79422d4bac4e898b56310c26a7860a8ebd61ed69519e27d4da04ef104"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/REPORT.md",
+      "sha256": "9214497741ccfd7342a9127f7ef63f811ebc87cd315cf9ae6dfe0501bf2ac253"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/source-entries.json",
+      "sha256": "b6f43fae954c04881ef0c756619ebe98871744e2305dc4d03a4c9fccc1353e78"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/supplemental-paths.txt",
+      "sha256": "b3919b7bf61586fe4cce8e42719a84523ba72f7e90c5dbc49b8f30956061c9c1"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/vanilla-paths.txt",
+      "sha256": "c9b13dcf5b7df5c448a00f8059d2539611e10d2ecbbaba47ccdae6f67065cccf"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/candidate/src/main/java/org/goldgom/chemicalelements/world/material/ChunkWriteFence.java",
+      "sha256": "116309058762ccc184b82345a8902200e29d8a6b24a5998ec2bdaf36b7c7eeba"
+    },
+    {
+      "path": "docs/world-material-boundary-r24/candidate/src/main/java/org/goldgom/chemicalelements/world/material/WorldPrimitivePermit.java",
+      "sha256": "29ffc4481c4430bce197794fa3f5b247c52f7e315a98e1640084a61e1d318277"
+    }
+  ],
+  "gitApplyCheck": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "indexBefore": "82db786aa6a4f64d0b38f02be6e7eaf7a1d35e9e905e7efe0c29713593cf1b69",
+  "indexAfter": "82db786aa6a4f64d0b38f02be6e7eaf7a1d35e9e905e7efe0c29713593cf1b69",
+  "stagedPaths": [
+    ".gitignore",
+    "build.gradle",
+    "gradle.properties",
+    "gradle/wrapper/gradle-wrapper.jar",
+    "gradle/wrapper/gradle-wrapper.properties",
+    "gradlew",
+    "gradlew.bat",
+    "settings.gradle",
+    "src/main/java/org/goldgom/chemicalelements/Chemicalelements.java",
+    "src/main/java/org/goldgom/chemicalelements/Config.java",
+    "src/main/resources/assets/chemicalelements/lang/en_us.json",
+    "src/main/resources/chemicalelements.mixins.json",
+    "src/main/templates/META-INF/neoforge.mods.toml"
+  ],
+  "indexLock": false,
+  "remaining": [
+    "world guards and projection",
+    "air metadata lifecycle implementation",
+    "detached serializer and stale save fence",
+    "region/external chunk crash-safe write",
+    "B authorized entry and startup pre-isolate recovery",
+    "real entry tests"
+  ]
+}

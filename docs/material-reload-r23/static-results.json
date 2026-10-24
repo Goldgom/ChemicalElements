@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "schemaCheck": "structure/rules used here plus cross-reference semantics; not a general JSON Schema implementation",
+  "resources": [
+    "iron_model.json",
+    "mixture.json",
+    "pure.json"
+  ],
+  "phaseResourcesReadOnly": 122,
+  "indexSha256": "82db786aa6a4f64d0b38f02be6e7eaf7a1d35e9e905e7efe0c29713593cf1b69",
+  "stagedCount": 13,
+  "diffCheckExit": 0,
+  "manifestSha256": "3728b06aa56af438d73c9210b97a9090ff228f24756193639217796c7e28be80",
+  "compiled": false,
+  "gameTestsRun": false
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:furnace"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:silica": "8.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Derived composite inventory from explicit ingredient items of minecraft:furnace; not a proof of reaction feasibility.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

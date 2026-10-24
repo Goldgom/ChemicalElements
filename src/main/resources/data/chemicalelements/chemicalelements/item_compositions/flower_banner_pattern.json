@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:flower_banner_pattern"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:cellulose": "0.350000000000000000",
+    "chemicalelements:water": "0.100000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Derived composite inventory from explicit ingredient items of minecraft:flower_banner_pattern; not a proof of reaction feasibility.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

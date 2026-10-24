@@ -1,0 +1,10 @@
+﻿L15: [01:43:46] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path GAMEDIR is E:\Projects\ChemicalElements\run\compat-r17
+L16: [01:43:46] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path MODSDIR is E:\Projects\ChemicalElements\run\compat-r17\mods
+L20: [01:43:47] [main/DEBUG] [ne.ne.fm.lo.ta.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{chemicalelements=[E:\Projects\ChemicalElements\build\classes\java\main, E:\Projects\ChemicalElements\build\resources\main]}]
+L51: [01:43:57] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path GAMEDIR is E:\Projects\ChemicalElements\run\compat-r17
+L52: [01:43:57] [main/DEBUG] [ne.ne.fm.lo.FMLPaths/CORE]: Path MODSDIR is E:\Projects\ChemicalElements\run\compat-r17\mods
+L65: [01:43:58] [main/DEBUG] [ne.ne.fm.lo.ta.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{chemicalelements=[E:\Projects\ChemicalElements\build\classes\java\main, E:\Projects\ChemicalElements\build\resources\main]}]
+L185: 		ChemicalElements 1.0-SNAPSHOT (chemicalelements)
+L186: 		Curios API 9.5.1+1.21.1 (curios)
+L187: 		Jade 15.10.6+neoforge (jade)
+L188: 		Just Enough Items 19.69.0.457 (jei)

@@ -1,0 +1,30 @@
+{
+    "schema_version":  1,
+    "type":  "electrolysis",
+    "reactants":  {
+                      "chemicalelements:water":  2
+                  },
+    "products":  {
+                     "chemicalelements:oxygen_gas":  1,
+                     "chemicalelements:hydrogen_gas":  2
+                 },
+    "conditions":  {
+                       "min_k":  "293.15",
+                       "max_k":  "333.15",
+                       "max_pa":  "103000",
+                       "min_pa":  "100000",
+                       "catalysts":  [
+
+                                     ],
+                       "capabilities":  [
+                                            "electricity",
+                                            "external_work",
+                                            "electrodes"
+                                        ]
+                   },
+    "duration_ticks":  100,
+    "energy_j_per_mol":  "500000",
+    "game_priority":  0,
+    "basis":  "approximation_and_game_convention",
+    "source":  "Net water electrolysis; OpenStax Chemistry 2e 17.7 Electrolysis. Requires separated gas outlets, inert electrodes; not saline electrolysis. Duration 100 ticks and energy budget are game calibration, not experimental kinetics/enthalpy. No Gibbs value claimed."
+}

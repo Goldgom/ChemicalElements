@@ -1,0 +1,41 @@
+{
+  "files": {
+    ".git\\index": "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69",
+    ".idea\\workspace.xml": "D592F2B2221DDA2293D08232F98C621F788977E6BF623D5DA40921363060B14A",
+    "run\\compat-r17\\mods\\curios-neoforge-9.5.1+1.21.1.jar": "A45DF2125C26219974ABA7507FFC9AFE7B83ACC941A386AF3FAACB1CC0056FDE",
+    "run\\compat-r17\\mods\\Jade-1.21.1-NeoForge-15.10.6.jar": "276F1F65A20D04F536989C4F311949D770B52C440C23C2B904A08860F3C93810",
+    "run\\compat-r17\\mods\\jei-1.21.1-neoforge-19.69.0.457.jar": "5F09D199DBA1265E131EF1672597EA07857220E4CC2FF1DC754E8BD0E6378925",
+    "build\\moddev\\clientLegacyClasspath.txt": "9906D52A8AEB9B6CF9B75B44944586DA16B95372317308D899808F0C5B7CB046",
+    "build\\moddev\\clientLog4j2.xml": "6ACE3DEA5D4E22EED69724D67C4986516DEDFF218A0A974323D37B803C95BAD4",
+    "build\\moddev\\clientRunProgramArgs.txt": "3E10E51F7E1768085AFA8F5F68491CE17A3ED3BB2D19A8E72C145BCF3589FDE1",
+    "build\\moddev\\clientRunVmArgs.txt": "9038B884C9F8B2BD6043D04454A1937D802AC7BA99C60160A92B5A156C93BEF9",
+    "build\\moddev\\dataLegacyClasspath.txt": "9906D52A8AEB9B6CF9B75B44944586DA16B95372317308D899808F0C5B7CB046",
+    "build\\moddev\\dataLog4j2.xml": "6ACE3DEA5D4E22EED69724D67C4986516DEDFF218A0A974323D37B803C95BAD4",
+    "build\\moddev\\dataRunProgramArgs.txt": "0B3D33DBD2CCC7E2DC06628D2934BFB5DF87FADF8F0C4F63D6550BA6E87B7164",
+    "build\\moddev\\dataRunVmArgs.txt": "2E5B94FCA71889B83EF043DD985866BA5ACCD41BC83C7BAC6CDC14D3C73515AC",
+    "build\\moddev\\gameTestServerLegacyClasspath.txt": "4B0B98491862B65A7D21AE262B48988C3BA90DE1FEF3D0329F3D7E56F097CD14",
+    "build\\moddev\\gameTestServerLog4j2.xml": "6ACE3DEA5D4E22EED69724D67C4986516DEDFF218A0A974323D37B803C95BAD4",
+    "build\\moddev\\gameTestServerRunProgramArgs.txt": "ABB66F3A8F675638C041D8714CCE42BA916C4990518AF795ED9C612B63BA9CDD",
+    "build\\moddev\\gameTestServerRunVmArgs.txt": "C7E50BB80A4B0163C69F1EEFD7C9D5E1B395DD8020A6AF8405A99054C670074C",
+    "build\\moddev\\minecraft_assets.properties": "EF4A4EBDF1520E49701ABBDEFB8BE1281FEC73605ED13452FE6366118551F95E",
+    "build\\moddev\\serverLegacyClasspath.txt": "4B0B98491862B65A7D21AE262B48988C3BA90DE1FEF3D0329F3D7E56F097CD14",
+    "build\\moddev\\serverLog4j2.xml": "6ACE3DEA5D4E22EED69724D67C4986516DEDFF218A0A974323D37B803C95BAD4",
+    "build\\moddev\\serverRunProgramArgs.txt": "F1BCFC52758053D17F526D9C5EAE4B7DFA82A95D734D9929B57EF113D87D0498",
+    "build\\moddev\\serverRunVmArgs.txt": "9FFDAF8FBC0D9C940383634CBE8FCE395330296C9D91158004E0984189BD0593"
+  },
+  "staged_names": [
+    ".gitignore",
+    "build.gradle",
+    "gradle.properties",
+    "gradle/wrapper/gradle-wrapper.jar",
+    "gradle/wrapper/gradle-wrapper.properties",
+    "gradlew",
+    "gradlew.bat",
+    "settings.gradle",
+    "src/main/java/org/goldgom/chemicalelements/Chemicalelements.java",
+    "src/main/java/org/goldgom/chemicalelements/Config.java",
+    "src/main/resources/assets/chemicalelements/lang/en_us.json",
+    "src/main/resources/chemicalelements.mixins.json",
+    "src/main/templates/META-INF/neoforge.mods.toml"
+  ]
+}

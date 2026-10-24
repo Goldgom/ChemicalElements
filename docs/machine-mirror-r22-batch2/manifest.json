@@ -1,0 +1,45 @@
+﻿{
+    "stagedCount":  13,
+    "files":  [
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineBlockEntity.java",
+                      "sha256":  "A07B3A0DEFC6C211B66F902745F16F7A1816A0A61C6850A4B8887FBB7FA57348",
+                      "bytes":  14156
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineInventory.java",
+                      "sha256":  "92EF21D8679602C862FF06AB6DE0F42484D92399F7ADE2F9B383ADC6808AF9EB",
+                      "bytes":  1376
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachinePower.java",
+                      "sha256":  "6B888BFA320C024A463A4D97AFD7C7ABCCB44FEAABCE10B3BAD60AA09F7CE483",
+                      "bytes":  2760
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MaterialTank.java",
+                      "sha256":  "5B66294547FC396D33934A4A7D2E9DEBD2A5F171E43BDF6A860B62FD1BE6B3F5",
+                      "bytes":  3990
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineProjection.java",
+                      "sha256":  "06CB3B27EB04B102AA10AB2F115502A42BE6F21BC1EC8B771043F2048389A67C",
+                      "bytes":  14111
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineProjectionGameTests.java",
+                      "sha256":  "C45CCC140142134C15E7E14D6AB568C39D44DA79A5DD52DE8B79252158E6DCAB",
+                      "bytes":  9770
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineCanonicalNbt.java",
+                      "sha256":  "7B98FDC4F204F08A9AE1B9BA70D4CC6A8980C3849D5009A156F535D6044A5ABC",
+                      "bytes":  1181
+                  }
+              ],
+    "batch":  2,
+    "indexSha256":  "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69",
+    "validation":  "SOURCE/STATIC ONLY; NOT compiled/run/Owner-ready",
+    "diffCheckExit":  0,
+    "task":  "chem-machine-mirror-r22"
+}

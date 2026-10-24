@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "atomic_number": 22,
+  "symbol": "Ti",
+  "molar_mass_g_mol": "47.867",
+  "basis": "empirical",
+  "source": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+  "notes": "Conventional abridged atomic weight; natural isotopic composition varies."
+}

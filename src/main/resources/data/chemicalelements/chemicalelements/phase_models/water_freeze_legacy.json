@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "chemicalelements:water_freeze_legacy",
+  "subject": "chemicalelements:water",
+  "allotrope": "UNSPECIFIED_NOT_ASSUMED",
+  "kind": "LEGACY_WATER_LATENT",
+  "reason": "Existing narrow water latent-only model retained. No new Cp, energy reference, density, EOS or production activation.",
+  "domain": null,
+  "energy_reference": null,
+  "low_species": null,
+  "high_species": null,
+  "transition_k": null,
+  "cp_low_j_mol_k": null,
+  "cp_high_j_mol_k": null,
+  "latent_j_mol": null,
+  "legacy_operation": "freeze",
+  "sources": [
+    {
+      "id": "existing-water-code",
+      "uri": "urn:chemicalelements:legacy:WaterPhaseModels",
+      "citation": "Existing WaterPhaseModels.java; not a newly verified primary thermochemical source",
+      "locator": "WaterPhaseModels.freeze()",
+      "accessed": "2026-10-24",
+      "basis": "UNVERIFIED",
+      "method": "Existing approximate latent constants; not reclassified as measured",
+      "pressure_evidence": "Existing 101000..101650 Pa game tolerance, not primary-source pressure verification",
+      "uncertainty": "Not established by this batch",
+      "license_status": "EXISTING_CODE_ONLY",
+      "units": "K;Pa;J/mol;J/mol/K",
+      "limitations": "Adapter only; external source permission and full enthalpy data remain pending; no constants copied into resources"
+    }
+  ]
+}

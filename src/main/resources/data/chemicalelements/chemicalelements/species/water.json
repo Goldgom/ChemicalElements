@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "atoms": {
+    "chemicalelements:hydrogen": 2,
+    "chemicalelements:oxygen": 1
+  },
+  "charge": 0,
+  "phase": "liquid",
+  "molar_mass_g_mol": "18.015",
+  "basis": "approximation",
+  "source": "Stoichiometric formula and sum of bundled abridged atomic weights; ion electron mass neglected"
+}

@@ -1,0 +1,132 @@
+﻿[
+    {
+        "path":  "build.gradle",
+        "exists":  true,
+        "length":  9387,
+        "lastWriteTime":  "2026-10-24T00:52:51.0438480-04:00",
+        "sha256":  "D90812F697B5FB467158DCF489C49396D1661C51D084FF1A1D34428A87C255B0"
+    },
+    {
+        "path":  "settings.gradle",
+        "exists":  true,
+        "length":  246,
+        "lastWriteTime":  "2026-10-23T14:25:04.6281531-04:00",
+        "sha256":  "B94FB4013AF72A91C29E63A80C816B56A26ABE360C24BCC50E4CC3C602B3EF92"
+    },
+    {
+        "path":  "gradle.properties",
+        "exists":  true,
+        "length":  2064,
+        "lastWriteTime":  "2026-10-23T14:25:19.6242393-04:00",
+        "sha256":  "791CBEE421D18EEE35F8E29C157B652EB1156B3C4CFC30E8A0D1B97523071304"
+    },
+    {
+        "path":  "gradle/wrapper/gradle-wrapper.properties",
+        "exists":  true,
+        "length":  250,
+        "lastWriteTime":  "2026-10-23T14:26:00.4096405-04:00",
+        "sha256":  "05E7BEC397CE5A52628D31DCC4C8B636CBDC55E28F8CEF19D097C71B5C5FBB42"
+    },
+    {
+        "path":  ".idea/gradle.xml",
+        "exists":  true,
+        "length":  594,
+        "lastWriteTime":  "2026-10-24T06:00:53.0271293-04:00",
+        "sha256":  "18332AE2EBBC955FF3E476A83D3C6E17B1B08C4DD5A079E1357CDF2D63DDC648"
+    },
+    {
+        "path":  ".idea/compiler.xml",
+        "exists":  true,
+        "length":  174,
+        "lastWriteTime":  "2026-10-23T14:32:32.3122008-04:00",
+        "sha256":  "AA6C5F3B39394975EC948A3297FA2B0B3108004E2CA87FBFABF9533C10DA6D5D"
+    },
+    {
+        "path":  ".idea/modules.xml",
+        "exists":  true,
+        "length":  471,
+        "lastWriteTime":  "2026-10-23T15:11:08.5351399-04:00",
+        "sha256":  "9CA959DB5A34D5BE325D42B0E7AD764971820F0B0296DAFDC6DABA26B4F58CB1"
+    },
+    {
+        "path":  ".idea/modules/ChemicalElements.main.iml",
+        "exists":  true,
+        "length":  695,
+        "lastWriteTime":  "2026-10-23T15:08:11.2215857-04:00",
+        "sha256":  "57C2BF836E12286948A62B1D3C35293F5D4F64B8DD9EB2037D2F839EF0C00CA6"
+    },
+    {
+        "path":  "build/moddev/clientRunProgramArgs.txt",
+        "exists":  true,
+        "length":  395,
+        "lastWriteTime":  "2026-10-24T01:43:14.5314975-04:00",
+        "sha256":  "3E10E51F7E1768085AFA8F5F68491CE17A3ED3BB2D19A8E72C145BCF3589FDE1"
+    },
+    {
+        "path":  "build/moddev/clientRunVmArgs.txt",
+        "exists":  true,
+        "length":  1959,
+        "lastWriteTime":  "2026-10-24T01:43:14.4999509-04:00",
+        "sha256":  "9038B884C9F8B2BD6043D04454A1937D802AC7BA99C60160A92B5A156C93BEF9"
+    },
+    {
+        "path":  "build/moddev/clientLegacyClasspath.txt",
+        "exists":  true,
+        "length":  16600,
+        "lastWriteTime":  "2026-10-23T14:29:52.6705055-04:00",
+        "sha256":  "9906D52A8AEB9B6CF9B75B44944586DA16B95372317308D899808F0C5B7CB046"
+    },
+    {
+        "path":  "build/moddev/dataRunProgramArgs.txt",
+        "exists":  true,
+        "length":  534,
+        "lastWriteTime":  "2026-10-23T22:22:28.3116648-04:00",
+        "sha256":  "0B3D33DBD2CCC7E2DC06628D2934BFB5DF87FADF8F0C4F63D6550BA6E87B7164"
+    },
+    {
+        "path":  "build/moddev/serverRunProgramArgs.txt",
+        "exists":  true,
+        "length":  296,
+        "lastWriteTime":  "2026-10-23T22:22:29.0469510-04:00",
+        "sha256":  "F1BCFC52758053D17F526D9C5EAE4B7DFA82A95D734D9929B57EF113D87D0498"
+    },
+    {
+        "path":  "build/a-r17-compat-evidence/install-manifest.json",
+        "exists":  true,
+        "length":  9754,
+        "lastWriteTime":  "2026-10-24T00:52:35.6671685-04:00",
+        "sha256":  "08AD6AF00E3E054C85AE8B42F2E4E6BF4A41BCDB4761DE1742B013DDF27CE5C7"
+    },
+    {
+        "path":  "build/a-r17-compat-evidence/prepare-client.log",
+        "exists":  true,
+        "length":  306,
+        "lastWriteTime":  "2026-10-24T00:53:05.4897446-04:00",
+        "sha256":  "4E1CFB9733316EEDEBD30011388B07992BBC6B2A0782E90DD3116E5A5C87B19C"
+    },
+    {
+        "path":  "build/a-r17-compat-evidence/client15.log",
+        "exists":  true,
+        "length":  117751,
+        "lastWriteTime":  "2026-10-24T01:45:48.3790784-04:00",
+        "sha256":  "95EC7F75DBC895253B59BC31A17BE598CB4F02F6EBB1C468DC1231061F08AFBF"
+    },
+    {
+        "path":  "src/main/java/org/goldgom/chemicalelements/core/VanillaCraftingAdmission.java",
+        "exists":  true,
+        "length":  10497,
+        "lastWriteTime":  "2026-10-24T06:02:58.0739344-04:00",
+        "sha256":  "AEFA8798EA8D4B7F375D283F728D6B2599DF57E122DEF55E9B252F47AA8B1E97"
+    },
+    {
+        "path":  "build/classes/java/main/org/goldgom/chemicalelements/core/VanillaCraftingAdmission.class",
+        "exists":  false
+    },
+    {
+        "path":  ".git/index",
+        "exists":  true,
+        "length":  1304,
+        "lastWriteTime":  "2026-10-23T14:26:01.8551143-04:00",
+        "sha256":  "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69"
+    }
+]

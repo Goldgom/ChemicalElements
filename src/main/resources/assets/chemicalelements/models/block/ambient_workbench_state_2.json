@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/ambient_workbench",
+  "textures": {
+    "front": "chemicalelements:block/ambient_workbench_state_2"
+  }
+}

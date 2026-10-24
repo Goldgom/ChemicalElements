@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:blue_concrete"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:silica": "1.000000000000000000",
+    "chemicalelements:calcium": "0.500000000000000000",
+    "chemicalelements:oxygen": "0.500000000000000000",
+    "chemicalelements:water": "0.100000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Concrete calcium-silicate/aggregate approximation with bound water for cured form.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

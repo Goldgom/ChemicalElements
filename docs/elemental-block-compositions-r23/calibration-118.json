@@ -1,0 +1,1182 @@
+[
+  {
+    "atomic_number": 1,
+    "element": "hydrogen",
+    "item_id": "chemicalelements:elemental_hydrogen",
+    "species_id": "chemicalelements:hydrogen_gas",
+    "species_mol_per_item": "0.500000000000000000",
+    "atoms_per_species": 2,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 2,
+    "element": "helium",
+    "item_id": "chemicalelements:elemental_helium",
+    "species_id": "chemicalelements:helium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 3,
+    "element": "lithium",
+    "item_id": "chemicalelements:elemental_lithium",
+    "species_id": "chemicalelements:lithium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 4,
+    "element": "beryllium",
+    "item_id": "chemicalelements:elemental_beryllium",
+    "species_id": "chemicalelements:beryllium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 5,
+    "element": "boron",
+    "item_id": "chemicalelements:elemental_boron",
+    "species_id": "chemicalelements:boron",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 6,
+    "element": "carbon",
+    "item_id": "chemicalelements:elemental_carbon",
+    "species_id": "chemicalelements:carbon",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 7,
+    "element": "nitrogen",
+    "item_id": "chemicalelements:elemental_nitrogen",
+    "species_id": "chemicalelements:nitrogen",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 8,
+    "element": "oxygen",
+    "item_id": "chemicalelements:elemental_oxygen",
+    "species_id": "chemicalelements:oxygen_gas",
+    "species_mol_per_item": "0.500000000000000000",
+    "atoms_per_species": 2,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 9,
+    "element": "fluorine",
+    "item_id": "chemicalelements:elemental_fluorine",
+    "species_id": "chemicalelements:fluorine",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 10,
+    "element": "neon",
+    "item_id": "chemicalelements:elemental_neon",
+    "species_id": "chemicalelements:neon",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 11,
+    "element": "sodium",
+    "item_id": "chemicalelements:elemental_sodium",
+    "species_id": "chemicalelements:sodium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 12,
+    "element": "magnesium",
+    "item_id": "chemicalelements:elemental_magnesium",
+    "species_id": "chemicalelements:magnesium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 13,
+    "element": "aluminium",
+    "item_id": "chemicalelements:elemental_aluminium",
+    "species_id": "chemicalelements:aluminium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 14,
+    "element": "silicon",
+    "item_id": "chemicalelements:elemental_silicon",
+    "species_id": "chemicalelements:silicon",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 15,
+    "element": "phosphorus",
+    "item_id": "chemicalelements:elemental_phosphorus",
+    "species_id": "chemicalelements:phosphorus",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 16,
+    "element": "sulfur",
+    "item_id": "chemicalelements:elemental_sulfur",
+    "species_id": "chemicalelements:sulfur",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 17,
+    "element": "chlorine",
+    "item_id": "chemicalelements:elemental_chlorine",
+    "species_id": "chemicalelements:chlorine",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 18,
+    "element": "argon",
+    "item_id": "chemicalelements:elemental_argon",
+    "species_id": "chemicalelements:argon",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 19,
+    "element": "potassium",
+    "item_id": "chemicalelements:elemental_potassium",
+    "species_id": "chemicalelements:potassium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 20,
+    "element": "calcium",
+    "item_id": "chemicalelements:elemental_calcium",
+    "species_id": "chemicalelements:calcium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 21,
+    "element": "scandium",
+    "item_id": "chemicalelements:elemental_scandium",
+    "species_id": "chemicalelements:scandium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 22,
+    "element": "titanium",
+    "item_id": "chemicalelements:elemental_titanium",
+    "species_id": "chemicalelements:titanium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 23,
+    "element": "vanadium",
+    "item_id": "chemicalelements:elemental_vanadium",
+    "species_id": "chemicalelements:vanadium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 24,
+    "element": "chromium",
+    "item_id": "chemicalelements:elemental_chromium",
+    "species_id": "chemicalelements:chromium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 25,
+    "element": "manganese",
+    "item_id": "chemicalelements:elemental_manganese",
+    "species_id": "chemicalelements:manganese",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 26,
+    "element": "iron",
+    "item_id": "chemicalelements:elemental_iron",
+    "species_id": "chemicalelements:iron",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 27,
+    "element": "cobalt",
+    "item_id": "chemicalelements:elemental_cobalt",
+    "species_id": "chemicalelements:cobalt",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 28,
+    "element": "nickel",
+    "item_id": "chemicalelements:elemental_nickel",
+    "species_id": "chemicalelements:nickel",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 29,
+    "element": "copper",
+    "item_id": "chemicalelements:elemental_copper",
+    "species_id": "chemicalelements:copper",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 30,
+    "element": "zinc",
+    "item_id": "chemicalelements:elemental_zinc",
+    "species_id": "chemicalelements:zinc",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 31,
+    "element": "gallium",
+    "item_id": "chemicalelements:elemental_gallium",
+    "species_id": "chemicalelements:gallium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 32,
+    "element": "germanium",
+    "item_id": "chemicalelements:elemental_germanium",
+    "species_id": "chemicalelements:germanium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 33,
+    "element": "arsenic",
+    "item_id": "chemicalelements:elemental_arsenic",
+    "species_id": "chemicalelements:arsenic",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 34,
+    "element": "selenium",
+    "item_id": "chemicalelements:elemental_selenium",
+    "species_id": "chemicalelements:selenium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 35,
+    "element": "bromine",
+    "item_id": "chemicalelements:elemental_bromine",
+    "species_id": "chemicalelements:bromine",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 36,
+    "element": "krypton",
+    "item_id": "chemicalelements:elemental_krypton",
+    "species_id": "chemicalelements:krypton",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 37,
+    "element": "rubidium",
+    "item_id": "chemicalelements:elemental_rubidium",
+    "species_id": "chemicalelements:rubidium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 38,
+    "element": "strontium",
+    "item_id": "chemicalelements:elemental_strontium",
+    "species_id": "chemicalelements:strontium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 39,
+    "element": "yttrium",
+    "item_id": "chemicalelements:elemental_yttrium",
+    "species_id": "chemicalelements:yttrium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 40,
+    "element": "zirconium",
+    "item_id": "chemicalelements:elemental_zirconium",
+    "species_id": "chemicalelements:zirconium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 41,
+    "element": "niobium",
+    "item_id": "chemicalelements:elemental_niobium",
+    "species_id": "chemicalelements:niobium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 42,
+    "element": "molybdenum",
+    "item_id": "chemicalelements:elemental_molybdenum",
+    "species_id": "chemicalelements:molybdenum",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 43,
+    "element": "technetium",
+    "item_id": "chemicalelements:elemental_technetium",
+    "species_id": "chemicalelements:technetium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 44,
+    "element": "ruthenium",
+    "item_id": "chemicalelements:elemental_ruthenium",
+    "species_id": "chemicalelements:ruthenium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 45,
+    "element": "rhodium",
+    "item_id": "chemicalelements:elemental_rhodium",
+    "species_id": "chemicalelements:rhodium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 46,
+    "element": "palladium",
+    "item_id": "chemicalelements:elemental_palladium",
+    "species_id": "chemicalelements:palladium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 47,
+    "element": "silver",
+    "item_id": "chemicalelements:elemental_silver",
+    "species_id": "chemicalelements:silver",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 48,
+    "element": "cadmium",
+    "item_id": "chemicalelements:elemental_cadmium",
+    "species_id": "chemicalelements:cadmium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 49,
+    "element": "indium",
+    "item_id": "chemicalelements:elemental_indium",
+    "species_id": "chemicalelements:indium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 50,
+    "element": "tin",
+    "item_id": "chemicalelements:elemental_tin",
+    "species_id": "chemicalelements:tin",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 51,
+    "element": "antimony",
+    "item_id": "chemicalelements:elemental_antimony",
+    "species_id": "chemicalelements:antimony",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 52,
+    "element": "tellurium",
+    "item_id": "chemicalelements:elemental_tellurium",
+    "species_id": "chemicalelements:tellurium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 53,
+    "element": "iodine",
+    "item_id": "chemicalelements:elemental_iodine",
+    "species_id": "chemicalelements:iodine",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 54,
+    "element": "xenon",
+    "item_id": "chemicalelements:elemental_xenon",
+    "species_id": "chemicalelements:xenon",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 55,
+    "element": "caesium",
+    "item_id": "chemicalelements:elemental_caesium",
+    "species_id": "chemicalelements:caesium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 56,
+    "element": "barium",
+    "item_id": "chemicalelements:elemental_barium",
+    "species_id": "chemicalelements:barium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 57,
+    "element": "lanthanum",
+    "item_id": "chemicalelements:elemental_lanthanum",
+    "species_id": "chemicalelements:lanthanum",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 58,
+    "element": "cerium",
+    "item_id": "chemicalelements:elemental_cerium",
+    "species_id": "chemicalelements:cerium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 59,
+    "element": "praseodymium",
+    "item_id": "chemicalelements:elemental_praseodymium",
+    "species_id": "chemicalelements:praseodymium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 60,
+    "element": "neodymium",
+    "item_id": "chemicalelements:elemental_neodymium",
+    "species_id": "chemicalelements:neodymium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 61,
+    "element": "promethium",
+    "item_id": "chemicalelements:elemental_promethium",
+    "species_id": "chemicalelements:promethium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 62,
+    "element": "samarium",
+    "item_id": "chemicalelements:elemental_samarium",
+    "species_id": "chemicalelements:samarium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 63,
+    "element": "europium",
+    "item_id": "chemicalelements:elemental_europium",
+    "species_id": "chemicalelements:europium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 64,
+    "element": "gadolinium",
+    "item_id": "chemicalelements:elemental_gadolinium",
+    "species_id": "chemicalelements:gadolinium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 65,
+    "element": "terbium",
+    "item_id": "chemicalelements:elemental_terbium",
+    "species_id": "chemicalelements:terbium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 66,
+    "element": "dysprosium",
+    "item_id": "chemicalelements:elemental_dysprosium",
+    "species_id": "chemicalelements:dysprosium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 67,
+    "element": "holmium",
+    "item_id": "chemicalelements:elemental_holmium",
+    "species_id": "chemicalelements:holmium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 68,
+    "element": "erbium",
+    "item_id": "chemicalelements:elemental_erbium",
+    "species_id": "chemicalelements:erbium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 69,
+    "element": "thulium",
+    "item_id": "chemicalelements:elemental_thulium",
+    "species_id": "chemicalelements:thulium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 70,
+    "element": "ytterbium",
+    "item_id": "chemicalelements:elemental_ytterbium",
+    "species_id": "chemicalelements:ytterbium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 71,
+    "element": "lutetium",
+    "item_id": "chemicalelements:elemental_lutetium",
+    "species_id": "chemicalelements:lutetium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 72,
+    "element": "hafnium",
+    "item_id": "chemicalelements:elemental_hafnium",
+    "species_id": "chemicalelements:hafnium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 73,
+    "element": "tantalum",
+    "item_id": "chemicalelements:elemental_tantalum",
+    "species_id": "chemicalelements:tantalum",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 74,
+    "element": "tungsten",
+    "item_id": "chemicalelements:elemental_tungsten",
+    "species_id": "chemicalelements:tungsten",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 75,
+    "element": "rhenium",
+    "item_id": "chemicalelements:elemental_rhenium",
+    "species_id": "chemicalelements:rhenium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 76,
+    "element": "osmium",
+    "item_id": "chemicalelements:elemental_osmium",
+    "species_id": "chemicalelements:osmium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 77,
+    "element": "iridium",
+    "item_id": "chemicalelements:elemental_iridium",
+    "species_id": "chemicalelements:iridium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 78,
+    "element": "platinum",
+    "item_id": "chemicalelements:elemental_platinum",
+    "species_id": "chemicalelements:platinum",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 79,
+    "element": "gold",
+    "item_id": "chemicalelements:elemental_gold",
+    "species_id": "chemicalelements:gold",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 80,
+    "element": "mercury",
+    "item_id": "chemicalelements:elemental_mercury",
+    "species_id": "chemicalelements:mercury",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 81,
+    "element": "thallium",
+    "item_id": "chemicalelements:elemental_thallium",
+    "species_id": "chemicalelements:thallium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 82,
+    "element": "lead",
+    "item_id": "chemicalelements:elemental_lead",
+    "species_id": "chemicalelements:lead",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 83,
+    "element": "bismuth",
+    "item_id": "chemicalelements:elemental_bismuth",
+    "species_id": "chemicalelements:bismuth",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 84,
+    "element": "polonium",
+    "item_id": "chemicalelements:elemental_polonium",
+    "species_id": "chemicalelements:polonium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 85,
+    "element": "astatine",
+    "item_id": "chemicalelements:elemental_astatine",
+    "species_id": "chemicalelements:astatine",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 86,
+    "element": "radon",
+    "item_id": "chemicalelements:elemental_radon",
+    "species_id": "chemicalelements:radon",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 87,
+    "element": "francium",
+    "item_id": "chemicalelements:elemental_francium",
+    "species_id": "chemicalelements:francium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 88,
+    "element": "radium",
+    "item_id": "chemicalelements:elemental_radium",
+    "species_id": "chemicalelements:radium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 89,
+    "element": "actinium",
+    "item_id": "chemicalelements:elemental_actinium",
+    "species_id": "chemicalelements:actinium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 90,
+    "element": "thorium",
+    "item_id": "chemicalelements:elemental_thorium",
+    "species_id": "chemicalelements:thorium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 91,
+    "element": "protactinium",
+    "item_id": "chemicalelements:elemental_protactinium",
+    "species_id": "chemicalelements:protactinium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 92,
+    "element": "uranium",
+    "item_id": "chemicalelements:elemental_uranium",
+    "species_id": "chemicalelements:uranium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 93,
+    "element": "neptunium",
+    "item_id": "chemicalelements:elemental_neptunium",
+    "species_id": "chemicalelements:neptunium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 94,
+    "element": "plutonium",
+    "item_id": "chemicalelements:elemental_plutonium",
+    "species_id": "chemicalelements:plutonium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 95,
+    "element": "americium",
+    "item_id": "chemicalelements:elemental_americium",
+    "species_id": "chemicalelements:americium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 96,
+    "element": "curium",
+    "item_id": "chemicalelements:elemental_curium",
+    "species_id": "chemicalelements:curium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 97,
+    "element": "berkelium",
+    "item_id": "chemicalelements:elemental_berkelium",
+    "species_id": "chemicalelements:berkelium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 98,
+    "element": "californium",
+    "item_id": "chemicalelements:elemental_californium",
+    "species_id": "chemicalelements:californium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 99,
+    "element": "einsteinium",
+    "item_id": "chemicalelements:elemental_einsteinium",
+    "species_id": "chemicalelements:einsteinium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 100,
+    "element": "fermium",
+    "item_id": "chemicalelements:elemental_fermium",
+    "species_id": "chemicalelements:fermium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 101,
+    "element": "mendelevium",
+    "item_id": "chemicalelements:elemental_mendelevium",
+    "species_id": "chemicalelements:mendelevium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 102,
+    "element": "nobelium",
+    "item_id": "chemicalelements:elemental_nobelium",
+    "species_id": "chemicalelements:nobelium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 103,
+    "element": "lawrencium",
+    "item_id": "chemicalelements:elemental_lawrencium",
+    "species_id": "chemicalelements:lawrencium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 104,
+    "element": "rutherfordium",
+    "item_id": "chemicalelements:elemental_rutherfordium",
+    "species_id": "chemicalelements:rutherfordium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 105,
+    "element": "dubnium",
+    "item_id": "chemicalelements:elemental_dubnium",
+    "species_id": "chemicalelements:dubnium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 106,
+    "element": "seaborgium",
+    "item_id": "chemicalelements:elemental_seaborgium",
+    "species_id": "chemicalelements:seaborgium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 107,
+    "element": "bohrium",
+    "item_id": "chemicalelements:elemental_bohrium",
+    "species_id": "chemicalelements:bohrium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 108,
+    "element": "hassium",
+    "item_id": "chemicalelements:elemental_hassium",
+    "species_id": "chemicalelements:hassium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 109,
+    "element": "meitnerium",
+    "item_id": "chemicalelements:elemental_meitnerium",
+    "species_id": "chemicalelements:meitnerium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 110,
+    "element": "darmstadtium",
+    "item_id": "chemicalelements:elemental_darmstadtium",
+    "species_id": "chemicalelements:darmstadtium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 111,
+    "element": "roentgenium",
+    "item_id": "chemicalelements:elemental_roentgenium",
+    "species_id": "chemicalelements:roentgenium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 112,
+    "element": "copernicium",
+    "item_id": "chemicalelements:elemental_copernicium",
+    "species_id": "chemicalelements:copernicium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 113,
+    "element": "nihonium",
+    "item_id": "chemicalelements:elemental_nihonium",
+    "species_id": "chemicalelements:nihonium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 114,
+    "element": "flerovium",
+    "item_id": "chemicalelements:elemental_flerovium",
+    "species_id": "chemicalelements:flerovium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 115,
+    "element": "moscovium",
+    "item_id": "chemicalelements:elemental_moscovium",
+    "species_id": "chemicalelements:moscovium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 116,
+    "element": "livermorium",
+    "item_id": "chemicalelements:elemental_livermorium",
+    "species_id": "chemicalelements:livermorium",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 117,
+    "element": "tennessine",
+    "item_id": "chemicalelements:elemental_tennessine",
+    "species_id": "chemicalelements:tennessine",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  },
+  {
+    "atomic_number": 118,
+    "element": "oganesson",
+    "item_id": "chemicalelements:elemental_oganesson",
+    "species_id": "chemicalelements:oganesson",
+    "species_mol_per_item": "1.000000000000000000",
+    "atoms_per_species": 1,
+    "atom_mol_per_item": "1.000000000000000000",
+    "basis": "game_convention"
+  }
+]

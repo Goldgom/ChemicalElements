@@ -1,0 +1,59 @@
+{
+  "version": "material-reload-r23-v1",
+  "compiled": false,
+  "gameTestsRun": false,
+  "files": [
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/data/AtomicChemistryCatalog.java",
+      "sha256": "0bc26b5779b3fe1374e237d43dc79acc6c65ddbb4c0e3a050ea028c0b1b982ec"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/data/ChemistryBundle.java",
+      "sha256": "191372604175a4f2bb765bfa97a9ecd46c26c61d7a43e482c7727462e4714dde"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/data/ChemistryReloadListener.java",
+      "sha256": "9d14b1626c3e315ac6dd7f4aff917500ec49ce893a775eabb48b6d32d32edef0"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/data/MaterialBehaviorDefinition.java",
+      "sha256": "283f3cc5ff4951b72a63fbe5a0c5612a09be9edbc0bf7fb5d1651ddf36c114c3"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/data/MaterialBehaviorLibrary.java",
+      "sha256": "b59254e5189cdb069be829c65074fe0cd3e7b589aa85ac6c94668a5919865875"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/gametest/core/MaterialReloadGameTests.java",
+      "sha256": "6a0326346e393bc40e19f74c3443a2e6997a0fdcc6b1b64d1ed01dfb6b083601"
+    },
+    {
+      "path": "src/test/java/org/goldgom/chemicalelements/data/MaterialBehaviorLibraryTest.java",
+      "sha256": "b7003725fa375f4bf2b7b1c108b3e69b708f2280d09730d2f8bb93dbcfd197b5"
+    },
+    {
+      "path": "src/main/resources/data/chemicalelements/chemicalelements/material_behaviors/iron_model.json",
+      "sha256": "7aef6a53ec5e89ff90930bac0a87d53086a0ebddf7152f9b8d0a315deed2115f"
+    },
+    {
+      "path": "src/main/resources/data/chemicalelements/chemicalelements/material_behaviors/mixture.json",
+      "sha256": "29ccee436c3c1b76603686bfd616feaf750cef80ae082a54edc0998bfe5471d5"
+    },
+    {
+      "path": "src/main/resources/data/chemicalelements/chemicalelements/material_behaviors/pure.json",
+      "sha256": "55e406bb0280e7d3bab3855ac175738ee686bccd54363ecf87364ffdc6112500"
+    },
+    {
+      "path": "docs/material-reload-r23/material-behavior.schema.json",
+      "sha256": "349dd778a50bcaa38bd5ecbaf45dba775389d0ed50ca7965740117a731c5789c"
+    },
+    {
+      "path": "docs/material-reload-r23/verify_static.py",
+      "sha256": "e2c0a24accf2b38a5494dbd510054a2de0074bb87329a19ddc455f0304dd4b05"
+    },
+    {
+      "path": "docs/material-reload-r23/REPORT.md",
+      "sha256": "e94bfd47fe89b441bbb5b39910570af2d2d30e22ebda8e10d00765d71786d8a6"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+Plugin sources jar SHA256 46674058D3B708510400399A5F77B9B3F6C90E1852D3EEBDD332A55AD61EC08E
+
+net/neoforged/moddevgradle/internal/IntelliJIntegration.java:179
+177:             RunModel run,
+178:             PrepareRun prepareTask) {
+179:         var appRun = new ExtendedApplication(run.getIdeName().get(), project, getExtraIntelijRunProperties(run));
+180:         var sourceSets = ExtensionUtils.getSourceSets(project);
+181:         var sourceSet = run.getSourceSet().get();
+182:         // Validate that the source set is part of this project
+183:         if (!sourceSets.contains(sourceSet)) {
+
+net/neoforged/moddevgradle/internal/IntelliJIntegration.java:187
+185:         }
+186:         appRun.setModuleName(getIntellijModuleName(project, sourceSet));
+187:         appRun.setWorkingDirectory(run.getGameDirectory().get().getAsFile().getAbsolutePath());
+188:         var modFoldersProvider = getModFoldersProvider(project, outputDirectory, run.getLoadedMods(), null);
+189:         appRun.setEnvs(RunUtils.replaceModClassesEnv(run, modFoldersProvider));
+190:         appRun.setJvmArgs(
+191:                 RunUtils.escapeJvmArg(RunUtils.getArgFileParameter(prepareTask.getVmArgsFile().get()))
+
+net/neoforged/moddevgradle/internal/IntelliJIntegration.java:197
+195:         appRun.setProgramParameters(RunUtils.escapeJvmArg(RunUtils.getArgFileParameter(prepareTask.getProgramArgsFile().get())));
+196: 
+197:         if (!run.getTasksBefore().isEmpty()) {
+198:             // This is slightly annoying.
+199:             // idea-ext does not expose the ability to run multiple gradle tasks at once, but the IDE model is capable of it.
+200:             class GradleTasks extends BeforeRunTask {
+201:                 @Inject
+
+net/neoforged/moddevgradle/internal/IntelliJIntegration.java:212
+210:                     var result = (Map<String, Object>) super.toMap();
+211:                     result.put("projectPath", project.getProjectDir().getAbsolutePath().replaceAll("\\\\", "/"));
+212:                     var tasks = run.getTasksBefore().stream().map(task -> task.get().getPath()).collect(Collectors.joining(" "));
+213:                     result.put("taskName", tasks);
+214:                     return result;
+215:                 }
+216:             }
+
+net/neoforged/moddevgradle/internal/IntelliJIntegration.java:220
+218:         }
+219: 
+220:         runConfigurations.add(appRun);
+221:     }
+222: 
+223:     private static String buildRelativePath(Provider<RegularFile> file, File workingDirectory) {
+224:         return workingDirectory.toPath().relativize(file.get().getAsFile().toPath()).toString().replace("\\", "/");
+
+net/neoforged/moddevgradle/internal/ModDevRunWorkflow.java:366
+364:         }
+365: 
+366:         var prepareRunTask = tasks.register(InternalModelHelper.nameOfRun(run, "prepare", "run"), PrepareRun.class, task -> {
+367:             task.setGroup(branding.internalTaskGroup());
+368:             task.setDescription("Prepares all files needed to launch the " + run.getName() + " Minecraft run.");
+369: 
+370:             task.getGameDirectory().set(run.getGameDirectory());
+
+net/neoforged/moddevgradle/internal/ModDevRunWorkflow.java:429
+427:             task.args(RunUtils.getArgFileParameter(prepareRunTask.get().getProgramArgsFile().get()).replace("\\", "\\\\"));
+428:             // Of course we need the arg files to be up-to-date ;)
+429:             task.dependsOn(prepareRunTask);
+430:             task.dependsOn(run.getTasksBefore());
+431: 
+432:             task.getJvmArgumentProviders().add(RunUtils.getGradleModFoldersProvider(project, run.getLoadedMods(), null));
+433:         });
+
+net/neoforged/moddevgradle/internal/ModDevRunWorkflow.java:430
+428:             // Of course we need the arg files to be up-to-date ;)
+429:             task.dependsOn(prepareRunTask);
+430:             task.dependsOn(run.getTasksBefore());
+431: 
+432:             task.getJvmArgumentProviders().add(RunUtils.getGradleModFoldersProvider(project, run.getLoadedMods(), null));
+433:         });
+434: 
+
+net/neoforged/moddevgradle/dsl/RunModel.java:67
+65:             ideName = project.getName() + " - " + ideName;
+66:         }
+67:         getIdeName().convention(ideName);
+68:         getIdeFolderName().convention("");
+69: 
+70:         getSourceSet().convention(ExtensionUtils.getSourceSets(project).getByName(SourceSet.MAIN_SOURCE_SET_NAME));
+71:     }
+
+net/neoforged/moddevgradle/dsl/RunModel.java:232
+230:      * tasks, and then run the actual game.
+231:      */
+232:     public void taskBefore(TaskProvider<?> task) {
+233:         this.tasksBefore.add(task);
+234:     }
+235: 
+236:     /**

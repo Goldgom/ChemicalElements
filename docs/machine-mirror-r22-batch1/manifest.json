@@ -1,0 +1,40 @@
+﻿{
+    "stagedCount":  13,
+    "validation":  "STATIC ONLY; NOT compiled or run; NOT Owner-ready",
+    "stage":  1,
+    "files":  [
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineBlockEntity.java",
+                      "sha256":  "A07B3A0DEFC6C211B66F902745F16F7A1816A0A61C6850A4B8887FBB7FA57348",
+                      "bytes":  14156
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineInventory.java",
+                      "sha256":  "92EF21D8679602C862FF06AB6DE0F42484D92399F7ADE2F9B383ADC6808AF9EB",
+                      "bytes":  1376
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachinePower.java",
+                      "sha256":  "6B888BFA320C024A463A4D97AFD7C7ABCCB44FEAABCE10B3BAD60AA09F7CE483",
+                      "bytes":  2760
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MaterialTank.java",
+                      "sha256":  "5B66294547FC396D33934A4A7D2E9DEBD2A5F171E43BDF6A860B62FD1BE6B3F5",
+                      "bytes":  3990
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineProjection.java",
+                      "sha256":  "4779C8BC4F86AC3DF65F01C7B054850919211703C2CAA01400600E2F3C55DF47",
+                      "bytes":  11019
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineProjectionGameTests.java",
+                      "sha256":  "CBB09E7AE92616B39FC2C7EAEA2210A98C699365A9863CB9AFCF1CB3DEC408AF",
+                      "bytes":  8120
+                  }
+              ],
+    "indexSha256":  "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69",
+    "diffCheckExit":  0,
+    "task":  "chem-machine-mirror-r22"
+}

@@ -1,0 +1,54 @@
+{
+  "task": "chem-idea-config-implement-r22",
+  "scope": "configuration implemented; STATIC ONLY; runtime pending",
+  "files": [
+    {
+      "path": "E:\\Projects\\ChemicalElements\\build.gradle",
+      "sha256": "C136EC9486710A11ABEF79DD7033D90D9FAA085CBAE1B0C54503A340A69A5693"
+    },
+    {
+      "path": "E:\\Projects\\ChemicalElements\\.run\\Client_Latest_Sources.run.xml",
+      "sha256": "B042421C252C6CD265E93C7F94EB43030F33CBE660EBDB2A3478EC7C32A977EC"
+    },
+    {
+      "path": "E:\\Projects\\ChemicalElements\\.run\\Client_Latest_Sources_Bare.run.xml",
+      "sha256": "475BD0F855857B92EEED4574F07396D2CBF13E0331123FAD6C7D8B847EB8AD1C"
+    },
+    {
+      "path": "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-implementation\\applied.patch",
+      "sha256": "E3605BA528F5BE0C72A6A99B7A32F2E3E45C6A13F25C808D8F81C78EC1BA44E0"
+    },
+    {
+      "path": "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-implementation\\build.gradle.before",
+      "sha256": "D90812F697B5FB467158DCF489C49396D1661C51D084FF1A1D34428A87C255B0"
+    },
+    {
+      "path": "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-implementation\\implement.py",
+      "sha256": "7C12BCF3AF73356A923BAD45D519BE422462F96C3244FD989B63F3D82144EA34"
+    },
+    {
+      "path": "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-implementation\\moddev-generation-evidence.txt",
+      "sha256": "34551EB722B952DF3D8FCA358239FE1DC94240F131C184936E876A778F3F5DE6"
+    },
+    {
+      "path": "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-implementation\\protected-after.json",
+      "sha256": "CB62947FD6E3262508AE9A0A2B91430A0BDB5483B64B9CD8FAD91AB7E7F9733C"
+    },
+    {
+      "path": "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-implementation\\protected-before.json",
+      "sha256": "CB62947FD6E3262508AE9A0A2B91430A0BDB5483B64B9CD8FAD91AB7E7F9733C"
+    },
+    {
+      "path": "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-implementation\\REPORT.md",
+      "sha256": "CB27CCDD863420E85D58F94B93302E88776250D2523E808DB5595BF66620268A"
+    },
+    {
+      "path": "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-implementation\\static-validation.json",
+      "sha256": "27439787229233DA997C0F668BF22C5FE601ECB224FBE8FD7AD427B248E152AB"
+    },
+    {
+      "path": "E:\\Projects\\ChemicalElements\\docs\\idea-debug-r22-implementation\\verify-static.py",
+      "sha256": "3DEDD82C16A3FD74BB9BFE02DC1CD2159978186CC46E7A9C35D16FB0B0628606"
+    }
+  ]
+}

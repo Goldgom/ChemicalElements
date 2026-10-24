@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:azalea"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:cellulose": "0.100000000000000000",
+    "chemicalelements:water": "0.100000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Plant bulk cellulose/water approximation; organics and micronutrients not claimed fully modeled.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

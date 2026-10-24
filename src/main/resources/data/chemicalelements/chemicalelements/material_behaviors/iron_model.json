@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "id": "chemicalelements:iron_model",
+  "composition_kind": "PURE",
+  "all_species": [
+    "chemicalelements:iron"
+  ],
+  "tags": [
+    "chemicalelements:material/phase_data_pending"
+  ],
+  "phase_model": "chemicalelements:iron_unknown",
+  "basis": "GAME_CONVENTION",
+  "source": "Original material classification contract r23; no thermodynamic numbers",
+  "limitations": "Classification only. Authoritative Composition, temperature, pressure, finite inventory and transaction checks remain with the server Owner. No phase prediction or production permission."
+}

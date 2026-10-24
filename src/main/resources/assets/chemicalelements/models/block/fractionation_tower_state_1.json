@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/fractionation_tower",
+  "textures": {
+    "front": "chemicalelements:block/fractionation_tower_state_1"
+  }
+}

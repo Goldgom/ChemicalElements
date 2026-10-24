@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "parent": {"z": 6, "a": 14, "isomer": 0},
+  "half_life_seconds": "180825048000",
+  "basis": "empirical_approximation",
+  "source": "Carbon-14 beta-minus decay: conventional half-life 5730 Julian years (365.25 days/year), endpoint/Q approximately 156 keV; IAEA LiveChart/NNDC NuDat evaluated nuclear data reference. This rounded model is not precision metrology. energy is TOTAL released nuclear energy including neutrino escape, not automatically deposited thermal energy. One ledger quantum = 1e-18 mol, Avogadro 6.02214076e23/mol; Q uses exact eV conversion 1.602176634e-19 J/eV.",
+  "branches": [{
+    "id": "beta_minus",
+    "probability": "1",
+    "daughter": {"z": 7, "a": 14, "isomer": 0},
+    "energy_j_per_quantum": "0.0000000150517118112363628704",
+    "emissions": [
+      {"id": "electron", "nucleons": 0, "charge": -1, "count": 1},
+      {"id": "antineutrino", "nucleons": 0, "charge": 0, "count": 1}
+    ]
+  }]
+}

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:piglin_banner_pattern"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:cellulose": "0.250000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Explicit inheritance from paper plus stated additions; enchantment/map content is information, not new matter. Damage retains material until an explicit abrasion transaction.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

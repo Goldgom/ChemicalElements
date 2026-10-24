@@ -1,0 +1,26 @@
+﻿{
+    "stagedCount":  13,
+    "version":  3,
+    "indexSha256":  "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69",
+    "files":  [
+                  {
+                      "sha256":  "2A31404A52036E8E681A6ED5DF168BB2685F7535962DC9490AF734C104078B92",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/world/heat/LoadedFiniteHeatResolver.java"
+                  },
+                  {
+                      "sha256":  "50114C3E1B8523C8D55389885A9951BDE84E75DDE708B532052741123C3C5927",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/gametest/heat/FiniteHeatResolutionGameTests.java"
+                  },
+                  {
+                      "sha256":  "1E5C7DE38C674A01986BE716B602B956D6FC4D955F40A1D5DED4A0A83A8A85EE",
+                      "path":  "src/test/java/org/goldgom/chemicalelements/world/heat/LoadedFiniteHeatResolverTest.java"
+                  },
+                  {
+                      "sha256":  "58B503CF8A0F24A7D89C663E088BB93BB4DE4FA218215D93192F2B2DDFE5BAA0",
+                      "path":  "docs/finite-heat-owner-r24/resolver-fix/resolver-fix-v3.md"
+                  }
+              ],
+    "testsRun":  false,
+    "staticDiffCheck":  "passed",
+    "compiled":  false
+}

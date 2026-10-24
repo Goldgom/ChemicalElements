@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:slime_block"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:carbon": "1.000000000000000000",
+    "chemicalelements:hydrogen": "2.000000000000000000",
+    "chemicalelements:nitrogen": "0.100000000000000000",
+    "chemicalelements:oxygen": "1.000000000000000000",
+    "chemicalelements:water": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Explicit porous/protein-polysaccharide material approximation; absorbed water is finite.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

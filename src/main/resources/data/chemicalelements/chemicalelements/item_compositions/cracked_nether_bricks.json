@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:cracked_nether_bricks"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:silica": "1.000000000000000000",
+    "chemicalelements:iron": "0.100000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Explicit fantasy fired ceramic analogue.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

@@ -1,0 +1,26 @@
+{
+  "appendToMixinsOnly": [
+    "WorldMaterialLevelMixin",
+    "WorldMaterialChunkMixin",
+    "WorldMaterialChunkAccessMixin",
+    "WorldMaterialSectionMixin",
+    "WorldMaterialPaletteMixin",
+    "WorldMaterialChunkStorageMixin",
+    "WorldMaterialChunkSerializerMixin",
+    "WorldMaterialUnloadMixin",
+    "WorldMaterialExplosionMixin",
+    "WorldMaterialRegionFileMixin",
+    "WorldMaterialRegionStorageMixin",
+    "WorldMaterialChunkPacketMixin"
+  ],
+  "preserve": [
+    "required",
+    "package",
+    "minVersion",
+    "compatibilityLevel",
+    "mixins existing entries",
+    "client",
+    "injectors.defaultRequire",
+    "overwrites"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/vacuum_chamber",
+  "textures": {
+    "front": "chemicalelements:block/vacuum_chamber_state_2"
+  }
+}

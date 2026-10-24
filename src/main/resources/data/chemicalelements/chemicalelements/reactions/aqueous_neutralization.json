@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "type": "neutralization",
+  "reactants": {"chemicalelements:hydrogen_ion": 1, "chemicalelements:hydroxide_ion": 1},
+  "products": {"chemicalelements:water": 1},
+  "conditions": {"min_k": "293.15", "max_k": "303.15", "min_pa": "100000", "max_pa": "103000", "capabilities": [], "catalysts": []},
+  "duration_ticks": 40,
+  "energy_j_per_mol": "0",
+  "game_priority": 0,
+  "basis": "approximation_and_game_convention",
+  "source": "Aqueous acid-base net ionic neutralization H+(aq)+OH-(aq)->H2O(l); OpenStax Chemistry 2e section 14.7 Acid-Base Titrations. Finite near-ambient dilute-solution model; implicit hydration. 40 ticks is game kinetics. Zero energy is an explicit isothermal game approximation, NOT measured reaction enthalpy; no Gibbs stability value supplied."
+}

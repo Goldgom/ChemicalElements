@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "chemicalelements:detector_basic",
+    "chemicalelements:detector_advanced",
+    "chemicalelements:detector_research"
+  ]
+}

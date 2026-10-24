@@ -1,0 +1,45 @@
+﻿{
+    "stagedCount":  13,
+    "validation":  "STATIC ONLY; NOT compiled/run; NOT Owner-ready",
+    "stage":  3,
+    "files":  [
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/AggregateTankImage.java",
+                      "sha256":  "9F30B3EDD9E3E977666A7BDEDE4408A57D0D5144F1ED2399BA066F50B168B2F4",
+                      "bytes":  5002
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/MachineOwnerEnvelope.java",
+                      "sha256":  "B7A9D06FF08DB7B5A9EF729595FB96F51D7C0F7153C58036C847D8B0363ADA38",
+                      "bytes":  6822
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/DurableMachinePermit.java",
+                      "sha256":  "AA41D384AE0DD27140147A2526625430F68542E3FD01B78B5D71D0A130F50DFD",
+                      "bytes":  5933
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/MachineJournal.java",
+                      "sha256":  "95F123544EA7DFB8766B0DDE397701E7B5A546CE15DBCC9659EBA4ABC8507E1F",
+                      "bytes":  14736
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/MutablePayloadPolicy.java",
+                      "sha256":  "A2F2CEF1E367C6394092F3BF17AE74B04813C0B0EA31EA867D1791036640EA19",
+                      "bytes":  2284
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/instance/MachineJournalGameTests.java",
+                      "sha256":  "CB8C27E0B6A5CB89701FA99024673A173F9295A74D3C613D446D9A330F38C243",
+                      "bytes":  14666
+                  },
+                  {
+                      "path":  "src/main/java/org/goldgom/chemicalelements/persistence/SinkLedger.java",
+                      "sha256":  "4098D8E0A870D5F1038E0A2C7AA4959052F3CE15A6B482DB83BE529BEF9F68F7",
+                      "bytes":  16848
+                  }
+              ],
+    "indexSha256":  "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69",
+    "diffCheckExit":  0,
+    "task":  "chem-b-journal-permit-r23"
+}

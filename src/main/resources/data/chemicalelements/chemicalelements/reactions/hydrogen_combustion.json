@@ -1,0 +1,29 @@
+{
+    "schema_version":  1,
+    "type":  "combustion",
+    "reactants":  {
+                      "chemicalelements:oxygen_gas":  1,
+                      "chemicalelements:hydrogen_gas":  2
+                  },
+    "products":  {
+                     "chemicalelements:water":  2
+                 },
+    "conditions":  {
+                       "min_k":  "293.15",
+                       "max_k":  "333.15",
+                       "max_pa":  "103000",
+                       "min_pa":  "100000",
+                       "catalysts":  [
+
+                                     ],
+                       "capabilities":  [
+                                            "ignition",
+                                            "closed_reactor"
+                                        ]
+                   },
+    "duration_ticks":  100,
+    "energy_j_per_mol":  "0",
+    "game_priority":  0,
+    "basis":  "approximation_and_game_convention",
+    "source":  "Hydrogen oxygen combustion, cooled product-water convention; OpenStax Chemistry 2e 4.2 Classifying Chemical Reactions. Heat routed to ideal game thermostat. Duration 100 ticks and energy budget are game calibration, not experimental kinetics/enthalpy. No Gibbs value claimed."
+}

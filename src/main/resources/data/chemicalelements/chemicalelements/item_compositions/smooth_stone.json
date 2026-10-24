@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:smooth_stone"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:silica": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Silicate rock bulk approximation; fantasy lithologies explicitly game-convention silica analogue; shape volume calibrated slab=1/2 stairs=3/4.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

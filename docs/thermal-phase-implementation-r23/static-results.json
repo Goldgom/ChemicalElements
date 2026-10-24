@@ -1,0 +1,16 @@
+{
+  "resources": 122,
+  "kinds": {
+    "UNKNOWN": 118,
+    "LEGACY_WATER_LATENT": 4
+  },
+  "schema_subset_validation": "PASS",
+  "required_and_extra_field_rejection": "PASS",
+  "decimal_latent_budget_reference_check": "PASS (Python arithmetic only, not Java)",
+  "index_sha256": "82db786aa6a4f64d0b38f02be6e7eaf7a1d35e9e905e7efe0c29713593cf1b69",
+  "staged_count": 13,
+  "java_compiled": false,
+  "java_tests_run": false,
+  "gametest_run": false,
+  "live_reload_installed": false
+}

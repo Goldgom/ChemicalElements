@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "chemicalelements:mixture_carrier_solid",
+    "chemicalelements:mixture_carrier_liquid",
+    "chemicalelements:mixture_carrier_gas",
+    "chemicalelements:mixture_carrier_unresolved"
+  ]
+}

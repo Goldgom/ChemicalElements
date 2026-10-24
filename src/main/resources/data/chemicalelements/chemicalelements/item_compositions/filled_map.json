@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:filled_map"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:cellulose": "2.000000000000000000",
+    "chemicalelements:iron": "4.000000000000000000",
+    "chemicalelements:copper": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Explicit inheritance from map plus stated additions; enchantment/map content is information, not new matter. Damage retains material until an explicit abrasion transaction.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

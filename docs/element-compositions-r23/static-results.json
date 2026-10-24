@@ -1,0 +1,27 @@
+{
+  "check_exit": 0,
+  "check_stdout": "{\n  \"status\": \"PASS\",\n  \"element_files\": 118,\n  \"other_mapping_files\": 1333,\n  \"atom_mol_per_item\": \"1\",\n  \"molecular_species\": [\n    \"hydrogen_gas\",\n    \"oxygen_gas\"\n  ],\n  \"atomic_bookkeeping_species\": 116,\n  \"compile_run\": false,\n  \"gametest_run\": false\n}\n",
+  "overwrite_refusal_exit": 2,
+  "overwrite_refusal_message_prefix": "Refusing to overwrite existing targets (no files written): src\\main\\resources\\data\\chemicalelements\\chemicalelements\\ite",
+  "118_output_hashes_unchanged_after_refusal": true,
+  "existing_elements_species_matching_preparation": 256,
+  "git_index_sha256": "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69",
+  "staged_entries": [
+    ".gitignore",
+    "build.gradle",
+    "gradle.properties",
+    "gradle/wrapper/gradle-wrapper.jar",
+    "gradle/wrapper/gradle-wrapper.properties",
+    "gradlew",
+    "gradlew.bat",
+    "settings.gradle",
+    "src/main/java/org/goldgom/chemicalelements/Chemicalelements.java",
+    "src/main/java/org/goldgom/chemicalelements/Config.java",
+    "src/main/resources/assets/chemicalelements/lang/en_us.json",
+    "src/main/resources/chemicalelements.mixins.json",
+    "src/main/templates/META-INF/neoforge.mods.toml"
+  ],
+  "compile": "NOT_RUN",
+  "java_standalone_test": "NOT_RUN",
+  "gametest": "NOT_RUN"
+}

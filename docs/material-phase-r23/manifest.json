@@ -1,0 +1,1170 @@
+﻿{
+    "task":  "chem-material-phase-gap-r23",
+    "scope":  "read-only preparation; no compile/runtime",
+    "user_date":  "2026-10-24",
+    "matrix_rows":  118,
+    "registered_element_names":  118,
+    "default_element_composition_mappings":  0,
+    "base_solid_game_convention":  118,
+    "neutral_single_element_species":  120,
+    "species_files":  138,
+    "item_composition_files":  1333,
+    "inputs":  [
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/api/chem/Composition.java",
+                       "sha256":  "91D0677F3A360BB83683368A4F73005C9839B9DBBBB601542934215363D469A7"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/api/chem/MolAmount.java",
+                       "sha256":  "221FB2213D5C5EAD40F267A97E3B24ECA301A34E4FCA003FE700B379D4ACFDC1"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/api/chem/SpeciesDefinition.java",
+                       "sha256":  "5A9AE725545AD154DCE1AC02394C998A806883F44B835BE4272268F1FDFB53FE"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/api/instance/InstanceRecord.java",
+                       "sha256":  "929E9D1C98D59F7A3A43CCA3B9393DB3FAF7A0B1FBBBD8D518E2F28636FE0DC4"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/api/thermal/ThermalState.java",
+                       "sha256":  "3A57874A8EAAAC26BE8F3E0591ADECE657D1C8F8434B42BEABCD5CAACD98FED6"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/data/AtomicChemistryCatalog.java",
+                       "sha256":  "58A3C86A14FF12663F27D187C276B93E1602590F3C51CD8B71AF746094460904"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/data/ChemistryBundle.java",
+                       "sha256":  "FF4BC26580D2E72070697570894651B8628F9FB063678BA729532EF9CD6D3D40"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/data/ChemistryReloadListener.java",
+                       "sha256":  "E60F0A1A1CD14C307E137B655AB0642601BF7C715FE1D97A1ABC20CA8DCD6DEE"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/data/LedgerJson.java",
+                       "sha256":  "F9F14DD908D89787936D3DD0A8E80DFD6DDB4353DC3777D8A5B93FEAE9939B7B"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/instance/BlockMoves.java",
+                       "sha256":  "948C549D724CBF9BAEF9831BA2CDA291585AA55A06F2F72EE042D75CB06DBB44"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/instance/Hooks.java",
+                       "sha256":  "97C1CAE3E964C58A61CFAD16A05627FFBC5692EDA42ED5A7D0115F584F39C97C"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/instance/InstanceSampler.java",
+                       "sha256":  "4872F0C18DB6EE46005AB16C643A6C652CC71F99B92B6BA2979E155956D193F6"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/instance/MenuOwnerTransactions.java",
+                       "sha256":  "786494FC477A60D2D9064310B6D52DC1C2235DB0663A7D2856FCFC36211F99A2"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/instance/ProductSettlement.java",
+                       "sha256":  "A5BE8A451EFC02EC633333C2FFF3127BF98426D8A93E5CF6704788203B19EBB2"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineBlockEntity.java",
+                       "sha256":  "FDE5D188453C5C78586199630F2982E2BB74F789BE9E60963947D69847779DDD"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/machine/MaterialStateBalance.java",
+                       "sha256":  "8BF355C2D302E1A8B4E3B8FB1395C2F6296D57AF19181265D82F55C5C8E8F9C5"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/machine/MaterialTank.java",
+                       "sha256":  "839F025B5B7C7A9257FF28E8D7D59103281F9A7C0483325706BE784EF3D74096"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/persistence/ChemistryComponents.java",
+                       "sha256":  "1B3E5D0C4E83767829D6AE047F3449853D5A95F19497C0026DC51737E39C1DFD"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/reaction/PhaseEquilibrium.java",
+                       "sha256":  "1A9A9C2F8CB6888D7B958E9B30B045F4639AF811B5BC7B0D1B985BADBF245FD0"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/registry/ElementItems.java",
+                       "sha256":  "4E5ABAC20FCE1482B591CD2494F7E03AC0B96B439A50ED4280DF11207FD5ADF5"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/thermal/DiluteWaterPhase.java",
+                       "sha256":  "CD085E8B8F405595D03AFEAFB2D41AA8A1BC35D4EBC20CFDECFE51D3C4813BA3"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/thermal/InstanceHeatExchange.java",
+                       "sha256":  "7471F40390E6480427FF32B79CA766C7940754F282A42E4D5CB4853421C898F5"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/thermal/PhaseProcess.java",
+                       "sha256":  "365D590D5475B994398051EAF5363F3592AB3267818065C701905051EB068DF4"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/thermal/WaterPhaseModels.java",
+                       "sha256":  "26CA73026DA1FA80CE386E0778816A368751694F70AA0DBF53D113A15BADC5E3"
+                   },
+                   {
+                       "path":  "src/main/java/org/goldgom/chemicalelements/world/ThermalRuntime.java",
+                       "sha256":  "5C321D0DA58309CC0EE4269B104D4E5639E71C5A2E9B7636408D5C7DB35786A6"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\actinium.json",
+                       "sha256":  "5423E95E7E6109E36348818EE1EE53DE56E1F07D05BCE25A013D944C9621E547"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\aluminium.json",
+                       "sha256":  "144AFE7E5CC5A666B935FD86E1E9AC10B5A03A40D4451D3332C4FA728A57C662"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\americium.json",
+                       "sha256":  "93BB420AC38721A20CCC95BAEA6AEA0DD12A8536666E59F9F84FC325FC868312"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\antimony.json",
+                       "sha256":  "A0C820BCE1E6C46BC6B9ED98B6914B685B190DF9E9F9A586E8765361F2573998"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\argon.json",
+                       "sha256":  "8441464EF2501B7BF1EB7770E6DA771EE08654E966994E13229EC71C63B4EFF0"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\arsenic.json",
+                       "sha256":  "B335922E2F1300F77C57F3ECD35FE2789D21D199B6C2D9144ACD72BB4B4703C5"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\astatine.json",
+                       "sha256":  "1DF85E31D7C03515F276BADA5801B2B23DFB1145359E3A726A52D6F58BCC71EE"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\barium.json",
+                       "sha256":  "A75A7E62A21F1DBACD3BC90AE47C84A8924FBBB847B17B9037242D113C152ECE"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\berkelium.json",
+                       "sha256":  "5EED58FB5DA8A74C68527767728D87979B2B517494229A73D6377069E18CEB55"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\beryllium.json",
+                       "sha256":  "ED40F1D00CEC82CF03A686A9436E777CBBFAED117E3E61D3F108E04E0F44D446"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\bismuth.json",
+                       "sha256":  "4D0436560016BEF475633CFB92B0AE5D4D2F6F3E62FE5DCF2A11313D2950B574"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\bohrium.json",
+                       "sha256":  "63A5B76B5E2A4562A14C9CA0324E56DAF13052F0F63E5DC1508C83764CE88AE9"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\boron.json",
+                       "sha256":  "E23CFC6E28993D7CA833166F4E2DF063F9F8329E61911924F880E409779519AF"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\bromine.json",
+                       "sha256":  "295F1D5097AA9F37E1AF4711C394A5B493664C5F9083CBAD50593A6CA9524BD6"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\cadmium.json",
+                       "sha256":  "36D332031D90845EA2C948C5E45B6CCD9CA28FB520D607EECFC1A2A748D7ABCC"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\caesium.json",
+                       "sha256":  "2C5F8A1609E67934E7870A792BB7FD484CB277F18CF94D1BF0762203E35720B6"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\calcium.json",
+                       "sha256":  "3D6E2F6269A15DEB086D399E31CCEC69BFEF45BAFB9EE93F0EFF1CE7B8B44FD6"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\californium.json",
+                       "sha256":  "7C12BCB96FAEC5D7507C48A7A1A89BCBB4EB59BECE71835A29F100AA18A771C1"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\carbon.json",
+                       "sha256":  "2DC5C14C91C1967A3265B99D5DC5C82F290ED4E1C4F2211E777132AD3A8C82CD"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\cerium.json",
+                       "sha256":  "034A9B08FA79C21B92C0159DC15C8533BEFB22ADB739EB91E7CED043BDAC56A9"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\chlorine.json",
+                       "sha256":  "1B443611B544599706338C5F49F47601C2C3AAB9D451133C560080FAB1221873"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\chromium.json",
+                       "sha256":  "9F3489F7B3C5D54D18F21C7759F82A159B6A29A2370BCF9280C190C83D031943"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\cobalt.json",
+                       "sha256":  "4242758036E0B1795DC843DADF47948B4FB13160329785CA301B6D565ADA95FA"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\copernicium.json",
+                       "sha256":  "9659F3E25B55DB17AD56ED0DC37774536DE6D50578E42C05E41AD8C8C20E83B3"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\copper.json",
+                       "sha256":  "31B0D8C674420CA8FD0F4C6BBF54AE05ED2CABBAF8C507F4FBAA538E4B5C758C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\curium.json",
+                       "sha256":  "A9837C1C3361BE356A539C0EA82315D47B2AD104342661B43FDEF67470705944"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\darmstadtium.json",
+                       "sha256":  "4DDF7C82EB6B0531F9981C8875E16B261BEB78741BFEB00A2A472203F5BF151A"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\dubnium.json",
+                       "sha256":  "D35F120DDF9631474C17C15BEAE6B912B192BB6E36D150F393CC99597CCC1C57"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\dysprosium.json",
+                       "sha256":  "E173503F3DD2CA5EA7A4209774E8421310D1CB43A2E8663418AFB399031F705C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\einsteinium.json",
+                       "sha256":  "ECADD64C9880D5E16B670C007814C71CC3F6BED58FAFC23286D661C15BF15FD6"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\erbium.json",
+                       "sha256":  "303810E62EA04FA41909B82F113087DE5078241EAA1767C23C98CA91426F595E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\europium.json",
+                       "sha256":  "555ACD60AC69F82189B2CBF5BE9CAF7B08209565C650ACD49F01E2BDA1AF500E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\fermium.json",
+                       "sha256":  "6A1080BB1C5C31F7930637494077AE0FFB869E9D396F0D0789BE1D8AA305203E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\flerovium.json",
+                       "sha256":  "596DD81C3B75108C1DD08B15A7FE4104EA9E413181574FC4FB03203613F08CC9"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\fluorine.json",
+                       "sha256":  "7EF45762ED1A06A1F69EC91997EE75DC91312C1C3BD29704C8DFD11FA9490331"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\francium.json",
+                       "sha256":  "37F8406EE7B8EA086151020CAB05224E9DC69F7C2A1E0A4843C60D76C926A82B"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\gadolinium.json",
+                       "sha256":  "C590E807E19E59E072D3BF4970B5D03B2CBC8F098E366E0D98067900F89797C8"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\gallium.json",
+                       "sha256":  "9A092BB18D1E55ACC482A982FABF70693FB7E32DBD6CCFCC0D14460F493B3849"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\germanium.json",
+                       "sha256":  "CAA5A606EE8614DF91851533DAB96AF8B3940B3F9FD7D9CD28C83882FC0367E3"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\gold.json",
+                       "sha256":  "A32E4C7B5BED2E7B2E3C2E9FDAAAED9E5A762D22AF668EEF308E5500B14EF8B2"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\hafnium.json",
+                       "sha256":  "9C5481FB7A1BBF0E3F2E5951EFB43769C56532B6B7FF8881BA3671A7F4E15B6B"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\hassium.json",
+                       "sha256":  "52422479892DBD6E5E0C475734C51FF9B81D106C3C27FCA80B41A9EB55390341"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\helium.json",
+                       "sha256":  "5AFCDE6BFFF79E979D5C18047ECB24F4F10869AD9963FBBC01CC9FA107BC5AA8"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\holmium.json",
+                       "sha256":  "2A895F0753E612E65F0F6210DA94625C8B2D693293B1235F5686D59258335A4D"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\hydrogen.json",
+                       "sha256":  "C5749FC26A2A0FCD6275421D25263D98DA931C2395CF3DA49AB1D598FCF498E8"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\indium.json",
+                       "sha256":  "94257D0E601789A180907BE110A8A4D69EDC0A91D20E773D16519EE02E12F3A4"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\iodine.json",
+                       "sha256":  "FD2F1088FD72671A6B9F7808170334383132D865E19F4FB40DB3CEF3C9E3429D"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\iridium.json",
+                       "sha256":  "7F39E251963CE0F0495DC42641CBF7FE7239CEBDCCCD896455344C51786ABABE"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\iron.json",
+                       "sha256":  "6860E76D4C282F6C7D91640948EA4D297603F7D72B31575F9E7F7A8405BC4A5D"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\krypton.json",
+                       "sha256":  "F8F7A6D1D3DDEF3836C1A31847F2D747FD6084C1A00BC3F76931E1802556932E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\lanthanum.json",
+                       "sha256":  "B7EAA08A9E0AEAE1D26A57BF1D1AC56D4C5C6FB7BD318C842E5902777927991B"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\lawrencium.json",
+                       "sha256":  "E8C3C1D7C92A410CF9FE404D426E5B5E298114A34EC1C0F1337466FE13C53222"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\lead.json",
+                       "sha256":  "A8A52854B2D8B23E7702210F83D73718963C316FA993E895A7B3C2A64DC53742"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\lithium.json",
+                       "sha256":  "0F9D8F0BC635009603E33373E112DFAD08292B669D0F9AF8BC55BADC1D9DB505"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\livermorium.json",
+                       "sha256":  "E180ED6335219BDB73F658DAE9A484D4B364C48FAF19337EBD4D25878F970A39"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\lutetium.json",
+                       "sha256":  "390594C7B7967A73154446C2E2247AAAB59A2559E08D4864D9D9034D36A77F1C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\magnesium.json",
+                       "sha256":  "7352CBB1DEEAA8BFE016633F6C06C1927BA69360366CD2205B058758719CC504"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\manganese.json",
+                       "sha256":  "381ABBA0095AE1E4E81D93DC494D23969826534A48124766CDAEABC32E4EB05E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\meitnerium.json",
+                       "sha256":  "DCBCEB3F7E24B32C34E9FF0152470F9AF0654DA1A20A248065DF1C5CFCA15EE7"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\mendelevium.json",
+                       "sha256":  "BEC7FC31AD9717F890520441BC2A2CEBFED6532E853B40310DEE674F914622B7"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\mercury.json",
+                       "sha256":  "F7C5F2EF20EB267A95CDA89F4429B1CFE87FAAA3173BD55D87A2D6260A219D10"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\molybdenum.json",
+                       "sha256":  "00CA0CA863B8A98F67A3FC04C550806421737BC78DD6F7812F94D96781229DDE"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\moscovium.json",
+                       "sha256":  "D6B5A5E2F302572CF7D5720609ADBED833B631D717CFDE0CA6E31AD383E3EA32"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\neodymium.json",
+                       "sha256":  "B8DB021F7F7BEC25D64419D714BF40DC50B9F5EAE0560467187DB36C759336E5"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\neon.json",
+                       "sha256":  "C0D005AE6E35EA4C708E487C3C80E1C79BEBF3CCCF14121E97375D5CE1875F22"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\neptunium.json",
+                       "sha256":  "CF54272990AB5AB6A163A71007C476E22FA7E3EEBE46FD74045C58524428FE48"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\nickel.json",
+                       "sha256":  "361FB7159ECDEAD69E341ED046E032C8E07905F162B6CBABC63220D7420FD452"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\nihonium.json",
+                       "sha256":  "C6EC356FA9D7E7A39645CA1E82FDD7C84E979D8DA740EE926DB7D31870E0A17F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\niobium.json",
+                       "sha256":  "E7E2F2C217652D33082E5D35FADA0527E090FC08FB69C6064B16FFC0C1E27F33"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\nitrogen.json",
+                       "sha256":  "EB959E82FF1085F3A199C629613298D26FB98A7CF64B7D4313496F537FCFB8D3"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\nobelium.json",
+                       "sha256":  "B3C77DFD81C106856000ABB69A254B845E627DE91EA9FC225164396181DD7AEC"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\oganesson.json",
+                       "sha256":  "8A8E902051E36DEC5DBCB6A374ECDFEE326A1DF097F7C666E097A04B507878C1"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\osmium.json",
+                       "sha256":  "66F95B4A9C3ACAE19CC69761E89652885803EB75CD5338087FCB9D5C143F2B5E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\oxygen.json",
+                       "sha256":  "D9DFCB90C1E7D23B8CE416EA5692202E414E03F3CF68B685893DF9DD6641307E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\palladium.json",
+                       "sha256":  "E6FD1DE961507186CF68FE6F9F317460CFD7EC7F0E7CEE764DA3999D8DC0DEEC"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\phosphorus.json",
+                       "sha256":  "E2256DB443B29C949E2063EBE61BF5A81A9380578301D401EED5A1445BD2F9DE"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\platinum.json",
+                       "sha256":  "A2E50BEC7067B1404443F0E4B7A36CE9964D85CF759BBA8497DC9D8C000725D4"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\plutonium.json",
+                       "sha256":  "474C6D8BC078B5B828375213806F5124C23995A21D967039335217147E8DA572"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\polonium.json",
+                       "sha256":  "7F371E895DA8600E958F8C5B671FDBAAAB7B2DDF970C9422BAEC2A2969AD830C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\potassium.json",
+                       "sha256":  "E0AAE607F6CCFBF1B3758B3A04C96095D4F608560BB84185060AB135041855DA"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\praseodymium.json",
+                       "sha256":  "FF5687F56640221801B7806F7FAF0B1A1DBF87353073C46390384250ED5C8056"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\promethium.json",
+                       "sha256":  "B06C49DD33A6757F42B39FED1D5D37F6DF3EC51D23DA6792D530CCEF33DEEBA0"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\protactinium.json",
+                       "sha256":  "2368C81D1C98D345BD471200EAC29FFB01EB33082DB4B92189E71F27DBD49181"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\radium.json",
+                       "sha256":  "4BDB9D29807D3BFFDA867C5DBED363B20AB27C1A69611F34B53F509A6DAA9F38"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\radon.json",
+                       "sha256":  "FECD677D370E2337563FE29DA0A2C1BD03B250DEE81E7F22913146FB620432FF"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\rhenium.json",
+                       "sha256":  "0044C27820D1F9A501E6C88F943D222AE4C13EF473EB336E3BAC5E809CA05DD2"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\rhodium.json",
+                       "sha256":  "747ACE42DBD1A5BB43ACB3B6503C0808C979DD0BD4082F6A75CC8EDEC31F3108"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\roentgenium.json",
+                       "sha256":  "DD8FCEB5049F33549530F200C9220E3581D42222EC5D3E2F93D18D5D36FB635F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\rubidium.json",
+                       "sha256":  "209AD5F53845C7D937E3A34014EDC060BC64D185835A4FD0F6B36E5312B886F3"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\ruthenium.json",
+                       "sha256":  "CF05371C7FCB9AAFB00D08B3E6744ABDD277724765852CFAEFC52639F1AC8E26"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\rutherfordium.json",
+                       "sha256":  "EC674B40D541BD4BA7AACD052D41D7E1AE2EDF57DE8DA1BC54901BDDF69A47BE"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\samarium.json",
+                       "sha256":  "624D17ECD0BB1186D26184A13D4C3D398B67469E04B378FA9E36FEA6F09F76E4"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\scandium.json",
+                       "sha256":  "42609482100DEFDA74AEDE5183BB129CA350BBF09EC55F71972E36307180DA36"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\seaborgium.json",
+                       "sha256":  "0E4BA7564824B0A8197044B7002E2D9828DBD4553BD4E77D2D1E6C8C04B374BF"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\selenium.json",
+                       "sha256":  "610DF9F750DD42509123F4D1F38E6F3CBF3C556B7749176FB5CFBC9373F7FF27"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\silicon.json",
+                       "sha256":  "E6F95598BF9CC425557DF7C950C6B7A6587513A2C818B2EDFB41FDC6F0781280"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\silver.json",
+                       "sha256":  "956398D718E4AC0654DDB15352B6AFDC50F19611792FFC4BAF75597D98B4FEC0"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\sodium.json",
+                       "sha256":  "CE1184ED6AB1B7E163EC0209424CE01F9551461CD3222930E0E4C1CD04631058"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\strontium.json",
+                       "sha256":  "6110FA0CED056C186CCCA58C77558882B1EEA2C608CE798393648E966327E48F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\sulfur.json",
+                       "sha256":  "8FEDA139B5941B93254C2CD61AC26B3705B382922AB98817C0388A7D51F5FE1C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\tantalum.json",
+                       "sha256":  "E253B8A313C3EB3DBDE3A1AF292F001C2850E655F883C4A41433DE997E8ACFA8"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\technetium.json",
+                       "sha256":  "5FD9CD6A8C53D5E140AB4D31AF483FB25C3B9A069A13D9B885A7F32D4B8878AC"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\tellurium.json",
+                       "sha256":  "075A484CCEF42EDD6A7113E630CFD05C63D8935384147803D5771739FD91A3C7"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\tennessine.json",
+                       "sha256":  "B08A72B3CD063FBAE888C1F4B0B0DB7601872DFF19D93D9F8009AB059891B31B"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\terbium.json",
+                       "sha256":  "A356774F892A04E9DD9E54CC63FF1BD361EBAB3E6344CF6557A307851ED9807D"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\thallium.json",
+                       "sha256":  "00D73AE9925D7FFF28E4DF5BC51895833722E1893D5D9641955072502BA14E17"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\thorium.json",
+                       "sha256":  "2DD6374899F24A6F1EB06D15A99AF0EEF8F72942246E69E2BE7B92F0F82ABB11"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\thulium.json",
+                       "sha256":  "A7B199004DCE0EECD1118A5BE524BA30CA39BC451DD9AE0620EC27D504F1CEE2"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\tin.json",
+                       "sha256":  "CC391965E38F1DCE68B1FC55825B5922E33431C0CAC40D9D68789D5B12A9E776"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\titanium.json",
+                       "sha256":  "74199ECB9226989E93728ECC6298031AF3A55F940FE39D4363CE62F06D969620"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\tungsten.json",
+                       "sha256":  "33E5BDBE1A37EECD45BD6E6B975092C45856CE158CBB31BDDECA489CD149C4B1"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\uranium.json",
+                       "sha256":  "15D167C58BBB49BE89E6C3F161DEA11F329EC53F135071849B2BFC7E098B8170"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\vanadium.json",
+                       "sha256":  "E029DB2487320D34B59E9B36ABE70D51C20D952FFFE934E2836B452698C3E8EB"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\xenon.json",
+                       "sha256":  "4A7F98E345789B4883092C43D865FA3CBFFB6F9CA85ECF40DFBC21F9C7EF12B5"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\ytterbium.json",
+                       "sha256":  "5A58479ACB12877CF4C6F23EF095947BAADC6E905BA26B91EBB599E4DB799C96"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\yttrium.json",
+                       "sha256":  "18D1A48BCE84B44E34DB3432C2A61AB20DC51EFD60FD309D690327B00002EA95"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\zinc.json",
+                       "sha256":  "B1BA04C8721C29CE7E2C7A045F0F4E4E262966A5BC1D192525DD7C5AC7C69943"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\elements\\zirconium.json",
+                       "sha256":  "D265ACFFF736BBABB4F879C36D6D6C46E1F437550C2243CED3430F4723BE4325"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\actinium.json",
+                       "sha256":  "D1637F443A65C82B2861BE7EF53F9185CFCF4714EA69C818C5CE5AF5399BB082"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\aluminium.json",
+                       "sha256":  "48E127E48D36C8BC11FF6367CD00B4C6C719FA00D536D3C0E36D5D49F9A7D7D0"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\americium.json",
+                       "sha256":  "92FDF84EDACB216D854364FCD4F24CD74C30AC334C8AD71DB2F836DAEB1D565D"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\antimony.json",
+                       "sha256":  "52BF4BE8FA525961082A0302BC825EBF6D9E4C04949C3F97B9E41D4925983EAA"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\argon.json",
+                       "sha256":  "1C893C9A3F33B2DAFFD8C14776CE4F631A3E1D142F215501DDD2CA1804717459"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\arsenic.json",
+                       "sha256":  "49275344A9D44557B2D00F4724D21D1B3A7B95663C421F0AE04A5A2D25ABD15D"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\astatine.json",
+                       "sha256":  "5B87C6EE362D54137EA0D13005EE0D976AC83F2E1CA295CA7EA0DA2F5E88E143"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\barium.json",
+                       "sha256":  "B28FB3AA81B2498B254A094421BA2AA486796C5D549AFD38BB8307C6564D3F26"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\berkelium.json",
+                       "sha256":  "2992F49ED2EC74CF18D502DD1443A023DD1DFA9BB361AE0D7BF302A0DC152260"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\beryllium.json",
+                       "sha256":  "5682384FB1C1918AEFE89F0C55230F8DE68F74FA18D087471EAFAF4E2C831A7F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\bismuth.json",
+                       "sha256":  "D4C3D6E9C057E32A85D501117B1DF1A0D8D7CF5EFA5F25915623645760956687"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\bohrium.json",
+                       "sha256":  "AC40649168582690B06B970A76BD511C4AFCC45C059AA3922EFCE970F168887C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\boron.json",
+                       "sha256":  "8F3984463285D7C9F1626EB745961870FE4BF74F8FA5606924B10193DD323476"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\bromine.json",
+                       "sha256":  "84F4507909A0D375331BF30138B26F1372F36F774C8DB32FC4610BE144957B6F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\cadmium.json",
+                       "sha256":  "C204F5452BAD1074B3F02F554C334049C2B07E40C2EE2EE77643025D5A08FB69"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\caesium.json",
+                       "sha256":  "D0888ABFE72F07FB6F9E3FE254A69B111DE0798043406B7632D719149155A126"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\calcium.json",
+                       "sha256":  "59ABF9CFB4109E0687CF3E3A548881644DDE2CBF00D4043F30E2590D527C6B7A"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\calcium_carbonate.json",
+                       "sha256":  "AD439C5CA1E626C0C76A49641FC8616D592954B241BB2E067F5A355BEA0198B2"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\calcium_ion.json",
+                       "sha256":  "A07BDEFA2033CD7C46612E407876481803A8D7E0A78F55BA52417ED09854A892"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\californium.json",
+                       "sha256":  "D2CDE560CE2188BFD5916F7D918E25393F11B3277D8AB7285942BC866012EA88"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\carbon.json",
+                       "sha256":  "C2BA3BB1ACDA744DFB2A7F8E592B3CFC1B255DB2D6556A4809ED5876DA1984FA"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\carbon_dioxide.json",
+                       "sha256":  "2EF61D566F851F71E69AF4CF37F18D125B1FECE32C8EC74E2113B96709B3839E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\carbonate_ion.json",
+                       "sha256":  "CDB79BF762A21324772EB1D9E1E86DAB1DDCD228E8103224FF8294871A889334"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\cellulose.json",
+                       "sha256":  "3D40804173AC247E6CF6353890D6E4DA389BD130C5C66016F57394E802B5240B"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\cerium.json",
+                       "sha256":  "ABBA736949A468733EC83FA495096E1CB4F157BD6730931DBFCADD20DD06F4DA"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\chloride_ion.json",
+                       "sha256":  "D03D60F06BD46DBE7941A1A876C9846492EED609EFC76D1A59056643E883FA6E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\chlorine.json",
+                       "sha256":  "7C9C22A7A04E0B6FBC34D8B1DE9A5D7D79A1372B00E823EB690197610AE12120"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\chromium.json",
+                       "sha256":  "BB5F918FFB657DD7085CA1E32E498C8C849AAE193AFDE7824C25DD59355B4626"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\cobalt.json",
+                       "sha256":  "B73C13B6635F0D4E2FCD3BD697AD336D9D88BFBE67052EB8AA01770E0D37EB14"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\copernicium.json",
+                       "sha256":  "5B80B4EA915C7CEA3C3F5A85A66C2D59A80334BADF8524C9FA58272C174C2E41"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\copper.json",
+                       "sha256":  "9E5DABA4ADF6143006BBAC2ABAE3B7EB070122544E3C064D37DB8B8CFD66A2ED"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\copper_ion.json",
+                       "sha256":  "36022D5729392330DBAB5000D16C7149921B96F8D34474DD28710E2460F4AB1B"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\curium.json",
+                       "sha256":  "88C976AD44D2FE82F0E2C72F856BEA785CFA834ED9E7E30BE6BD56BE24C8C269"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\darmstadtium.json",
+                       "sha256":  "8591214201BCE23176265FAC8C650B8FF618992DC9861C951E9EB3EC71BEDECA"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\dubnium.json",
+                       "sha256":  "BCAFDBBCCD64E74CB4D0EB4C905931975597015141A8D0144B7199FD05ED5C00"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\dysprosium.json",
+                       "sha256":  "BE15E6C3A530EB3BFB6E447673AD10EA1D44FF1D2071068DC6D1691F960CE3D2"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\einsteinium.json",
+                       "sha256":  "A9F5DD1643259340BD7386AEA7DABF6DA2CF2E4F79FDC0B7E291BE9E7C32D51E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\erbium.json",
+                       "sha256":  "64B090046DF72084E4862E08E9C84060FB245D1F8CE36B1F985C4828A13E4856"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\europium.json",
+                       "sha256":  "66CC3AFAE94D7F0B601FA611E6F70BEFB54742BD40B739E83A5541B9B3237CC5"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\fermium.json",
+                       "sha256":  "932BECD1712AB8EADB2CF83ADAA6EDDF925415F71AD363C5920817E6C44FC526"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\flerovium.json",
+                       "sha256":  "1222D40BC612A27A9D4B8E2128CAE95D6F05E531AE847D34A00C3FA2BF071B1E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\fluorine.json",
+                       "sha256":  "2FC3C618E290CBE0C1F492B3D8F63BA03E4FA5755E60B67EAFB5D7BBB937309F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\francium.json",
+                       "sha256":  "4A13C509FBA044FEE29DE43532CDB1953874E0B294A1400BCC31056DBEFA58BD"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\gadolinium.json",
+                       "sha256":  "345EE421116BE8F7C2C791E4403A3FDBB497540F4A80307BC279F41176060EDA"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\gallium.json",
+                       "sha256":  "7CA185C4F86D7CA142282D45B7AE215D00F386F3BCA0451EF6F4119373F82C33"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\germanium.json",
+                       "sha256":  "9BC08D03D88573BF4A0C06A1A23D6CDA158B871F2465D8E15B7B62021D3CEBA5"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\gold.json",
+                       "sha256":  "06D1D4907DA60DF1D42176D26049F7EFAD420B5E31BEDF7D75E896975AD60E06"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\hafnium.json",
+                       "sha256":  "EAC705BC8005B18B75AC47740F542A9BFC2B1F41E6825524B20937B40D168630"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\hassium.json",
+                       "sha256":  "700AF3CCF2DFED5520F97E20C6802AFBDC77CFB254F531EAEE1F02D5D26BD139"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\helium.json",
+                       "sha256":  "6AD6551AFCDB6B252BEF4E64DD3E46704BB760AEA4CB522F3E93A0AEFAB2EC45"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\holmium.json",
+                       "sha256":  "C920BCB4043A114D77BDD2DA3F837C15CAD0E32944D22AC694FB8A1B07019262"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\hydrogen.json",
+                       "sha256":  "FC66EB3097594EF0C8B0C5DD92F19C0EB5CE7CA4D8C2B5162283C65FFC3C43D5"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\hydrogen_gas.json",
+                       "sha256":  "FFF53E998C39063475E92B1991F9795A9B4752CB8ECA6E5B067EE2387386A635"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\hydrogen_ion.json",
+                       "sha256":  "AC4C311A872844C27EC7FC2452247E87762788F5D52F835D96353B2D1EED84E3"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\hydroxide_ion.json",
+                       "sha256":  "3EAB2E86C6993E969328EA0D56A2CBA6EA231F592383FFEF460F315272986B0D"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\ice.json",
+                       "sha256":  "D0F5928EBCF24C4D2ACF58D8048C64B94DAF4A0A4AF1B93E845E05D603C33E0D"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\indium.json",
+                       "sha256":  "59B5601FF3171AC67ABE2793EF780ED1BD23ECCE0759B6F108C085C311227FB9"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\iodine.json",
+                       "sha256":  "4A5081A06361B503F85DDD9F0C46C7149A0A1401BB05A740C568C4F5DB739173"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\iridium.json",
+                       "sha256":  "E34CF4A8C94F0D3987D69242EB31F359BF4074790E04E517E290C85E3ED80B57"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\iron.json",
+                       "sha256":  "535D1E252E1880D9F9D7BEB13B3DA9B3C437E31EE4E5D295233DDCF8C28C6915"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\krypton.json",
+                       "sha256":  "027F63E26F1D999BC828D1F298FA80365EFDB6A5AD59736FF2E197C22667859A"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\lanthanum.json",
+                       "sha256":  "B9B544B62A40408A2EE34D03CDC459BB9FC7B771FEAE55E6F2109931046C805F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\lawrencium.json",
+                       "sha256":  "D12B8241E8BF4F996271B1AF8E5769F7D9AB20843F86FE62F9F4F7898DD635F5"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\lead.json",
+                       "sha256":  "C55350AE0E549F345618066F05AD622EFE6AB70AD3E0DBB4D7F55ECB57F148D8"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\lithium.json",
+                       "sha256":  "949C22D392AE666D9684A0536FA649CC98991EB51F167AF528D91C91BE62E69A"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\livermorium.json",
+                       "sha256":  "08307214A73F430AAECC9F75313A7C0F78FC9CC3CFB0D85CD1EDB1CB4FA4F75C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\lutetium.json",
+                       "sha256":  "09A5FF1218947D4CA562C93CBF6B797CDA0BA39FF981D0C07FD1632CEF2F7B0F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\magnesium.json",
+                       "sha256":  "28C56A680F3359D7AE51BB8D27537EE099C57DF68F8606917155272027CACD07"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\manganese.json",
+                       "sha256":  "79CA444105E2E92940523DD1A9EA05E2352DF34D7DA672DD08C1AB61529D7377"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\meitnerium.json",
+                       "sha256":  "D63EB50C4FDC4EA0CDBE7B1EDDD6CCEB9BC89A8A41EE20E02BDF8F260B035123"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\mendelevium.json",
+                       "sha256":  "46A1B83B72DBC89C2FC3B052CF6C8F7DFB03F44BCAB0B8D852A42F49FF3ED695"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\mercury.json",
+                       "sha256":  "78E13AB0C3EDE03499CE0EBFB1910F0F940E8F1BC5315421538BDE4F951CDF9C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\molybdenum.json",
+                       "sha256":  "00F031480405D24DE3A9AA7C3138901DFFD73E3B56B3ABB03BDDDCFA53FA993C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\moscovium.json",
+                       "sha256":  "3B89A096B40EF94364B9133C5BA1997EADF0A98049CB6CD271D05CD1C440C680"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\neodymium.json",
+                       "sha256":  "BE57D53B7B7477E5A0419357D53D03B4C118771B7960F686DC5F0CB98FC52F0E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\neon.json",
+                       "sha256":  "F52E274AE636F01FB240D709FA0A3A8738874A6A64D68C18EEF29E9464D07529"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\neptunium.json",
+                       "sha256":  "25D9F29E7FDCEFC5BDC3113E02709FA249AB36145375EFE848F89B82EA7A3AD2"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\nickel.json",
+                       "sha256":  "05CE6E1C2E4AA7DAD17A22C1CEAB487BDC27DEC4B5D09C3021CF469BE07B21EF"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\nihonium.json",
+                       "sha256":  "E1A1B326F6B25DA780BBDF14E32BBD163954086B84758A5B4438808ACD483287"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\niobium.json",
+                       "sha256":  "7AF0FA01485B6F9FD72FAAA67BCB2E93446FBC6684B9BA6AA2456AA80CEF5D31"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\nitrogen.json",
+                       "sha256":  "FAA739843D981647FAF1AEE098CB18DA82022FF8C38C36015F9413EAA487F3BE"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\nobelium.json",
+                       "sha256":  "88C1B32E330D07DF58B9938029D77F0660810E7F8A00C907F8FC483CC5F7A28F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\oganesson.json",
+                       "sha256":  "FE508C3C198AB1D9A287A4495163EA44CFB76A48261F4F281633107B0E7666D1"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\osmium.json",
+                       "sha256":  "47E721C2D8441FDBB35C365E255CD2606CF7FD72910F4F7C406BF7538BC3BBE4"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\oxygen.json",
+                       "sha256":  "6162B186A84D77F188280AAD0746C6F8AF1EFA031E2C912E6812AA8302E3A197"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\oxygen_gas.json",
+                       "sha256":  "39A9E35451F656A9A01063ABF2EC5BFB212EA30C53B25BD35E0814355719C9E0"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\palladium.json",
+                       "sha256":  "45BF094850B1D3135589F7F5783F8CB64CCB1588E5A42E6C5C3FA503D3DD2922"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\phosphorus.json",
+                       "sha256":  "A5BC2DA6F708C65819F1BA6BDA75B2E311E9AD1EE39FCF8EAAFE6DFAF06A813C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\platinum.json",
+                       "sha256":  "10B3DCB31CB3D8CD424E937931FA4C08E03977C1F8BA520E73532041827B106F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\plutonium.json",
+                       "sha256":  "7701632C09DA55346BCF0152B9213F647785F7C6DD9E1AE913CEBD275B0187B0"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\polonium.json",
+                       "sha256":  "4A50CB04A173DAC713E65865EEFC802F031457A9D3120B29B5952DAB88D8EE37"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\potassium.json",
+                       "sha256":  "B620BABBF8AEE89EA2B67CD6DB8BF48F3F45B24CA13935D06F525973459C34CE"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\praseodymium.json",
+                       "sha256":  "AAC38BE103272A69BC2F0BA20FF56BC44190525C1414A1372D4C01D4BDC48E8D"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\promethium.json",
+                       "sha256":  "E4C0EA6E10813C6674F5BAF4B53A7D742CD330BBAE1CD182009B817B8708FC59"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\protactinium.json",
+                       "sha256":  "7CCB1A1C94B77A21D4A63D163431CE7FC416F81EDA599302E66CAB26F40D4E23"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\radium.json",
+                       "sha256":  "96B85CFA55D8EC209936E20488A8FD338ECDC108706053D3C02056E72B6A92AA"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\radon.json",
+                       "sha256":  "6578D007867E027A17E8BB31D5FDEBC1E6D1559F392290DC2BC1D97B6C655E60"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\rhenium.json",
+                       "sha256":  "C523BEDDC4D30FD46C3382B91B3DE2C9E1B0EBD1E9A1F820E305FB418C155B7B"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\rhodium.json",
+                       "sha256":  "78F54C682B9E2B8A6BBBAD0EE9156264492B7E153480CC1AC8AFC801CEBEE741"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\roentgenium.json",
+                       "sha256":  "F7323D3F2E2C1936777874B691DBCA69A8366CD83BBB1F81E7F5C13ADA40260D"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\rubidium.json",
+                       "sha256":  "199277A53028AAABBF0EFE66938BF8C4713310CF74B663D88F80AA39E9C3C852"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\ruthenium.json",
+                       "sha256":  "C500BAEB35F15088EB0D20E123739ABB0232F25247881309F2B30F0202234FFB"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\rutherfordium.json",
+                       "sha256":  "296E490ACED3ED4177A7258E8281133E51925EDFA5918D8E324CF7BBA6A9EE17"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\samarium.json",
+                       "sha256":  "800F61279D8D8AE36BA4E8955AE2F7AA18EB02B74C886DF8589629DC0BA942BB"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\scandium.json",
+                       "sha256":  "90C682F1DA23F1885409DB22C50736A4C3C911941496A77A317A0275A815B0E9"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\seaborgium.json",
+                       "sha256":  "F472D063E92017043EF12DF47540D67456A1F55BE218A0566D3ACBED5813391F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\selenium.json",
+                       "sha256":  "C991E4AEB229443E39CE9223964228CC33CAAA4C9F6D1304A89639B5673C73AA"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\silica.json",
+                       "sha256":  "70BA068919E7DC9C789ABD36561A89CFF201AF211F288FB8F6F3F827694EB3C2"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\silicon.json",
+                       "sha256":  "BBBB5EC51C48074FF477349D329F79A19B72CFC3E593E626B8617D5BC8C0F81C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\silver.json",
+                       "sha256":  "937119B9FACDF57E56975D560DA0D8E54EE15058EA6B26C3F38483EB36F6D838"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\silver_chloride.json",
+                       "sha256":  "700D8D703EDA113D4C717193BAE5810D6A1273F11AC6FA9608A2ABF186021DF0"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\silver_ion.json",
+                       "sha256":  "6030381734072EDA15E0389CBB33F85BC45B94FCD3815DA6C510C62F159CD774"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\sodium.json",
+                       "sha256":  "2AC58F159770916FFFB3D094D946A6EC43EDEE115560DA9B504A0EA844187D2C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\sodium_chloride.json",
+                       "sha256":  "3CC9A714BCEC5319F389DD9B0D33444804C80B980DCDE5235B0DC11341084208"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\sodium_ion.json",
+                       "sha256":  "2246616ED9B2E10FC627CB5DA66D63D4686DF2E312354F6D49F7D007814AB45F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\strontium.json",
+                       "sha256":  "0875EC95FB766B09B230FBDDA0D984D2C2C1D45C67D4721A5A493412463A6599"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\sulfur.json",
+                       "sha256":  "D9786C9318C65755AAACB5F8284EC8373F6C8AC615627D2A93F802AA56691E99"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\tantalum.json",
+                       "sha256":  "C3B6A188AAFFC8CE2D324023CFD0DA6DE782EB5FFD0E196A8CF9E9AF700B16A1"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\technetium.json",
+                       "sha256":  "FBBD47202B3B3E49161797F0626F7BEB0381133026EA86C76B748A34A7CC2341"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\tellurium.json",
+                       "sha256":  "65F65A52A06FDA174A4B9ED004BF1E53F1FA54B6BA97AE8973726F17211AC699"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\tennessine.json",
+                       "sha256":  "8FE1427678E7C48B7D640CF4673DB26F4CA18C9BC8F0BEBA12554DEA10CE1024"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\terbium.json",
+                       "sha256":  "1229DE0DEFE55BA8F7308059429350AE50E591773AEE0C90C70AA19D3A3F08F4"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\thallium.json",
+                       "sha256":  "B40774677E992245AC3E897781CF8CF318895B571676694234D895593BA0C854"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\thorium.json",
+                       "sha256":  "81168C1FCE796EB1B2021F009434D3F24303FDF34930FC528918AB016B3BCBD9"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\thulium.json",
+                       "sha256":  "AEB3E7A5F80030B7FE01A38467A7C16A5ED06A1352D4069E5A4A43954065FC97"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\tin.json",
+                       "sha256":  "F4B3A9A10AA124C0A6DC8653A55A8DFD05D156BAC74ADDEF3E0A9235DF4E8304"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\titanium.json",
+                       "sha256":  "3900B4B44C3F6DF264D9B804B3EDED037420E509847F984AEAFF900B6E02BC5E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\tungsten.json",
+                       "sha256":  "53CBD3125D32D1C1A4F18DC7E30D140BD2B65F00713D0AA7FCC7673F20DF6943"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\uranium.json",
+                       "sha256":  "F64F07BAAF86862A274FB69855EAD1DD675C35602B91E6A813D1962E0B7F8C75"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\vanadium.json",
+                       "sha256":  "151AF18440DA2BADF594E7DF9F7638826F9351B1A1DCE99D830FDFB7E5A86F45"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\water.json",
+                       "sha256":  "E27626548859C73D5DF3776DE06E01AE15107BBFD90A06E666321C216459770E"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\water_vapor.json",
+                       "sha256":  "791BF39C90C2DEDCC50AB21ED3C23B31AC1A59ADEAF612179D3A72320A29C8EC"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\xenon.json",
+                       "sha256":  "CAE3E3A39DCA0140ACD6B8A6F0D934D128F2A0E041E80049A98CFF8EE6568D8C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\ytterbium.json",
+                       "sha256":  "C02D537E279371DB8369E78B8C18C0F0C4EE3DDE57CAEEF4B13C98BC90197C3F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\yttrium.json",
+                       "sha256":  "92C9AE486CBB0F7E13850EBCD7188C9B86B43590CEA9F31E752F4E3216969D7C"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\zinc.json",
+                       "sha256":  "8910CBA5FC23405A045FD583F9BE92E450F6A3F127CD7A834123748B61F0C47D"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\zinc_ion.json",
+                       "sha256":  "3723C7D17518EDF88D6BAD384F4AACF4D8506172E12861939CE9B2403FDE377F"
+                   },
+                   {
+                       "path":  "src\\main\\resources\\data\\chemicalelements\\chemicalelements\\species\\zirconium.json",
+                       "sha256":  "04C98BABB6A9ADA8D7AAC63A42D6889D362E073EC6E673D38A08CF2D08FD1B11"
+                   }
+               ],
+    "files":  [
+                  {
+                      "path":  "E:\\Projects\\ChemicalElements\\docs\\material-phase-r23\\CANDIDATES.md",
+                      "sha256":  "8F66E1847507BA159042667ABAE1F9D61723B2C6373D47921A64C6E31926EF9E",
+                      "bytes":  3578
+                  },
+                  {
+                      "path":  "E:\\Projects\\ChemicalElements\\docs\\material-phase-r23\\coverage-118.csv",
+                      "sha256":  "82F060B214AE77878080E37F8E0E25CD043B81B5BD3065D0BC334FC286FFB768",
+                      "bytes":  93351
+                  },
+                  {
+                      "path":  "E:\\Projects\\ChemicalElements\\docs\\material-phase-r23\\coverage-118.json",
+                      "sha256":  "C0C794C2964BB32E6A56C9F7692965245FA966AC679327449DD345F310AC3FBB",
+                      "bytes":  209384
+                  },
+                  {
+                      "path":  "E:\\Projects\\ChemicalElements\\docs\\material-phase-r23\\phase-model.candidate.schema.json",
+                      "sha256":  "E40319A1B7402A58FA131750C8D927916D0A9CBB1D37516CC838BC9DCDE1B6FB",
+                      "bytes":  4123
+                  },
+                  {
+                      "path":  "E:\\Projects\\ChemicalElements\\docs\\material-phase-r23\\REPORT.md",
+                      "sha256":  "5A77248C0F51425829E4D192BF352AE3F0B67D892A4BAC219CA9D8FC3E0364AC",
+                      "bytes":  19208
+                  },
+                  {
+                      "path":  "E:\\Projects\\ChemicalElements\\docs\\material-phase-r23\\SOURCES.md",
+                      "sha256":  "FFB44B5C52697BFC90C4E96A5AA22F2FDA82F7C6C59046CAB7BBF51E8D970485",
+                      "bytes":  5920
+                  }
+              ]
+}

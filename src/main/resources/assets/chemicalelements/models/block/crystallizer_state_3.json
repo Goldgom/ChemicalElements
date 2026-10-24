@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/crystallizer",
+  "textures": {
+    "front": "chemicalelements:block/crystallizer_state_3"
+  }
+}

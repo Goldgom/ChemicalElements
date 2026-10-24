@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:dragon_egg"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:silica": "4.000000000000000000",
+    "chemicalelements:beryllium": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Named End material fictional silicate/beryllium convention; no physical portal chemistry claimed.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

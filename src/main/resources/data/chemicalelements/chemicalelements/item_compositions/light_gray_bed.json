@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:light_gray_bed"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:carbon": "3.000000000000000000",
+    "chemicalelements:hydrogen": "6.000000000000000000",
+    "chemicalelements:nitrogen": "1.000000000000000000",
+    "chemicalelements:oxygen": "1.000000000000000000",
+    "chemicalelements:sulfur": "0.060000000000000000",
+    "chemicalelements:cellulose": "3.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Derived composite inventory from explicit ingredient items of minecraft:light_gray_bed; not a proof of reaction feasibility.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

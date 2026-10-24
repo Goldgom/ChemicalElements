@@ -1,0 +1,49 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.goldgom.chemicalelements.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AbstractContainerMenuMixin",
+    "ComponentMapMutationMixin",
+    "CraftingMenuBarrierMixin",
+    "CraftingGridAccess",
+    "ResultSlotBarrierMixin",
+    "FurnaceAccess",
+    "HopperBlockEntityMixin",
+    "InventoryMixin",
+    "ItemEntityMixin",
+    "ItemHandlerMixins$Helper",
+    "ItemHandlerMixins$Sided",
+    "ItemHandlerMixins$StackHandler",
+    "ItemHandlerMixins$Vanilla",
+    "ItemHandlerMixins$Wrapper",
+    "ItemStackMixin",
+    "NonNullListMutationMixin",
+    "PlayerProjectionMixin",
+    "MaterialPlayerDataStorageMixin",
+    "MaterialAttachmentEncodingMixin",
+    "MovementMixins$Falling",
+    "MovementMixins$Piston",
+    "SlotMixin",
+    "WorldMaterialChunkAccessMixin",
+    "WorldMaterialChunkMixin",
+    "WorldMaterialSectionMixin",
+    "WorldMaterialPaletteMixin",
+    "WorldMaterialLevelMixin",
+    "WorldMaterialChunkPacketMixin",
+    "WorldMixins$Crafter",
+    "WorldMixins$Drops",
+    "WorldMixins$Dropper",
+    "WorldMixins$Furnace",
+    "WorldMixins$Place"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

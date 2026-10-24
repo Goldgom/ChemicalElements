@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "atomic_number": 82,
+  "symbol": "Pb",
+  "molar_mass_g_mol": "207.2",
+  "basis": "empirical",
+  "source": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+  "notes": "Conventional abridged atomic weight; natural isotopic composition varies."
+}

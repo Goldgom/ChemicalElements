@@ -1,0 +1,43 @@
+﻿{
+    "version":  "material-owner-key-r24-v1",
+    "taskId":  "chem-material-owner-key-r24",
+    "authoritativeUserTime":  "2026-10-24 07:51 EDT (turn start)",
+    "root":  "E:\\Projects\\ChemicalElements",
+    "baselineOwnerKeySHA256":  "A3CD1BBE496D577FA175217F4864E92460030768CA35560B2E404AEEFF409291",
+    "indexBeforeSHA256":  "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69",
+    "indexAfterSHA256":  "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69",
+    "stagedPaths":  [
+                        ".gitignore",
+                        "build.gradle",
+                        "gradle.properties",
+                        "gradle/wrapper/gradle-wrapper.jar",
+                        "gradle/wrapper/gradle-wrapper.properties",
+                        "gradlew",
+                        "gradlew.bat",
+                        "settings.gradle",
+                        "src/main/java/org/goldgom/chemicalelements/Chemicalelements.java",
+                        "src/main/java/org/goldgom/chemicalelements/Config.java",
+                        "src/main/resources/assets/chemicalelements/lang/en_us.json",
+                        "src/main/resources/chemicalelements.mixins.json",
+                        "src/main/templates/META-INF/neoforge.mods.toml"
+                    ],
+    "checks":  {
+                   "legacyRecordsUnchanged":  true,
+                   "fourRecords":  true,
+                   "worldSignature":  true,
+                   "heatSignature":  true,
+                   "permitsFour":  true,
+                   "nineNullGuards":  true,
+                   "noRandomIncarnation":  true,
+                   "noVersionComponents":  true,
+                   "testNineNullCases":  true,
+                   "gameNineNullCases":  true,
+                   "twoGameTests":  true,
+                   "bothHaveVariantMatrix":  true,
+                   "noTrailingWhitespace":  true,
+                   "indexHashUnchanged":  true,
+                   "thirteenStagedPaths":  true,
+                   "noIndexLock":  true
+               },
+    "execution":  "Static PowerShell text/hash checks only; Gradle, javac, Java main, GameTest, client and screenshots NOT RUN"
+}

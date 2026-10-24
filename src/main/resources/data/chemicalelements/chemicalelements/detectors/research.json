@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "priority": 3,
+  "precision": 18,
+  "max_inventory_slot": 40,
+  "instances": true,
+  "liquid": true,
+  "gas": true,
+  "temperature": true,
+  "nuclides": true,
+  "elements": []
+}

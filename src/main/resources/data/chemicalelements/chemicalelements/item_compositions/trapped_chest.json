@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:trapped_chest"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:cellulose": "8.000000000000000000",
+    "chemicalelements:iron": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Wood chest and iron trigger material calibration.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

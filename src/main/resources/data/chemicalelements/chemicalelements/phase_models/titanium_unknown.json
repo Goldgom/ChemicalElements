@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "id": "chemicalelements:titanium_unknown",
+  "subject": "chemicalelements:titanium",
+  "allotrope": "UNSPECIFIED_NOT_ASSUMED",
+  "kind": "UNKNOWN",
+  "reason": "Atomic bookkeeping species is not a validated thermodynamic identity/allotrope; complete sourced enthalpy model pending. No physical phase inferred.",
+  "domain": null,
+  "energy_reference": null,
+  "low_species": null,
+  "high_species": null,
+  "transition_k": null,
+  "cp_low_j_mol_k": null,
+  "cp_high_j_mol_k": null,
+  "latent_j_mol": null,
+  "legacy_operation": null,
+  "sources": []
+}

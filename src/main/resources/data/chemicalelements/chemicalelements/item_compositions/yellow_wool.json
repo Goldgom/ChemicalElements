@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:yellow_wool"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:carbon": "1.000000000000000000",
+    "chemicalelements:hydrogen": "2.000000000000000000",
+    "chemicalelements:nitrogen": "0.333333333333333333",
+    "chemicalelements:oxygen": "0.333333333333333333",
+    "chemicalelements:sulfur": "0.020000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Protein/fiber bulk elemental approximation; fantasy membranes/shells explicitly use game-convention protein analogue. Quantized downward at 10^-18 mol; all actual recipe transactions must carry deterministic residuals, not regenerate this template.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

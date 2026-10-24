@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "controller": "chemicalelements:high_temperature_furnace",
+  "parts": [
+    {
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "block": "chemicalelements:high_temperature_furnace"
+    },
+    {
+      "offset": [
+        2,
+        0,
+        1
+      ],
+      "block": "chemicalelements:part_assembly",
+      "facing": "north"
+    },
+    {
+      "offset": [
+        -2,
+        0,
+        1
+      ],
+      "block": "chemicalelements:part_column_tall",
+      "facing": "north"
+    },
+    {
+      "offset": [
+        -2,
+        0,
+        3
+      ],
+      "block": "chemicalelements:part_column_tall",
+      "facing": "north"
+    },
+    {
+      "offset": [
+        1,
+        0,
+        0
+      ],
+      "block": "chemicalelements:part_port",
+      "facing": "north"
+    }
+  ],
+  "ports": [
+    {
+      "offset": [
+        1,
+        0,
+        0
+      ],
+      "role": "material"
+    }
+  ],
+  "unloaded": "pause",
+  "visual_assembly": {
+    "style": "industrial chemistry r16",
+    "bays": [
+      {
+        "kind": "assembly",
+        "origin": [
+          2,
+          0,
+          1
+        ],
+        "size": [
+          3,
+          3,
+          3
+        ]
+      },
+      {
+        "kind": "column_tall",
+        "origin": [
+          -2,
+          0,
+          1
+        ],
+        "size": [
+          1,
+          3,
+          1
+        ]
+      },
+      {
+        "kind": "column_tall",
+        "origin": [
+          -2,
+          0,
+          3
+        ],
+        "size": [
+          1,
+          3,
+          1
+        ]
+      },
+      {
+        "kind": "port",
+        "origin": [
+          1,
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1,
+          1
+        ]
+      }
+    ]
+  }
+}

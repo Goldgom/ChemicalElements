@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:rail"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:iron": "0.375000000000000000",
+    "chemicalelements:cellulose": "0.015625000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Derived composite inventory from explicit ingredient items of minecraft:rail; not a proof of reaction feasibility.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

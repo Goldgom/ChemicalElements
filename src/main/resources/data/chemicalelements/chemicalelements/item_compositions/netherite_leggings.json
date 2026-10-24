@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:netherite_leggings"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:carbon": "7.000000000000000000",
+    "chemicalelements:tungsten": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Explicit inheritance from diamond_leggings plus stated additions; enchantment/map content is information, not new matter. Damage retains material until an explicit abrasion transaction.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

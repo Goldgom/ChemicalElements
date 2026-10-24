@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "parts": [
+    {
+      "offset": [
+        0,
+        0,
+        0
+      ],
+      "block": "chemicalelements:gas_collector"
+    },
+    {
+      "offset": [
+        1,
+        0,
+        0
+      ],
+      "block": "chemicalelements:part_port"
+    },
+    {
+      "offset": [
+        -1,
+        0,
+        0
+      ],
+      "block": "chemicalelements:part_column_short"
+    }
+  ]
+}

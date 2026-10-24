@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "atoms": {
+    "chemicalelements:carbon": 1,
+    "chemicalelements:oxygen": 3
+  },
+  "charge": -2,
+  "phase": "aqueous",
+  "molar_mass_g_mol": "60.008",
+  "basis": "approximation",
+  "source": "Stoichiometric formula and bundled abridged atomic weights; ion electron mass neglected",
+  "notes": "Explicit species identity and phase; formula alone does not establish reaction feasibility."
+}

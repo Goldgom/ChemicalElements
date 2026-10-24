@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "atomic_number": 91,
+  "symbol": "Pa",
+  "molar_mass_g_mol": "231.03588",
+  "basis": "empirical",
+  "source": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+  "notes": "Conventional abridged atomic weight; natural isotopic composition varies."
+}

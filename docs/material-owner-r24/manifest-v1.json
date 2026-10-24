@@ -1,0 +1,39 @@
+﻿{
+    "gameTestRun":  false,
+    "version":  "material-owner-r24-v1",
+    "ownerReady":  false,
+    "files":  [
+                  {
+                      "sha256":  "5D499D210A12D16BD35CB0C772158043C01E0C41B1305E1EED2FCC97DA6D8114",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/content/material/MaterialProjection.java"
+                  },
+                  {
+                      "sha256":  "56EA6E317C2863CBBFC9A6C18C60D33C8255A5BA6C5872D0AA8C6826A26DAF84",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/content/material/MaterialBlockEntity.java"
+                  },
+                  {
+                      "sha256":  "956F1EF620C9FDA1E12A102B200EF8A40CFD97C978D50D35981D75289C11E21C",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/content/material/MaterialBlock.java"
+                  },
+                  {
+                      "sha256":  "7324CDF0B0B21C746A5AE6E2964B02F3F8AFDF199DD977B9C2A107E0CB87D5B8",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/content/material/tx/MaterialRootState.java"
+                  },
+                  {
+                      "sha256":  "1B409B96BB79F63260C3E094E092498DD3761CF95DC2E17192E1B587744384E4",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/registry/ElementMaterials.java"
+                  },
+                  {
+                      "sha256":  "646B7F23F376687697E2479C0DE00BC9E5A0FFD73F7D1397F384534C69C36972",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/gametest/material/MaterialRootGameTests.java"
+                  },
+                  {
+                      "sha256":  "CD1189F0A70FFB3C935DC9B1DCDDE1121088E3BCEF8690036A471FB2F348C074",
+                      "path":  "docs/material-owner-r24/STATUS-v1.md"
+                  }
+              ],
+    "compiled":  false,
+    "cachedPaths":  13,
+    "indexSha256":  "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69",
+    "evidence":  "source-and-static-only"
+}

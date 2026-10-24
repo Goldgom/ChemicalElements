@@ -1,0 +1,39 @@
+﻿{
+    "files":  [
+                  {
+                      "sha256":  "A07B3A0DEFC6C211B66F902745F16F7A1816A0A61C6850A4B8887FBB7FA57348",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineBlockEntity.java"
+                  },
+                  {
+                      "sha256":  "7B98FDC4F204F08A9AE1B9BA70D4CC6A8980C3849D5009A156F535D6044A5ABC",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineCanonicalNbt.java"
+                  },
+                  {
+                      "sha256":  "92EF21D8679602C862FF06AB6DE0F42484D92399F7ADE2F9B383ADC6808AF9EB",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineInventory.java"
+                  },
+                  {
+                      "sha256":  "6B888BFA320C024A463A4D97AFD7C7ABCCB44FEAABCE10B3BAD60AA09F7CE483",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachinePower.java"
+                  },
+                  {
+                      "sha256":  "12BFBF2C11FC6BA6E2954F6AA889557EE5F613C81F0082F17A4A3B0F36E621CF",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineProjection.java"
+                  },
+                  {
+                      "sha256":  "B3183CDFA8153C76FE840C8A58E858D7E6270F302BD8CAA36ECE2835917BDE31",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MachineProjectionGameTests.java"
+                  },
+                  {
+                      "sha256":  "5B66294547FC396D33934A4A7D2E9DEBD2A5F171E43BDF6A860B62FD1BE6B3F5",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/machine/MaterialTank.java"
+                  },
+                  {
+                      "sha256":  "6C7990D09D57A19AAB57FEA161A03F82677EFB2D86DFD1CB45F7080C01DC739B",
+                      "path":  "docs/machine-mirror-r22-batch4/REPORT.md"
+                  }
+              ],
+    "batch":  "machine-mirror-r22-batch4",
+    "compiled":  false,
+    "executed":  false
+}

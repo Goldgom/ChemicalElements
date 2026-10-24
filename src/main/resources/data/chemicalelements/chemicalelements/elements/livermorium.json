@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "atomic_number": 116,
+  "symbol": "Lv",
+  "molar_mass_g_mol": "293",
+  "basis": "approximation",
+  "source": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+  "notes": "Representative isotope mass number, not standard atomic weight; approximate g/mol."
+}

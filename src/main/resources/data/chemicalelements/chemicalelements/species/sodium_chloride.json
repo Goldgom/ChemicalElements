@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "atoms": {
+    "chemicalelements:sodium": 1,
+    "chemicalelements:chlorine": 1
+  },
+  "charge": 0,
+  "phase": "solid",
+  "molar_mass_g_mol": "58.43976928",
+  "basis": "approximation",
+  "source": "Stoichiometric formula and sum of bundled abridged atomic weights; ion electron mass neglected"
+}

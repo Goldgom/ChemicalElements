@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:music_disc_pigstep"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:carbon": "2.000000000000000000",
+    "chemicalelements:hydrogen": "3.000000000000000000",
+    "chemicalelements:chlorine": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Vinyl reference material gameplay convention; historical disc material not claimed.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

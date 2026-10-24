@@ -1,0 +1,38 @@
+﻿{
+    "version":  "material-owner-r24-v2",
+    "indexSha256":  "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69",
+    "files":  [
+                  {
+                      "sha256":  "E8D0AA44521583057E2D66FE23B00900B59A5E7735811DFAAB58B80791DDDD10",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/content/material/MaterialProjection.java"
+                  },
+                  {
+                      "sha256":  "F7DCDF0D356020142CA34FF76061405647B0E364A78AD68F957578688C41EF8D",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/content/material/MaterialBlockEntity.java"
+                  },
+                  {
+                      "sha256":  "956F1EF620C9FDA1E12A102B200EF8A40CFD97C978D50D35981D75289C11E21C",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/content/material/MaterialBlock.java"
+                  },
+                  {
+                      "sha256":  "7324CDF0B0B21C746A5AE6E2964B02F3F8AFDF199DD977B9C2A107E0CB87D5B8",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/content/material/tx/MaterialRootState.java"
+                  },
+                  {
+                      "sha256":  "1B409B96BB79F63260C3E094E092498DD3761CF95DC2E17192E1B587744384E4",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/registry/ElementMaterials.java"
+                  },
+                  {
+                      "sha256":  "FF41DD640559EB7D48D0EEFAD51EE63977BDF0F3A182836E8D6CD1E40C6FF64A",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/gametest/material/MaterialRootGameTests.java"
+                  },
+                  {
+                      "sha256":  "46A89D96BBF1B36AC5B1E958538818F84A15AA0E06FD863E60A4620A2C8AD25A",
+                      "path":  "docs/material-owner-r24/STATUS-v2.md"
+                  }
+              ],
+    "cachedPaths":  13,
+    "ownerReady":  false,
+    "compiled":  false,
+    "gameTestRun":  false
+}

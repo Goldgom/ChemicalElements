@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/filter",
+  "textures": {
+    "front": "chemicalelements:block/filter_state_1"
+  }
+}

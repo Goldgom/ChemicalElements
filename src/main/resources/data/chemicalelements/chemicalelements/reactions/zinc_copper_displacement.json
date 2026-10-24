@@ -1,0 +1,29 @@
+{
+    "schema_version":  1,
+    "type":  "redox",
+    "reactants":  {
+                      "chemicalelements:copper_ion":  1,
+                      "chemicalelements:zinc":  1
+                  },
+    "products":  {
+                     "chemicalelements:copper":  1,
+                     "chemicalelements:zinc_ion":  1
+                 },
+    "conditions":  {
+                       "min_k":  "293.15",
+                       "max_k":  "303.15",
+                       "max_pa":  "103000",
+                       "min_pa":  "100000",
+                       "catalysts":  [
+
+                                     ],
+                       "capabilities":  [
+                                            "aqueous_contact"
+                                        ]
+                   },
+    "duration_ticks":  100,
+    "energy_j_per_mol":  "0",
+    "game_priority":  0,
+    "basis":  "approximation_and_game_convention",
+    "source":  "Zn + Cu2+ -\u003e Zn2+ + Cu, aqueous displacement; OpenStax Chemistry 2e 17.2 Galvanic Cells. Ideal dilute model excludes passivation/complexants. Duration 100 ticks and energy budget are game calibration, not experimental kinetics/enthalpy. No Gibbs value claimed."
+}

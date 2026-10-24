@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "atomic_number": 6,
+  "symbol": "C",
+  "molar_mass_g_mol": "12.011",
+  "basis": "empirical",
+  "source": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+  "notes": "Conventional abridged atomic weight; natural isotopic composition varies."
+}

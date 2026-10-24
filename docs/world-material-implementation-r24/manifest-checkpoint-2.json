@@ -1,0 +1,94 @@
+{
+  "status": "source-only-uncompiled",
+  "files": [
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/gametest/worldmaterial/WorldMaterialBoundaryGameTests.java",
+      "sha256": "68d93f574e139f812604d14fbe8e030602476bd21c70bfef72388fc6c2dcdf6f"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/mixin/WorldMaterialChunkAccessMixin.java",
+      "sha256": "318185004d014d3748c9946cd71c4340e83b732fc4b3809ed1ba72b7fd433fa0"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/mixin/WorldMaterialChunkMixin.java",
+      "sha256": "53a0c30905ff765cd8f74857484a9ec1930ab4fa2aeca5c50e9f59703d2f516f"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/mixin/WorldMaterialChunkPacketMixin.java",
+      "sha256": "4b268f1e0da240923cdf249361790ce366dd36e61688a300938bd40ab70a9bee"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/mixin/WorldMaterialLevelMixin.java",
+      "sha256": "3e973e2caf0c1d1f288d0650a3eb5c1689e92aedbf353ee8f34bac5b8aa91429"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/mixin/WorldMaterialPaletteMixin.java",
+      "sha256": "1f861c3af16f7b9020ee242ef2b6bf28fa5db3e5103726b6ebc17c51fd6416f2"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/mixin/WorldMaterialRegionStorageMixin.java",
+      "sha256": "0c90a5280f5112120d398ff506aa042b5ff39189d6a039e0161f64e4552a5404"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/mixin/WorldMaterialSectionMixin.java",
+      "sha256": "e83a8a4110f6a1b5dbb084d5de926254ea7e69a8538e3304fda38b2921a2163c"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/world/material/AtomicRegionPublisher.java",
+      "sha256": "6ce0a1d0896a639e023ede5651f80b91541089ab31f32d290d2c3ef3328260cf"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/world/material/ChunkWriteSequencer.java",
+      "sha256": "12cbf8cf5bcb328b30ddfdf19c73f62b568e0c3f19efa8d2fb6e35f5bf7896e9"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/world/material/DetachedChunkImage.java",
+      "sha256": "690b63e26cb02600b806f991508eeafbd6bdc598b7b583e595550c4ff30df78b"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/world/material/ExternalChunkPublication.java",
+      "sha256": "ff47dc06aee94a4341b789e81e27ad01f39aa2e34a92e4b237ce0f15dd7651de"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/world/material/GuardedBlockEntityMap.java",
+      "sha256": "765c7f8e75903b8f62944d809d3dd2f46e675369678374875d442c9b11e5d4be"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/world/material/WorldChunkAccessBridge.java",
+      "sha256": "e02168a4e114f8fe7c7b7463664ff17586b3076b0a3ad6e20421ecdcadd0e46b"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/world/material/WorldChunkBoundary.java",
+      "sha256": "fb4993c7aba9d9af3102a7af4ba3f8088ebc3894b01b13c0c77c954d37a3f85b"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/world/material/WorldMaterialRootBridge.java",
+      "sha256": "b8fa1324b5756d7ee78a4f29d5b0b4073993ca1ece6114121317a0d01b722509"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/world/material/WorldPositionMetadata.java",
+      "sha256": "6b422d6d87694c581b8e902dd9a5a4d29332d74347865d9a25e7a8bdb6bd6ba4"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/world/material/WorldPrimitivePermit.java",
+      "sha256": "e3dc057616879761cf81ec87bf5f10b37370a0d9d9f79e696012a18bbc6c3f6e"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/world/material/WorldRecoveryGate.java",
+      "sha256": "49e50d9ec0cce0443bb657cc8d3260f782838e36f7f8e10942055d2ef8a32901"
+    },
+    {
+      "path": "src/main/java/org/goldgom/chemicalelements/world/material/WorldRegionStorage.java",
+      "sha256": "faa739b744b92a3be7d96c2bd1f7a1ac9de8c65ac55d6e3fdd244ad276b537a3"
+    },
+    {
+      "path": "src/test/java/org/goldgom/chemicalelements/world/material/AtomicRegionPublisherTest.java",
+      "sha256": "a38881af836a49346927e2c712fc9a99a76fbefb415b16ccbbe9110011a0e0a5"
+    },
+    {
+      "path": "src/test/java/org/goldgom/chemicalelements/world/material/WorldBoundaryPrimitivesTest.java",
+      "sha256": "4af71d7302d0c8bd41781ea57c0e8f0c979780756b469bba1643ef594cb395d8"
+    }
+  ],
+  "indexSha256": "82db786aa6a4f64d0b38f02be6e7eaf7a1d35e9e905e7efe0c29713593cf1b69"
+}

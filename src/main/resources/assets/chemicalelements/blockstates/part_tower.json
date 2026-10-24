@@ -1,0 +1,1084 @@
+{
+  "variants": {
+    "part_x=0,part_y=0,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_0_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=0,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_0_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=0,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_0_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=0,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_0_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=0,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_0_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=0,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_0_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=0,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_0_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=0,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_0_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=0,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_0_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=0,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_0_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=0,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_0_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=0,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_0_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=1,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_1_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=1,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_1_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=1,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_1_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=1,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_1_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=1,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_1_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=1,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_1_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=1,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_1_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=1,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_1_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=1,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_1_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=1,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_1_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=1,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_1_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=1,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_1_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=2,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_2_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=2,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_2_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=2,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_2_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=2,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_2_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=2,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_2_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=2,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_2_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=2,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_2_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=2,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_2_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=2,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_2_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=2,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_2_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=2,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_2_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=2,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_2_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=3,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_3_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=3,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_3_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=3,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_3_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=3,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_3_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=3,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_3_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=3,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_3_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=3,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_3_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=3,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_3_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=3,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_3_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=3,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_3_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=3,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_3_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=3,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_3_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=4,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_4_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=4,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_4_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=4,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_4_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=4,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_4_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=4,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_4_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=4,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_4_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=4,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_4_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=4,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_4_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=4,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_4_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=4,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_4_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=4,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_4_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=4,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_4_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=5,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_5_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=5,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_5_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=5,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_5_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=5,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_5_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=5,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_5_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=5,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_5_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=5,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_5_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=5,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_5_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=0,part_y=5,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_0_5_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=0,part_y=5,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_0_5_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=0,part_y=5,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_0_5_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=0,part_y=5,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_0_5_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=0,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_0_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=0,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_0_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=0,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_0_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=0,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_0_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=0,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_0_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=0,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_0_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=0,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_0_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=0,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_0_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=0,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_0_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=0,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_0_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=0,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_0_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=0,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_0_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=1,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_1_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=1,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_1_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=1,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_1_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=1,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_1_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=1,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_1_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=1,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_1_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=1,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_1_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=1,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_1_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=1,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_1_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=1,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_1_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=1,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_1_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=1,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_1_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=2,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_2_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=2,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_2_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=2,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_2_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=2,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_2_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=2,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_2_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=2,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_2_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=2,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_2_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=2,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_2_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=2,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_2_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=2,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_2_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=2,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_2_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=2,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_2_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=3,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_3_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=3,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_3_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=3,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_3_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=3,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_3_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=3,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_3_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=3,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_3_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=3,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_3_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=3,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_3_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=3,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_3_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=3,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_3_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=3,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_3_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=3,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_3_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=4,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_4_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=4,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_4_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=4,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_4_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=4,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_4_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=4,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_4_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=4,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_4_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=4,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_4_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=4,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_4_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=4,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_4_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=4,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_4_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=4,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_4_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=4,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_4_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=5,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_5_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=5,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_5_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=5,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_5_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=5,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_5_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=5,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_5_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=5,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_5_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=5,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_5_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=5,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_5_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=1,part_y=5,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_1_5_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=1,part_y=5,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_1_5_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=1,part_y=5,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_1_5_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=1,part_y=5,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_1_5_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=0,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_0_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=0,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_0_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=0,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_0_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=0,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_0_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=0,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_0_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=0,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_0_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=0,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_0_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=0,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_0_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=0,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_0_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=0,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_0_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=0,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_0_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=0,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_0_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=1,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_1_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=1,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_1_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=1,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_1_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=1,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_1_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=1,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_1_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=1,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_1_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=1,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_1_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=1,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_1_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=1,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_1_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=1,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_1_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=1,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_1_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=1,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_1_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=2,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_2_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=2,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_2_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=2,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_2_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=2,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_2_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=2,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_2_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=2,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_2_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=2,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_2_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=2,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_2_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=2,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_2_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=2,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_2_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=2,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_2_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=2,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_2_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=3,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_3_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=3,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_3_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=3,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_3_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=3,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_3_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=3,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_3_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=3,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_3_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=3,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_3_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=3,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_3_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=3,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_3_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=3,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_3_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=3,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_3_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=3,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_3_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=4,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_4_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=4,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_4_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=4,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_4_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=4,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_4_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=4,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_4_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=4,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_4_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=4,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_4_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=4,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_4_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=4,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_4_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=4,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_4_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=4,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_4_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=4,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_4_2",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=5,part_z=0,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_5_0",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=5,part_z=0,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_5_0",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=5,part_z=0,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_5_0",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=5,part_z=0,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_5_0",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=5,part_z=1,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_5_1",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=5,part_z=1,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_5_1",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=5,part_z=1,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_5_1",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=5,part_z=1,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_5_1",
+      "y": 270,
+      "uvlock": true
+    },
+    "part_x=2,part_y=5,part_z=2,facing=north": {
+      "model": "chemicalelements:block/part_tower_2_5_2",
+      "y": 0,
+      "uvlock": true
+    },
+    "part_x=2,part_y=5,part_z=2,facing=east": {
+      "model": "chemicalelements:block/part_tower_2_5_2",
+      "y": 90,
+      "uvlock": true
+    },
+    "part_x=2,part_y=5,part_z=2,facing=south": {
+      "model": "chemicalelements:block/part_tower_2_5_2",
+      "y": 180,
+      "uvlock": true
+    },
+    "part_x=2,part_y=5,part_z=2,facing=west": {
+      "model": "chemicalelements:block/part_tower_2_5_2",
+      "y": 270,
+      "uvlock": true
+    }
+  }
+}

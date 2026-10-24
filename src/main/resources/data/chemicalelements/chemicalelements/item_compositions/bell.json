@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:bell"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:copper": "3.000000000000000000",
+    "chemicalelements:tin": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Bell bronze alloy gameplay unit.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

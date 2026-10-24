@@ -1,0 +1,25 @@
+{
+    "version":  "resolver-fix-v2",
+    "files":  [
+                  {
+                      "sha256":  "1EF606AC26701D791B04AF2634C6B214A108879B847AEA48F60FAB4DF6682397",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/world/heat/LoadedFiniteHeatResolver.java"
+                  },
+                  {
+                      "sha256":  "53F9F57A53E3D92AA6133653D42B951C4EADDF0C3E1FD9F3A12BC7162C91DC18",
+                      "path":  "src/main/java/org/goldgom/chemicalelements/gametest/heat/FiniteHeatResolutionGameTests.java"
+                  },
+                  {
+                      "sha256":  "76DD4B473A783E50F990BC636886B81882F12E247ADFBD5F989715BBAA9B2A39",
+                      "path":  "src/test/java/org/goldgom/chemicalelements/world/heat/LoadedFiniteHeatResolverTest.java"
+                  },
+                  {
+                      "sha256":  "A3396A17A75BCE06A0130EE02430C6C57704A0A8DBFB2DB1CAE3FDF6ED4108FD",
+                      "path":  "docs/finite-heat-owner-r24/resolver-fix/resolver-fix-v2.md"
+                  }
+              ],
+    "testsRun":  false,
+    "indexSha256":  "82DB786AA6A4F64D0B38F02BE6E7EAF7A1D35E9E905E7EFE0C29713593CF1B69",
+    "guardContractSha256":  "34E00DF0E5E8A0E113629B0524F5714F51F900B9071985AEE13F3144BA990E94",
+    "status":  "SOURCE_ONLY_GUARD_INTEGRATED_PARTIAL_TEST_COVERAGE"
+}

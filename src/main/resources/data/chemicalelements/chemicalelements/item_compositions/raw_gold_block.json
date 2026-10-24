@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:raw_gold_block"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:gold": "9.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Game-calibrated elemental sample; ingot unit 1 mol, storage block 9 units, nugget 1/9 unit (quantized by explicit shared rounding).",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

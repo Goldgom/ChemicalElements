@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:gunpowder"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:potassium": "2.000000000000000000",
+    "chemicalelements:nitrogen": "2.000000000000000000",
+    "chemicalelements:oxygen": "6.000000000000000000",
+    "chemicalelements:carbon": "3.000000000000000000",
+    "chemicalelements:sulfur": "1.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Black powder component inventory approximation; reaction safety and conditions belong to modeled engine.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

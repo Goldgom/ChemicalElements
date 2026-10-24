@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "atomic_number": 27,
+  "symbol": "Co",
+  "molar_mass_g_mol": "58.933194",
+  "basis": "empirical",
+  "source": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+  "notes": "Conventional abridged atomic weight; natural isotopic composition varies."
+}

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "atoms": {
+    "chemicalelements:chlorine": 1
+  },
+  "charge": -1,
+  "phase": "aqueous",
+  "molar_mass_g_mol": "35.45",
+  "basis": "approximation",
+  "source": "Stoichiometric formula and sum of bundled abridged atomic weights; ion electron mass neglected"
+}

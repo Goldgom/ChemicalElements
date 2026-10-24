@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/dryer",
+  "textures": {
+    "front": "chemicalelements:block/dryer_state_1"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "chemicalelements:block/centrifuge",
+  "textures": {
+    "front": "chemicalelements:block/centrifuge_state_1"
+  }
+}

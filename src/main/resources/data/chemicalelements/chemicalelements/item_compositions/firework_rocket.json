@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:firework_rocket"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:potassium": "0.666666666666666666",
+    "chemicalelements:nitrogen": "0.666666666666666666",
+    "chemicalelements:oxygen": "2.000000000000000000",
+    "chemicalelements:carbon": "1.000000000000000000",
+    "chemicalelements:sulfur": "0.333333333333333333",
+    "chemicalelements:cellulose": "0.083333333333333333"
+  },
+  "basis": "game_convention",
+  "notes": "Derived composite inventory from explicit ingredient items of minecraft:firework_rocket_simple; not a proof of reaction feasibility. Quantized downward at 10^-18 mol; all actual recipe transactions must carry deterministic residuals, not regenerate this template.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

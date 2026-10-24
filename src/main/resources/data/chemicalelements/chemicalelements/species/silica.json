@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "atoms": {
+    "chemicalelements:silicon": 1,
+    "chemicalelements:oxygen": 2
+  },
+  "charge": 0,
+  "phase": "solid",
+  "molar_mass_g_mol": "60.083",
+  "basis": "approximation",
+  "source": "Stoichiometric formula and sum of bundled abridged atomic weights; ion electron mass neglected"
+}

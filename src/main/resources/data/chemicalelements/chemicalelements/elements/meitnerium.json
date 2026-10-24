@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "atomic_number": 109,
+  "symbol": "Mt",
+  "molar_mass_g_mol": "278",
+  "basis": "approximation",
+  "source": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+  "notes": "Representative isotope mass number, not standard atomic weight; approximate g/mol."
+}

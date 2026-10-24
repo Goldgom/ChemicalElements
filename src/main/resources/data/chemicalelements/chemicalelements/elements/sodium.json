@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "atomic_number": 11,
+  "symbol": "Na",
+  "molar_mass_g_mol": "22.98976928",
+  "basis": "empirical",
+  "source": "https://iupac.org/what-we-do/periodic-table-of-elements/",
+  "notes": "Conventional abridged atomic weight; natural isotopic composition varies."
+}

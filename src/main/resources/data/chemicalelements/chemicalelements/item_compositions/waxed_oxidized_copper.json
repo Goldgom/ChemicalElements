@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:waxed_oxidized_copper"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:copper": "1.000000000000000000",
+    "chemicalelements:oxygen": "0.500000000000000000",
+    "chemicalelements:carbon": "0.100000000000000000",
+    "chemicalelements:hydrogen": "0.200000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Copper object game-calibrated size; patina approximated oxygen component, wax hydrocarbon component. Oxidation/waxing must supply these inventories.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

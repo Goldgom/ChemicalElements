@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "match": {
+    "items": [
+      "minecraft:damaged_anvil"
+    ]
+  },
+  "priority": 100,
+  "per_instance": {
+    "chemicalelements:iron": "31.000000000000000000"
+  },
+  "basis": "game_convention",
+  "notes": "Explicit inheritance from anvil plus stated additions; enchantment/map content is information, not new matter. Damage retains material until an explicit abrasion transaction.",
+  "source": "ChemicalElements explicit material calibration v1; bundled species sources describe chemical formula approximations."
+}

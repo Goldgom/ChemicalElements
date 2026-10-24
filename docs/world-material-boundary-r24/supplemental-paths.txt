@@ -1,0 +1,334 @@
+
+FILE net/minecraft/world/level/chunk/storage/RegionFile.java
+288:     protected synchronized void write(ChunkPos p_63655_, ByteBuffer p_63656_) throws IOException {
+289:         int i = getOffsetIndex(p_63655_);
+290:         int j = this.offsets.get(i);
+291:         int k = getSectorNumber(j);
+292:         int l = getNumSectors(j);
+293:         int i1 = p_63656_.remaining();
+294:         int j1 = sizeToSectors(i1);
+295:         int k1;
+296:         RegionFile.CommitOp regionfile$commitop;
+297:         if (j1 >= 256) {
+298:             Path path = this.getExternalChunkPath(p_63655_);
+299:             LOGGER.warn("Saving oversized chunk {} ({} bytes} to external file {}", p_63655_, i1, path);
+300:             j1 = 1;
+301:             k1 = this.usedSectors.allocate(j1);
+302:             regionfile$commitop = this.writeToExternalFile(path, p_63656_);
+303:             ByteBuffer bytebuffer = this.createExternalStub();
+304:             this.file.write(bytebuffer, (long)(k1 * 4096));
+305:         } else {
+306:             k1 = this.usedSectors.allocate(j1);
+307:             regionfile$commitop = () -> Files.deleteIfExists(this.getExternalChunkPath(p_63655_));
+308:             this.file.write(p_63656_, (long)(k1 * 4096));
+309:         }
+310: 
+311:         this.offsets.put(i, this.packSectorOffset(k1, j1));
+312:         this.timestamps.put(i, getTimestamp());
+313:         this.writeHeader();
+314:         regionfile$commitop.run();
+315:         if (k != 0) {
+316:             this.usedSectors.free(k, l);
+317:         }
+318:     }
+319: 
+320:     private ByteBuffer createExternalStub() {
+321:         ByteBuffer bytebuffer = ByteBuffer.allocate(5);
+322:         bytebuffer.putInt(1);
+323:         bytebuffer.put((byte)(this.version.getId() | 128));
+324:         bytebuffer.flip();
+325:         return bytebuffer;
+326:     }
+327: 
+328:     private RegionFile.CommitOp writeToExternalFile(Path p_63663_, ByteBuffer p_63664_) throws IOException {
+329:         Path path = Files.createTempFile(this.externalFileDir, "tmp", null);
+330: 
+331:         try (FileChannel filechannel = FileChannel.open(path, StandardOpenOption.CREATE, StandardOpenOption.WRITE)) {
+332:             p_63664_.position(5);
+333:             filechannel.write(p_63664_);
+334:         }
+335: 
+336:         return () -> Files.move(path, p_63663_, StandardCopyOption.REPLACE_EXISTING);
+337:     }
+338: 
+339:     private void writeHeader() throws IOException {
+340:         this.header.position(0);
+341:         this.file.write(this.header, 0L);
+342:     }
+343: 
+344:     private int getOffset(ChunkPos p_63687_) {
+345:         return this.offsets.get(getOffsetIndex(p_63687_));
+346:     }
+347: 
+348:     public boolean hasChunk(ChunkPos p_63683_) {
+349:         return this.getOffset(p_63683_) != 0;
+350:     }
+351: 
+352:     private static int getOffsetIndex(ChunkPos p_63689_) {
+353:         return p_63689_.getRegionLocalX() + p_63689_.getRegionLocalZ() * 32;
+354:     }
+355: 
+356:     @Override
+357:     public void close() throws IOException {
+358:         try {
+359:             this.padToFullSector();
+360:         } finally {
+361:             try {
+362:                 this.file.force(true);
+363:             } finally {
+364:                 this.file.close();
+365:             }
+366:         }
+367:     }
+368: 
+369:     private void padToFullSector() throws IOException {
+370:         int i = (int)this.file.size();
+371:         int j = sizeToSectors(i) * 4096;
+372:         if (i != j) {
+373:             ByteBuffer bytebuffer = PADDING_BUFFER.duplicate();
+374:             bytebuffer.position(0);
+375:             this.file.write(bytebuffer, (long)(j - 1));
+376:         }
+377:     }
+378: 
+379:     class ChunkBuffer extends ByteArrayOutputStream {
+380:         private final ChunkPos pos;
+381: 
+382:         public ChunkBuffer(ChunkPos p_63696_) {
+383:             super(8096);
+384:             super.write(0);
+385:             super.write(0);
+386:             super.write(0);
+387:             super.write(0);
+388:             super.write(RegionFile.this.version.getId());
+389:             this.pos = p_63696_;
+390:         }
+391: 
+392:         @Override
+393:         public void close() throws IOException {
+394:             ByteBuffer bytebuffer = ByteBuffer.wrap(this.buf, 0, this.count);
+395:             int i = this.count - 5 + 1;
+396:             JvmProfiler.INSTANCE.onRegionFileWrite(RegionFile.this.info, this.pos, RegionFile.this.version, i);
+397:             bytebuffer.putInt(0, i);
+398:             RegionFile.this.write(this.pos, bytebuffer);
+399:         }
+400:     }
+401: 
+402:     interface CommitOp {
+403:         void run() throws IOException;
+404:     }
+405: }
+
+FILE net/minecraft/world/level/chunk/PalettedContainer.java
+105:     public int onResize(int p_63142_, T p_63143_) {
+106:         PalettedContainer.Data<T> data = this.data;
+107:         PalettedContainer.Data<T> data1 = this.createOrReuseData(data, p_63142_);
+108:         data1.copyFrom(data.palette, data.storage);
+109:         this.data = data1;
+110:         return data1.palette.idFor(p_63143_);
+111:     }
+112: 
+113:     public T getAndSet(int p_63092_, int p_63093_, int p_63094_, T p_63095_) {
+114:         this.acquire();
+115: 
+116:         Object object;
+117:         try {
+118:             object = this.getAndSet(this.strategy.getIndex(p_63092_, p_63093_, p_63094_), p_63095_);
+119:         } finally {
+120:             this.release();
+121:         }
+122: 
+123:         return (T)object;
+124:     }
+125: 
+126:     public T getAndSetUnchecked(int p_63128_, int p_63129_, int p_63130_, T p_63131_) {
+127:         return this.getAndSet(this.strategy.getIndex(p_63128_, p_63129_, p_63130_), p_63131_);
+128:     }
+129: 
+130:     private T getAndSet(int p_63097_, T p_63098_) {
+131:         int i = this.data.palette.idFor(p_63098_);
+132:         int j = this.data.storage.getAndSet(p_63097_, i);
+133:         return this.data.palette.valueFor(j);
+134:     }
+135: 
+136:     public void set(int p_156471_, int p_156472_, int p_156473_, T p_156474_) {
+137:         this.acquire();
+138: 
+139:         try {
+140:             this.set(this.strategy.getIndex(p_156471_, p_156472_, p_156473_), p_156474_);
+141:         } finally {
+142:             this.release();
+143:         }
+144:     }
+145: 
+146:     private void set(int p_63133_, T p_63134_) {
+147:         int i = this.data.palette.idFor(p_63134_);
+148:         this.data.storage.set(p_63133_, i);
+149:     }
+150: 
+151:     @Override
+152:     public T get(int p_63088_, int p_63089_, int p_63090_) {
+153:         return this.get(this.strategy.getIndex(p_63088_, p_63089_, p_63090_));
+154:     }
+155: 
+156:     protected T get(int p_63086_) {
+157:         PalettedContainer.Data<T> data = this.data;
+158:         return data.palette.valueFor(data.storage.get(p_63086_));
+159:     }
+160: 
+161:     @Override
+162:     public void getAll(Consumer<T> p_196880_) {
+163:         Palette<T> palette = this.data.palette();
+164:         IntSet intset = new IntArraySet();
+165:         this.data.storage.getAll(intset::add);
+166:         intset.forEach(p_238274_ -> p_196880_.accept(palette.valueFor(p_238274_)));
+167:     }
+168: 
+169:     public void read(FriendlyByteBuf p_63119_) {
+170:         this.acquire();
+171: 
+172:         try {
+173:             int i = p_63119_.readByte();
+174:             PalettedContainer.Data<T> data = this.createOrReuseData(this.data, i);
+175:             data.palette.read(p_63119_);
+176:             p_63119_.readLongArray(data.storage.getRaw());
+177:             this.data = data;
+178:         } finally {
+179:             this.release();
+180:         }
+181:     }
+182: 
+183:     @Override
+184:     public void write(FriendlyByteBuf p_63136_) {
+185:         this.acquire();
+186: 
+187:         try {
+188:             this.data.write(p_63136_);
+189:         } finally {
+190:             this.release();
+191:         }
+192:     }
+193: 
+194:     private static <T> DataResult<PalettedContainer<T>> unpack(
+195:         IdMap<T> p_188068_, PalettedContainer.Strategy p_188069_, PalettedContainerRO.PackedData<T> p_238258_
+196:     ) {
+197:         List<T> list = p_238258_.paletteEntries();
+198:         int i = p_188069_.size();
+199:         int j = p_188069_.calculateBitsForSerialization(p_188068_, list.size());
+200:         PalettedContainer.Configuration<T> configuration = p_188069_.getConfiguration(p_188068_, j);
+201:         BitStorage bitstorage;
+202:         if (j == 0) {
+203:             bitstorage = new ZeroBitStorage(i);
+204:         } else {
+205:             Optional<LongStream> optional = p_238258_.storage();
+206:             if (optional.isEmpty()) {
+207:                 return DataResult.error(() -> "Missing values for non-zero storage");
+208:             }
+209: 
+210:             long[] along = optional.get().toArray();
+211: 
+212:             try {
+213:                 if (configuration.factory() == PalettedContainer.Strategy.GLOBAL_PALETTE_FACTORY) {
+214:                     Palette<T> palette = new HashMapPalette<>(p_188068_, j, (p_238278_, p_238279_) -> 0, list);
+215:                     SimpleBitStorage simplebitstorage = new SimpleBitStorage(j, i, along);
+216:                     int[] aint = new int[i];
+217:                     simplebitstorage.unpack(aint);
+218:                     swapPalette(aint, p_238283_ -> p_188068_.getId(palette.valueFor(p_238283_)));
+219:                     bitstorage = new SimpleBitStorage(configuration.bits(), i, aint);
+220:                 } else {
+221:                     bitstorage = new SimpleBitStorage(configuration.bits(), i, along);
+222:                 }
+223:             } catch (SimpleBitStorage.InitializationException simplebitstorage$initializationexception) {
+224:                 return DataResult.error(() -> "Failed to read PalettedContainer: " + simplebitstorage$initializationexception.getMessage());
+225:             }
+226:         }
+227: 
+228:         return DataResult.success(new PalettedContainer<>(p_188068_, p_188069_, configuration, bitstorage, list));
+229:     }
+230: 
+231:     @Override
+232:     public PalettedContainerRO.PackedData<T> pack(IdMap<T> p_188065_, PalettedContainer.Strategy p_188066_) {
+233:         this.acquire();
+234: 
+235:         PalettedContainerRO.PackedData palettedcontainerro$packeddata;
+236:         try {
+237:             HashMapPalette<T> hashmappalette = new HashMapPalette<>(p_188065_, this.data.storage.getBits(), this.dummyPaletteResize);
+238:             int i = p_188066_.size();
+239:             int[] aint = new int[i];
+240:             this.data.storage.unpack(aint);
+241:             swapPalette(aint, p_198178_ -> hashmappalette.idFor(this.data.palette.valueFor(p_198178_)));
+242:             int j = p_188066_.calculateBitsForSerialization(p_188065_, hashmappalette.getSize());
+243:             Optional<LongStream> optional;
+244:             if (j != 0) {
+245:                 SimpleBitStorage simplebitstorage = new SimpleBitStorage(j, i, aint);
+246:                 optional = Optional.of(Arrays.stream(simplebitstorage.getRaw()));
+247:             } else {
+248:                 optional = Optional.empty();
+249:             }
+250: 
+251:             palettedcontainerro$packeddata = new PalettedContainerRO.PackedData<>(hashmappalette.getEntries(), optional);
+252:         } finally {
+253:             this.release();
+254:         }
+255: 
+256:         return palettedcontainerro$packeddata;
+257:     }
+258: 
+259:     private static <T> void swapPalette(int[] p_198190_, IntUnaryOperator p_198191_) {
+260:         int i = -1;
+261:         int j = -1;
+262: 
+263:         for (int k = 0; k < p_198190_.length; k++) {
+264:             int l = p_198190_[k];
+265:             if (l != i) {
+266:                 i = l;
+267:                 j = p_198191_.applyAsInt(l);
+268:             }
+269: 
+270:             p_198190_[k] = j;
+271:         }
+272:     }
+273: 
+274:     @Override
+275:     public int getSerializedSize() {
+276:         return this.data.getSerializedSize();
+277:     }
+278: 
+279:     @Override
+280:     public boolean maybeHas(Predicate<T> p_63110_) {
+281:         return this.data.palette.maybeHas(p_63110_);
+282:     }
+283: 
+284:     public PalettedContainer<T> copy() {
+285:         return new PalettedContainer<>(this.registry, this.strategy, this.data.copy());
+286:     }
+287: 
+288:     @Override
+289:     public PalettedContainer<T> recreate() {
+290:         return new PalettedContainer<>(this.registry, this.data.palette.valueFor(0), this.strategy);
+291:     }
+292: 
+293:     @Override
+294:     public void count(PalettedContainer.CountConsumer<T> p_63100_) {
+295:         if (this.data.palette.getSize() == 1) {
+296:             p_63100_.accept(this.data.palette.valueFor(0), this.data.storage.getSize());
+297:         } else {
+298:             Int2IntOpenHashMap int2intopenhashmap = new Int2IntOpenHashMap();
+299:             this.data.storage.getAll(p_238269_ -> int2intopenhashmap.addTo(p_238269_, 1));
+300:             int2intopenhashmap.int2IntEntrySet()
+
+FILE net/minecraft/server/level/ServerChunkCache.java
+45: import net.minecraft.world.level.storage.DimensionDataStorage;
+46: import net.minecraft.world.level.storage.LevelStorageSource;
+47: 
+48: public class ServerChunkCache extends ChunkSource implements net.neoforged.neoforge.common.extensions.IServerChunkCacheExtension {
+49:     private static final List<ChunkStatus> CHUNK_STATUSES = ChunkStatus.getStatusList();
+50:     private final DistanceManager distanceManager;
+51:     public final ServerLevel level;
+52:     final Thread mainThread;
+53:     final ThreadedLevelLightEngine lightEngine;
+54:     private final ServerChunkCache.MainThreadExecutor mainThreadProcessor;
+55:     public final ChunkMap chunkMap;
+56:     private final DimensionDataStorage dataStorage;
+57:     private long lastInhabitedUpdate;
+58:     private boolean spawnEnemies = true;
