@@ -15,6 +15,7 @@ import net.neoforged.neoforge.attachment.IAttachmentSerializer;
 import org.goldgom.chemicalelements.api.instance.InstanceRecord;
 import org.goldgom.chemicalelements.api.instance.StackLedger;
 import org.goldgom.chemicalelements.data.LedgerJson;
+import org.goldgom.chemicalelements.fluid.FiniteVolume;
 
 /**
  * Sparse per-chunk chemistry store owned by package B. Keys are packed {@code BlockPos.asLong()}.
@@ -38,8 +39,12 @@ public final class ChunkChemistry {
     }
 
     /** Finite water cell. All amounts in 1e-18 units (litres for volume, mol for species). */
-    public record WaterCell(BigInteger volume, SortedMap<String, BigInteger> species, BigInteger energy, BigInteger capacity, String origin, long revision) {
+    public record WaterCell(BigInteger volume, SortedMap<String, BigInteger> species, BigInteger energy, BigInteger capacity, String origin, long revision, FiniteVolume.Parcel evaporated, String fluidId) {
+        public WaterCell(BigInteger volume,SortedMap<String,BigInteger> species,BigInteger energy,BigInteger capacity,String origin,long revision,FiniteVolume.Parcel evaporated){this(volume,species,energy,capacity,origin,revision,evaporated,"minecraft:water");}
+        public WaterCell(BigInteger volume,SortedMap<String,BigInteger> species,BigInteger energy,BigInteger capacity,String origin,long revision){this(volume,species,energy,capacity,origin,revision,FiniteVolume.Parcel.empty());}
         public WaterCell {
+            Objects.requireNonNull(evaporated);
+            net.minecraft.resources.ResourceLocation.parse(Objects.requireNonNull(fluidId));
             if (volume.signum() < 0 || energy.signum() < 0 || capacity.signum() < 0) throw new IllegalArgumentException("negative water cell");
             var m = new TreeMap<String, BigInteger>();
             species.forEach((k, v) -> { if (v.signum() < 0) throw new IllegalArgumentException("negative species"); if (v.signum() > 0) m.put(k, v); });
@@ -122,6 +127,12 @@ public final class ChunkChemistry {
             e.putString("capacity", c.capacity().toString());
             e.putString("origin", c.origin());
             e.putLong("rev", c.revision());
+            // Keep zero-loss legacy payloads byte-for-byte structurally compatible with bound UUID receipts.
+            if(!c.fluidId().equals("minecraft:water"))e.putString("fluid",c.fluidId());
+            if(!c.evaporated().equals(FiniteVolume.Parcel.empty())){
+                var lost=new CompoundTag();lost.putString("volume",c.evaporated().volume().toString());lost.putString("energy",c.evaporated().energy().toString());
+                var lostSpecies=new CompoundTag();c.evaporated().species().forEach((k,v)->lostSpecies.putString(k,v.toString()));lost.put("species",lostSpecies);e.put("evaporated",lost);
+            }
             var s = new CompoundTag();
             c.species().forEach((k, v) -> s.putString(k, v.toString()));
             e.put("species", s);
@@ -155,7 +166,9 @@ public final class ChunkChemistry {
                 var s = new TreeMap<String, BigInteger>();
                 var st = e.getCompound("species");
                 for (var k : st.getAllKeys()) s.put(k, bounded(st.getString(k)));
-                c.water.put(e.getLong("pos"), new WaterCell(bounded(e.getString("volume")), s, bounded(e.getString("energy")), bounded(e.getString("capacity")), e.getString("origin"), e.getLong("rev")));
+                var evaporated=FiniteVolume.Parcel.empty();
+                if(e.contains("evaporated")){var lost=e.getCompound("evaporated");var lostSpecies=new TreeMap<String,BigInteger>();var amounts=lost.getCompound("species");for(String key:amounts.getAllKeys())lostSpecies.put(key,bounded(amounts.getString(key)));evaporated=new FiniteVolume.Parcel(bounded(lost.getString("volume")),lostSpecies,bounded(lost.getString("energy")));}
+                c.water.put(e.getLong("pos"), new WaterCell(bounded(e.getString("volume")), s, bounded(e.getString("energy")), bounded(e.getString("capacity")), e.getString("origin"), e.getLong("rev"),evaporated,e.contains("fluid")?e.getString("fluid"):"minecraft:water"));
             }
             var x = tag.getCompound("extra");
             for (var k : x.getAllKeys()) c.extra.put(k, x.getCompound(k));

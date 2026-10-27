@@ -1,4 +1,9 @@
 {
+  "item.chemicalelements.partial_fluid_bucket": "未满流体桶（%s / 1000 L）",
+  "item.chemicalelements.partial_fluid_bucket.help": "对流体右键继续收集；对方块右键倒出；潜行右键可倒回流体。",
+  "item.chemicalelements.chemical_inspector": "创造模式化学查看器",
+  "gui.chemicalelements.inspector.title": "方块化学详情",
+  "gui.chemicalelements.inspector.hint": "右键查看完整化学信息（仅创造模式）",
   "item.chemicalelements.element_hydrogen": "氢（H）",
   "item.chemicalelements.element_helium": "氦（He）",
   "item.chemicalelements.element_lithium": "锂（Li）",

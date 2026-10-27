@@ -62,7 +62,11 @@ public class Chemicalelements {
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public Chemicalelements(IEventBus modEventBus, ModContainer modContainer) {
         org.goldgom.chemicalelements.persistence.ChemistryComponents.register(modEventBus);
-        // Safe listeners only: legacy recovery, finite-water binding and production remain separate.
+        org.goldgom.chemicalelements.instance.WaterStorePort.bindIfAbsent();
+        NeoForge.EVENT_BUS.addListener(org.goldgom.chemicalelements.instance.WaterStorePort::load);
+        NeoForge.EVENT_BUS.addListener(org.goldgom.chemicalelements.instance.WaterStorePort::unload);
+        NeoForge.EVENT_BUS.addListener(org.goldgom.chemicalelements.instance.WaterStorePort::unloadLevel);
+        NeoForge.EVENT_BUS.addListener(org.goldgom.chemicalelements.instance.WaterStorePort::wake);
         org.goldgom.chemicalelements.instance.InstanceBootstrap.registerLifecycle();
         org.goldgom.chemicalelements.instance.InstanceBootstrap.registerReadServices();
         org.goldgom.chemicalelements.registry.ElementItems.bootstrap(modEventBus);
@@ -83,6 +87,7 @@ public class Chemicalelements {
         org.goldgom.chemicalelements.registry.CreativeCategories.register(EXAMPLE_BLOCK_ITEM.getId(),org.goldgom.chemicalelements.registry.CreativeCategories.Category.MATERIALS,EXAMPLE_BLOCK_ITEM);
         org.goldgom.chemicalelements.registry.CreativeCategories.register(org.goldgom.chemicalelements.registry.ElementItems.MATERIAL_SAMPLE.getId(),org.goldgom.chemicalelements.registry.CreativeCategories.Category.MATERIALS,org.goldgom.chemicalelements.registry.ElementItems.MATERIAL_SAMPLE);
         org.goldgom.chemicalelements.registry.CreativeCategories.bootstrap(modEventBus);
+        org.goldgom.chemicalelements.registry.CreativeCategories.register(org.goldgom.chemicalelements.registry.ElementItems.CHEMICAL_INSPECTOR.getId(),org.goldgom.chemicalelements.registry.CreativeCategories.Category.TOOLS,org.goldgom.chemicalelements.registry.ElementItems.CHEMICAL_INSPECTOR);
         NeoForge.EVENT_BUS.addListener((net.neoforged.neoforge.event.AddReloadListenerEvent event) ->
                 event.addListener(new org.goldgom.chemicalelements.data.ChemistryReloadListener()));
         // Register the commonSetup method for modloading

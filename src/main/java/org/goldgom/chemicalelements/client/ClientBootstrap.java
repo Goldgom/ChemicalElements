@@ -8,5 +8,6 @@ import org.goldgom.chemicalelements.client.screen.MachineScreen;
 @EventBusSubscriber(modid="chemicalelements",bus=EventBusSubscriber.Bus.MOD,value=Dist.CLIENT)
 public final class ClientBootstrap {
  private ClientBootstrap(){}
+ @SubscribeEvent public static void setup(net.neoforged.fml.event.lifecycle.FMLClientSetupEvent event){event.enqueueWork(InspectorClient::install);}
  @SubscribeEvent public static void screens(RegisterMenuScreensEvent event){event.register(MachineBootstrap.MENU.get(),MachineScreen::new);}
 }

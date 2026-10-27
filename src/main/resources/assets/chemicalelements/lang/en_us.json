@@ -1,4 +1,9 @@
 {
+  "item.chemicalelements.partial_fluid_bucket": "Partially Filled Bucket (%s / 1000 L)",
+  "item.chemicalelements.partial_fluid_bucket.help": "Use on liquid to collect; use on a block to pour. Sneak-use to pour into liquid.",
+  "item.chemicalelements.chemical_inspector": "Creative Chemical Inspector",
+  "gui.chemicalelements.inspector.title": "Block Chemistry Details",
+  "gui.chemicalelements.inspector.hint": "Right-click for full chemistry (Creative mode only)",
   "itemGroup.chemicalelements": "Chemical Elements",
   "block.chemicalelements.example_block": "Example Block",
   "item.chemicalelements.example_item": "Example Item",

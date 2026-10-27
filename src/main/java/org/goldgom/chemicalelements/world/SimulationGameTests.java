@@ -74,7 +74,8 @@ public final class SimulationGameTests {
   var released=org.goldgom.chemicalelements.fluid.SorptionExchange.release(absorbed.water(),absorbed.pores(),absorbed.pores().volume());
   helper.assertTrue(released.water().equals(water)&&released.pores().equals(empty),"Production pore release recovers all inventory");
   var blocked=org.goldgom.chemicalelements.fluid.SorptionExchange.absorb(water,empty,dense);
-  helper.assertTrue(blocked.water().equals(water)&&blocked.pores().equals(empty),"Production dense material has explicit zero bulk porosity");
+  helper.assertTrue(blocked.pores().volume().signum()>0&&blocked.water().plus(blocked.pores()).equals(water),"Production dense material has finite surface wetting and conserves inventory");
+  for(var block:net.minecraft.core.registries.BuiltInRegistries.BLOCK)helper.assertTrue(org.goldgom.chemicalelements.fluid.SorptionLibrary.INSTANCE.materialForBlock(net.minecraft.core.registries.BuiltInRegistries.BLOCK.getKey(block)).poreCapacity().signum()>0,"Every registered block has an explicit or default finite wetting capacity");
   helper.assertTrue(org.goldgom.chemicalelements.fluid.SorptionLibrary.INSTANCE.material(ResourceLocation.parse("unknown:material")).isEmpty(),"Unknown material is not silently assigned porosity");
   helper.succeed();
  }

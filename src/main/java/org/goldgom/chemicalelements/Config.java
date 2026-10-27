@@ -35,7 +35,23 @@ public class Config {
             .comment("A list of items to log on common setup.")
             .defineListAllowEmpty("items", List.of("minecraft:iron_ingot"), Config::validateItemName);
 
+    private static final ModConfigSpec.DoubleValue MINIMUM_WATER_LITRES = BUILDER
+            .comment("Free water below this volume evaporates; removed volume, solutes and heat are audited. A full block is 1000 L. Zero disables trace evaporation.")
+            .defineInRange("minimumWaterLitres", 0.01, 0.0, 1000.0);
+    private static final ModConfigSpec.DoubleValue MINIMUM_WATER_LEVEL_DIFFERENCE_LITRES = BUILDER
+            .comment("Minimum volume difference between two horizontal free-water cells required for flow, in litres. A full block is 1000 L. Zero disables this deadband; gravity and absorption are unaffected.")
+            .defineInRange("minimumWaterLevelDifferenceLitres", 50.0, 0.0, 1000.0);
+    public static double minimumWaterLevelDifferenceLitres = 50.0;
+    private static final ModConfigSpec.IntValue FLUID_UPDATE_RADIUS = BUILDER
+            .comment("Maximum Manhattan distance of a fluid update from its original trigger. Propagated changes do not reset this radius.")
+            .defineInRange("fluidUpdateRadius", 10, 1, 16);
+    public static int fluidUpdateRadius = 10;
+    private static final ModConfigSpec.IntValue FLUID_FLOW_INTERVAL_TICKS = BUILDER
+            .comment("Delay between visible stages of the same fluid region, in game ticks. 10 ticks = 0.5 seconds at 20 TPS.")
+            .defineInRange("fluidFlowIntervalTicks", 10, 1, 100);
+    public static int fluidFlowIntervalTicks = 10;
     static final ModConfigSpec SPEC = BUILDER.build();
+    public static double minimumWaterLitres = 0.01;
 
     public static boolean logDirtBlock;
     public static int magicNumber;
@@ -48,6 +64,11 @@ public class Config {
 
     @SubscribeEvent
     static void onLoad(final ModConfigEvent event) {
+        if(event.getConfig().getSpec()!=SPEC)return;
+        minimumWaterLitres = MINIMUM_WATER_LITRES.get();
+        minimumWaterLevelDifferenceLitres = MINIMUM_WATER_LEVEL_DIFFERENCE_LITRES.get();
+        fluidUpdateRadius = FLUID_UPDATE_RADIUS.get();
+        fluidFlowIntervalTicks = FLUID_FLOW_INTERVAL_TICKS.get();
         logDirtBlock = LOG_DIRT_BLOCK.get();
         magicNumber = MAGIC_NUMBER.get();
         magicNumberIntroduction = MAGIC_NUMBER_INTRODUCTION.get();

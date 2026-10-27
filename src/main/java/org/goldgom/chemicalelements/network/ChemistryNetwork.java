@@ -52,7 +52,8 @@ public final class ChemistryNetwork {
   }
  }
  @SubscribeEvent public static void register(RegisterPayloadHandlersEvent event){
-  var registrar=event.registrar("5");
+  var registrar=event.registrar("7");
+  InspectorNetwork.register(registrar);
   registrar.playToClient(ReactionCatalogSync.Page.TYPE,ReactionCatalogSync.Page.CODEC,(packet,context)->context.enqueueWork(()->org.goldgom.chemicalelements.compat.RecipeViews.accept(packet)));
   registrar.playToClient(MachineStatus.TYPE,MachineStatus.CODEC,(packet,context)->context.enqueueWork(()->{if(context.player().containerMenu instanceof org.goldgom.chemicalelements.machine.MachineMenu menu)menu.acceptStatus(packet);}));
   registrar.playToServer(Close.TYPE,Close.CODEC,(packet,context)->context.enqueueWork(()->{if(context.player() instanceof ServerPlayer player){var watch=WATCHES.get(player.getUUID());if(watch!=null&&watch.query.session().equals(packet.session()))WATCHES.remove(player.getUUID());}}));

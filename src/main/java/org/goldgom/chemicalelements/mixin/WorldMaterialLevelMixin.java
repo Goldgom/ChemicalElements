@@ -22,6 +22,14 @@ public abstract class WorldMaterialLevelMixin {
     @Inject(method = "setBlock(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;II)Z", at = @At("HEAD"))
     private void ce$set(BlockPos pos, net.minecraft.world.level.block.state.BlockState state, int flags, int depth,
             CallbackInfoReturnable<Boolean> cir) { ce$position(pos); }
+    @Inject(method = "setBlock(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;II)Z", at = @At("RETURN"))
+    private void ce$waterChanged(BlockPos pos, net.minecraft.world.level.block.state.BlockState state, int flags, int depth,
+            CallbackInfoReturnable<Boolean> cir) {
+        if (cir.getReturnValueZ() && (Object)this instanceof ServerLevel server
+                && !org.goldgom.chemicalelements.instance.WaterStorePort.RENDERING.get()) {
+            org.goldgom.chemicalelements.instance.WaterStorePort.changed(server, pos);
+        }
+    }
     @Inject(method = "destroyBlock", at = @At("HEAD"))
     private void ce$destroy(BlockPos pos, boolean drops, net.minecraft.world.entity.Entity entity, int depth,
             CallbackInfoReturnable<Boolean> cir) { ce$position(pos); }

@@ -10,6 +10,12 @@
     "CraftingGridAccess",
     "ResultSlotBarrierMixin",
     "FurnaceAccess",
+    "FiniteWaterMixin",
+    "FiniteLiquidShapeMixin$State",
+    "FiniteLiquidShapeMixin$Height",
+    "FiniteWaterBucketMixins$Pickup",
+    "FiniteWaterBucketMixins$Contact",
+    "FiniteWaterBucketMixins$Place",
     "HopperBlockEntityMixin",
     "InventoryMixin",
     "ItemEntityMixin",
@@ -39,6 +45,7 @@
     "WorldMixins$Place"
   ],
   "client": [
+    "FiniteLiquidRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

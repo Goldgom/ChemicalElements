@@ -8,6 +8,8 @@ public final class ElementItems {
  public static final DeferredRegister.Items ITEMS=DeferredRegister.createItems("chemicalelements");
  /** Carrier only: actual matter is supplied exclusively by its instance ledger. */
  public static final DeferredItem<Item> MATERIAL_SAMPLE=ITEMS.registerSimpleItem("material_sample",new Item.Properties());
+ public static final DeferredItem<org.goldgom.chemicalelements.item.PartialFluidBucketItem> PARTIAL_FLUID_BUCKET=ITEMS.register("partial_fluid_bucket",()->new org.goldgom.chemicalelements.item.PartialFluidBucketItem(new Item.Properties().stacksTo(1)));
+ public static final DeferredItem<org.goldgom.chemicalelements.item.ChemicalInspectorItem> CHEMICAL_INSPECTOR=ITEMS.register("chemical_inspector",()->new org.goldgom.chemicalelements.item.ChemicalInspectorItem(new Item.Properties().stacksTo(1).rarity(net.minecraft.world.item.Rarity.EPIC)));
  public static final Map<String,DeferredItem<Item>> ELEMENTS;
  static {var m=new LinkedHashMap<String,DeferredItem<Item>>(); for(String name:NAMES)m.put(name,ITEMS.registerSimpleItem("element_"+name,new Item.Properties())); ELEMENTS=Collections.unmodifiableMap(m);}
  public static void bootstrap(IEventBus bus){ITEMS.register(bus);ElementMaterials.bootstrap(bus);}

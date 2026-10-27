@@ -135,9 +135,8 @@ public final class WorldChemistryStore {
                     && !(decided && cur > post(c).revision())) return false;
             chunks.put(ChunkPos.asLong(c.pos()), chunk.get());
         }
-        journal.prepareDurably(receipt, payload);
+        journal.decideWaterDurably(receipt, payload);
         apply(level, changes, chunks);
-        journal.commitDurably(receipt);
         return true;
     }
 
@@ -160,12 +159,31 @@ public final class WorldChemistryStore {
      * operation. Pending conflicts stay pending, never abort a possibly partial projection.
      */
     public static synchronized int recover(ServerLevel level) {
+        return recover(level,SinkLedger.get().recoverable());
+    }
+
+    /** Chunk discovery visits only indexed water receipts involving this chunk, not the world journal. */
+    public static synchronized int recoverChunk(ServerLevel level,ChunkPos chunk){
+        return recover(level,SinkLedger.get().waterOperationsForChunk(level.dimension().location().toString(),chunk.toLong()));
+    }
+
+    private static int recover(ServerLevel level,Collection<UUID> operations){
         var journal = SinkLedger.get();
         int done = 0;
-        for (var tx : journal.recoverable()) {
+        for (var tx : operations) {
             var entry = journal.journalEntry(tx).orElse(null);
             if (entry == null || !entry.getString("dim").equals(level.dimension().location().toString())
                     || !entry.contains("changes", Tag.TAG_LIST)) continue;
+            if(journal.committed(tx)){
+                boolean superseded=true;
+                for(Tag value:entry.getList("changes",Tag.TAG_COMPOUND)){
+                    var change=(CompoundTag)value;var pos=BlockPos.of(change.getLong("pos"));
+                    long revision=water(level,pos).map(ChunkChemistry.WaterCell::revision).orElse(-1L);
+                    long postRevision=Math.max(change.getLong("expected")+1,change.getCompound("cell").getLong("rev"));
+                    if(revision<=postRevision){superseded=false;break;}
+                }
+                if(superseded)continue;
+            }
             var changes = decode(entry);
             if (changes.isEmpty()) continue;
             boolean decided = journal.committed(tx);
@@ -186,7 +204,7 @@ public final class WorldChemistryStore {
             if (conflict || (decided && !needsProjection)) continue;
             // A recovered intent is already durable; explicitly reflush before projection
             // so retrying an in-memory failed write cannot bypass the T1 barrier.
-            journal.flushDurably();
+            if(!decided||!journal.decisionDurable(tx))journal.flushDurably();
             apply(level, changes, chunks);
             if (!decided) journal.commitDurably(tx);
             done++;
@@ -210,7 +228,7 @@ public final class WorldChemistryStore {
 
     private static ChunkChemistry.WaterCell post(WaterChange c) {
         var r = c.replacement();
-        return new ChunkChemistry.WaterCell(r.volume(), r.species(), r.energy(), r.capacity(), r.origin(), Math.max(c.expectedRevision() + 1, r.revision()));
+        return new ChunkChemistry.WaterCell(r.volume(), r.species(), r.energy(), r.capacity(), r.origin(), Math.max(c.expectedRevision() + 1, r.revision()),r.evaporated(),r.fluidId());
     }
 
     private static boolean isPost(ChunkChemistry d, WaterChange c) {

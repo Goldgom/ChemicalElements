@@ -7,7 +7,6 @@ import java.io.UncheckedIOException;
 import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
 import java.nio.file.StandardOpenOption;
 import net.minecraft.nbt.NbtIo;
 import net.minecraft.nbt.NbtUtils;
@@ -41,13 +40,18 @@ import org.goldgom.chemicalelements.instance.LedgerOps;
  */
 public final class SinkLedger extends SavedData {
     public static final String NAME = "chemicalelements_instances";
-    public static final int SCHEMA = 1;
+    public static final int SCHEMA = 2;
+    private static final String PACKED_WATER = "__packed_water";
     static final ResourceLocation WATER = ResourceLocation.fromNamespaceAndPath("chemicalelements", "water");
 
     private long serial = 1;
     private final TreeMap<String, Composition> sinks = new TreeMap<>();
     private final TreeMap<String, Long> sinkCounts = new TreeMap<>();
     private final LinkedHashMap<UUID, CompoundTag> journal = new LinkedHashMap<>();
+    private final Map<String,LinkedHashSet<UUID>> waterByChunk = new HashMap<>();
+    private final Set<UUID> durableDecisions = new HashSet<>();
+    private DurableAppendLog waterWal;
+    private boolean waterWalLoaded;
     private final LinkedHashMap<String, String> quarantine = new LinkedHashMap<>();
     private CompoundTag unknownFuture;
     // Terminal receipts are retained: eviction would allow an old operation UUID to mint again.
@@ -60,8 +64,40 @@ public final class SinkLedger extends SavedData {
     public static SinkLedger get() {
         MinecraftServer server = ServerLifecycleHooks.getCurrentServer();
         if (server == null || server.overworld() == null) return DETACHED;
-        return server.overworld().getDataStorage().computeIfAbsent(FACTORY, NAME);
+        var ledger=server.overworld().getDataStorage().computeIfAbsent(FACTORY, NAME);
+        ledger.attachWaterJournal(server.getWorldPath(LevelResource.ROOT).resolve("data").resolve(NAME+"-water.wal"));
+        return ledger;
     }
+
+    synchronized void attachWaterJournal(Path path){
+        if(waterWalLoaded||readOnly())return;
+        waterWal=new DurableAppendLog(path);
+        try{
+            waterWal.replay(bytes->{
+                try{
+                    var entry=NbtIo.readCompressed(new java.io.ByteArrayInputStream(bytes),net.minecraft.nbt.NbtAccounter.create(256L*1024*1024));
+                    if(entry.getInt("schema_version")!=1||!entry.hasUUID("tx"))throw new IllegalArgumentException("unknown water WAL record");
+                    var tx=entry.getUUID("tx");var payload=entry.getCompound("payload");
+                    if(!payload.contains("dim")||!payload.contains("changes",Tag.TAG_LIST))throw new IllegalArgumentException("invalid water WAL payload");
+                    prepare(tx,payload);markCommitted(tx);durableDecisions.add(tx);
+                }catch(IOException ex){throw new UncheckedIOException("Cannot decode water WAL",ex);}
+            });
+            waterWalLoaded=true;
+        }catch(IOException ex){throw new UncheckedIOException("Cannot recover finite-fluid journal",ex);}
+    }
+
+    private void indexWater(UUID tx,CompoundTag payload){
+        if(!payload.contains("dim")||!payload.contains("changes",Tag.TAG_LIST))return;
+        for(Tag value:payload.getList("changes",Tag.TAG_COMPOUND)){
+            long pos=((CompoundTag)value).getLong("pos");
+            long chunk=net.minecraft.world.level.ChunkPos.asLong(net.minecraft.core.BlockPos.of(pos));
+            waterByChunk.computeIfAbsent(payload.getString("dim")+"|"+chunk,k->new LinkedHashSet<>()).add(tx);
+        }
+    }
+    public synchronized List<UUID> waterOperationsForChunk(String dimension,long chunk){
+        var operations=waterByChunk.get(dimension+"|"+chunk);return operations==null?List.of():List.copyOf(operations);
+    }
+    public synchronized boolean decisionDurable(UUID tx){return durableDecisions.contains(tx);}
 
     public static SinkLedger detached() { return DETACHED; }
 
@@ -117,13 +153,41 @@ public final class SinkLedger extends SavedData {
         return List.copyOf(result);
     }
 
-    public synchronized Optional<CompoundTag> journalEntry(UUID tx) { return Optional.ofNullable(journal.get(tx)).map(CompoundTag::copy); }
+    public synchronized Optional<CompoundTag> journalEntry(UUID tx) { return Optional.ofNullable(journal.get(tx)).map(SinkLedger::unpack); }
+
+    /** Keep historical fluid post-images compressed instead of millions of resident NBT maps.
+     * Metadata stays directly accessible; only callers recovering this transaction decode it. */
+    private static CompoundTag pack(CompoundTag payload){
+        if(!payload.contains("dim")||!payload.contains("changes",Tag.TAG_LIST))return payload.copy();
+        try{
+            var bytes=new java.io.ByteArrayOutputStream();
+            try(var gzip=new java.util.zip.GZIPOutputStream(bytes){{def.setLevel(java.util.zip.Deflater.BEST_SPEED);}};
+                var output=new java.io.DataOutputStream(new java.io.BufferedOutputStream(gzip))){NbtIo.write(payload,output);}
+            var result=new CompoundTag();result.putByteArray(PACKED_WATER,bytes.toByteArray());
+            result.putString("dim",payload.getString("dim"));
+            if(payload.contains("kind"))result.putString("kind",payload.getString("kind"));
+            result.putBoolean("committed",payload.getBoolean("committed"));
+            if(payload.contains("aborted"))result.putBoolean("aborted",payload.getBoolean("aborted"));
+            return result;
+        }catch(IOException ex){throw new UncheckedIOException("Cannot pack water history",ex);}
+    }
+    private static CompoundTag unpack(CompoundTag stored){
+        if(!stored.contains(PACKED_WATER,Tag.TAG_BYTE_ARRAY))return stored.copy();
+        try{
+            var result=NbtIo.readCompressed(new java.io.ByteArrayInputStream(stored.getByteArray(PACKED_WATER)),net.minecraft.nbt.NbtAccounter.create(256L*1024*1024));
+            if(!result.contains("dim")||!result.contains("changes",Tag.TAG_LIST))throw new IllegalArgumentException("invalid packed water history");
+            result.remove("__tx");
+            result.putBoolean("committed",stored.getBoolean("committed"));
+            if(stored.contains("aborted"))result.putBoolean("aborted",stored.getBoolean("aborted"));
+            return result;
+        }catch(IOException ex){throw new UncheckedIOException("Cannot decode water history",ex);}
+    }
 
     public synchronized void prepare(UUID tx, CompoundTag payload) {
         guard();
         Objects.requireNonNull(tx);
         Objects.requireNonNull(payload);
-        if (payload.contains("committed") || payload.contains("aborted") || payload.contains("__tx"))
+        if (payload.contains("committed") || payload.contains("aborted") || payload.contains("__tx") || payload.contains(PACKED_WATER))
             throw new IllegalArgumentException("reserved journal field");
         var existing = journal.get(tx);
         if (existing != null) {
@@ -131,9 +195,10 @@ public final class SinkLedger extends SavedData {
             if (existing.getBoolean("aborted")) throw new IllegalStateException("transaction cancelled: " + tx);
             return;
         }
-        var t = payload.copy();
+        var t = pack(payload);
         t.putBoolean("committed", false);
         journal.put(tx, t);
+        indexWater(tx,payload);
         trim();
         setDirty();
     }
@@ -183,7 +248,7 @@ public final class SinkLedger extends SavedData {
     public synchronized boolean matches(UUID tx, CompoundTag payload) {
         var stored = journal.get(tx);
         if (stored == null) return false;
-        var body = stored.copy();
+        var body = unpack(stored);
         body.remove("committed");
         body.remove("aborted");
         return body.equals(payload);
@@ -200,6 +265,25 @@ public final class SinkLedger extends SavedData {
         if (stored == null || stored.getBoolean("committed")) return;
         stored.putBoolean("aborted", true);
         setDirty();
+    }
+
+    /** Append only this decision and fsync before any chunk projection. Full SavedData snapshots
+     * remain compatible checkpoints; startup merges the append log by exact transaction UUID. */
+    public synchronized void decideWaterDurably(UUID tx,CompoundTag payload) {
+        requireAttachedServer();
+        guard();
+        if(journal.containsKey(tx)&&(!matches(tx,payload)||aborted(tx)))throw new IllegalStateException("water transaction conflict");
+        if(!waterWalLoaded||waterWal==null)throw new IllegalStateException("water journal not attached");
+        var entry=new CompoundTag();entry.putInt("schema_version",1);entry.putUUID("tx",tx);entry.put("payload",payload.copy());
+        try{
+            var bytes=new java.io.ByteArrayOutputStream();
+            try(var gzip=new java.util.zip.GZIPOutputStream(bytes){{def.setLevel(java.util.zip.Deflater.BEST_SPEED);}};
+                var output=new java.io.DataOutputStream(new java.io.BufferedOutputStream(gzip))){NbtIo.write(entry,output);}
+            waterWal.append(bytes.toByteArray());
+        }catch(IOException ex){throw new UncheckedIOException("finite-fluid decision durability barrier failed",ex);}
+        prepare(tx,payload);
+        markCommitted(tx);
+        durableDecisions.add(tx);
     }
 
     /** Persist intent before the first owner projection. Same UUID/payload retries also flush. */
@@ -292,6 +376,7 @@ public final class SinkLedger extends SavedData {
         NbtUtils.addCurrentDataVersion(root);
         try {
             writeDurableImage(file.toPath(), root);
+            journal.forEach((tx,entry)->{if(entry.getBoolean("committed"))durableDecisions.add(tx);});
             setDirty(false);
         } catch (IOException ex) {
             // No rollback to a guessed state: a failed publication can have uncertain effects.
@@ -306,12 +391,17 @@ public final class SinkLedger extends SavedData {
         Files.createDirectories(parent);
         Path temporary = Files.createTempFile(parent, NAME + "-", ".pending");
         // On failure retain the uncommitted image for diagnosis; it is never loaded as journal.
-        NbtIo.writeCompressed(root, temporary);
+        // This runs on the server thread at every durability barrier. Default gzip level 6
+        // repeatedly scans large historical payloads; level 1 keeps the same readable format.
+        try (var gzip = new java.util.zip.GZIPOutputStream(Files.newOutputStream(temporary)) {
+            { def.setLevel(java.util.zip.Deflater.BEST_SPEED); }
+        }; var output = new java.io.DataOutputStream(new java.io.BufferedOutputStream(gzip))) {
+            NbtIo.write(root, output);
+        }
         try (FileChannel channel = FileChannel.open(temporary, StandardOpenOption.WRITE)) {
             channel.force(true);
         }
-        Files.move(temporary, target.toAbsolutePath(), StandardCopyOption.ATOMIC_MOVE,
-                StandardCopyOption.REPLACE_EXISTING);
+        AtomicFilePublication.replace(temporary, target.toAbsolutePath());
         // Force the published file too. Directory fsync is not portable on Windows; this
         // guarantees process-crash ordering, not a claim about every disk's power-loss cache.
         try (FileChannel channel = FileChannel.open(target, StandardOpenOption.WRITE)) {
@@ -344,7 +434,7 @@ public final class SinkLedger extends SavedData {
     public static SinkLedger load(CompoundTag tag, HolderLookup.Provider provider) {
         var d = new SinkLedger();
         int v = tag.getInt("schema_version");
-        if (v != SCHEMA) { d.unknownFuture = tag.copy(); d.serial = Math.max(1, tag.getLong("serial")) + 1_000_000; return d; }
+        if (v != SCHEMA && v != 1) { d.unknownFuture = tag.copy(); d.serial = Math.max(1, tag.getLong("serial")) + 1_000_000; return d; }
         try {
         d.serial = Math.max(1, tag.getLong("serial"));
         var s = tag.getCompound("sinks");
@@ -356,9 +446,11 @@ public final class SinkLedger extends SavedData {
             d.sinkCounts.put(k, e.getLong("__count"));
         }
         for (Tag t : tag.getList("journal", Tag.TAG_COMPOUND)) {
-            var e = ((CompoundTag) t).copy();
-            if (!e.hasUUID("__tx")) throw new IllegalArgumentException("journal entry lacks UUID");
-            var id = e.getUUID("__tx");
+            var source = (CompoundTag)t;
+            if (!source.hasUUID("__tx")) throw new IllegalArgumentException("journal entry lacks UUID");
+            var id = source.getUUID("__tx");
+            // Pack the legacy entry directly: never deep-copy its large changes tree first.
+            var e = source.contains(PACKED_WATER) ? source.copy() : pack(source);
             e.remove("__tx");
             if (org.goldgom.chemicalelements.instance.MultiOwnerJournal.KIND.equals(e.getString("kind")))
                 org.goldgom.chemicalelements.instance.MultiOwnerJournal.validateStored(id, e, provider);
@@ -367,6 +459,8 @@ public final class SinkLedger extends SavedData {
             if (org.goldgom.chemicalelements.instance.materialtx.MaterialJournal.KIND.equals(e.getString("kind")))
                 org.goldgom.chemicalelements.instance.materialtx.MaterialJournal.validateStored(id, e);
             if (d.journal.putIfAbsent(id, e) != null) throw new IllegalArgumentException("duplicate journal UUID");
+            if(e.getBoolean("committed"))d.durableDecisions.add(id);
+            d.indexWater(id,source.contains(PACKED_WATER)?unpack(e):source);
         }
         var q = tag.getCompound("quarantine");
         for (var k : q.getAllKeys()) d.quarantine.put(k, q.getString(k));
